@@ -2,6 +2,7 @@
 layout: archive
 title: "CV"
 permalink: /cv/
+toc: true
 author_profile: true
 redirect_from:
   - /resume
@@ -25,7 +26,7 @@ Work experience
 * __2002__           Research Assistant (voluntary), Goethe-University Frankfurt, Germany
 * __1998 - 2001__    PhD Student, Goethe-University Frankfurt, Germany
 
-  
+
 Research Expertise and Interests
 ======
 * Research in observational galactic and extragalactic astrophysics
@@ -39,7 +40,7 @@ Research Expertise and Interests
 * Research and project experience with space-based, airborne and terrestrial astronomical observatories
 * Project experience in large-scale, multinational collaborations
 * Radiative transfer
-* CRC/SFB planning and application (total CRC 956 volume: 33 mil. EUR) 
+* CRC/SFB planning and application (total CRC 956 volume: 33 mil. EUR)
 
 
 Refereed Publications
@@ -63,12 +64,12 @@ Non-refereed Publications
 	{% endif %}
   {% endfor %}
   </ul>
-  
+
 Academic Talks
 ======
   <ul>
   {% for post in site.talks reversed %}
-	{% if post.tag == 'academic' %} 
+	{% if post.tag == 'academic' %}
 		{% include archive-single-talk-cv.html %}
 	{% endif %}
   {% endfor %}
@@ -78,26 +79,25 @@ Public Outreach Talks
 ======
   <ul>
   {% for post in site.talks reversed %}
-	{% if post.tag == 'public' %} 
+	{% if post.tag == 'public' %}
 		{% include archive-single-talk-cv.html %}
 	{% endif %}
   {% endfor %}
   </ul>
-  
+
 Teaching
 ======
   <ul>{% for post in site.teaching %}
     {% include archive-single-cv.html %}
   {% endfor %}</ul>
-  
+
 Service and leadership
 ======
 * Local Organizing Committee, 7th Chile-Cologne-Bonn-Symposium, 2022, 200+ participants, Puerto Varas, Chile
-* Member: Bonn-Cologne Graduate School, H2-Grant review panel, 2016, Cologne, Germany 
+* Member: Bonn-Cologne Graduate School, H2-Grant review panel, 2016, Cologne, Germany
 * Local Organizing Committee, 6-th Zermatt ISM-Symposium 2015, 250+ participants, Zermatt, Switzerland
-* Member: Bonn-Cologne Graduate School, H2-Grant review panel, 2014, Bonn, Germany 
+* Member: Bonn-Cologne Graduate School, H2-Grant review panel, 2014, Bonn, Germany
 * Local Organizing Committee, SOFIA Winter School 2014, 70 participants
 * Referee for ANR: Agence Nationale de la Recherche (French national funding agency), France (2013) project volume: 4 yrs., 446035 EUR
 * Editor: EAS Conference proceedings, 5th Zermatt ISM-Symposium 2010
 * Local Organizing Committee, 5th Zermatt ISM-Symposium 2010, 250+ participants, Zermatt, Switzerland
-
