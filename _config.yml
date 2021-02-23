@@ -84,7 +84,7 @@ author:
   avatar           : "Foto_M_Roellig.JPG"  #  "profile.png"
   bio              : "Senior Researcher"
   location         : "Cologne"
-  employer         :
+  employer         : 
   pubmed           : #"https://www.ncbi.nlm.nih.gov/pubmed/?term=john+snow"
   googlescholar    : "https://scholar.google.com/citations?user=Cv6I6lYAAAAJ&hl=de"
   email            : "roellig@ph1.uni-koeln.de"
@@ -179,6 +179,9 @@ collections:
     output: true
     permalink: /:collection/:path/
   publications:
+    output: true
+    permalink: /:collection/:path/
+  publicationsNR:
     output: true
     permalink: /:collection/:path/
   portfolio:

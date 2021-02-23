@@ -11,6 +11,23 @@ author_profile: true
 
 {% endif %}
 
+<h2> <a id="academic"></a>Academic Talks</h2>
+Jump to <a href="#outreach">Public Outreach</a>
+
 {% for post in site.talks reversed %}
-  {% include archive-single-talk.html %}
+	{% if post.tag == 'academic' %} 
+		{% include archive-single-talk.html %}
+	{% endif %}
+{% endfor %}
+
+<br>
+<hr style="border-top: 8px solid #bbb; border-radius: 5px"> 
+
+<h2> <a id="outreach"></a>Public Outreach Talks</h2>
+Jump back to <a href="#academic">Academic Talks</a>
+
+{% for post in site.talks reversed %}
+	{% if post.tag == 'public' %} 
+		{% include archive-single-talk.html %}
+	{% endif %}
 {% endfor %}
