@@ -85,10 +85,20 @@ Public Outreach Talks
   {% endfor %}
   </ul>
 
-Teaching
+Teaching at Frankfurt
 ======
   <ul>{% for post in site.teaching %}
+  {% if post.venue == "Goethe-University Frankfurt, IAP" %}
     {% include archive-single-cv.html %}
+  {% endif %}
+  {% endfor %}</ul>
+
+Teaching at Cologne
+======
+  <ul>{% for post in site.teaching %}
+  {% if post.venue == "Cologne University, I. Physical Institute" %}
+    {% include archive-single-cv.html %}
+  {% endif %}
   {% endfor %}</ul>
 
 Service and leadership

@@ -7,6 +7,25 @@ author_profile: true
 
 {% include base_path %}
 
+
+<h2>Teaching at Goethe University Frankfurt</h2><a name="frankfurt"> </a>
+Jump directly to <a href="#cologne">Teaching at Cologne University</a>
+
 {% for post in site.teaching reversed %}
-  {% include archive-single.html %}
+  {% if post.venue == "Goethe-University Frankfurt, IAP" %}
+    {% include archive-single.html %}
+  {% endif %}
+{% endfor %}
+
+
+<hr style="border-top: 8px solid #bbb; border-radius: 5px">
+
+
+<h2>Teaching at Cologne University</h2><a name="cologne"></a>
+Jump directly to <a href="#frankfurt"> Teaching at Goethe University Frankfurt</a>
+
+{% for post in site.teaching reversed %}
+  {% if post.venue == "Cologne University, I. Physical Institute" %}
+    {% include archive-single.html %}
+  {% endif %}
 {% endfor %}

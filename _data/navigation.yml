@@ -10,7 +10,10 @@ main:
   - title: "Publications"
     url: /publications/
 
-  - title: "Taks"
+  - title: "Software"
+    url: /software/
+
+  - title: "Talks"
     url: /talks/
 
   - title: "CV"

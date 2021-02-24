@@ -1,0 +1,5456 @@
+(* Content-type: application/mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 7.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       145,          7]
+NotebookDataLength[    160781,       5447]
+NotebookOptionsPosition[    146531,       5061]
+NotebookOutlinePosition[    147009,       5079]
+CellTagsIndexPosition[    146966,       5076]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell[TextData[{
+ StyleBox["Mathematica",
+  FontSlant->"Italic"],
+ " as a Tool for Astronomy and Physics"
+}], "Title",
+ CellChangeTimes->{{3.4631492689871325`*^9, 3.4631492808119326`*^9}}],
+
+Cell["\<\
+Lecture 10
+Wintersemester 2009/10
+
+Markus R\[ODoubleDot]llig\
+\>", "Subtitle",
+ CellChangeTimes->{{3.4631492844155326`*^9, 3.463149301715933*^9}, {
+   3.463149446339533*^9, 3.4631494500679326`*^9}, {3.463150895378133*^9, 
+   3.4631508957369328`*^9}, {3.4631509331145325`*^9, 
+   3.4631509348461323`*^9}, {3.4633918330178003`*^9, 3.4633918441094*^9}, {
+   3.4633924180713997`*^9, 3.4633924208326*^9}, 3.4633925658190002`*^9, 
+   3.464937683525*^9, 3.4654667940002003`*^9, 3.4661610144728003`*^9, 
+   3.466824617671341*^9, 3.46772120193779*^9, {3.4698188886046867`*^9, 
+   3.4698188888046875`*^9}}],
+
+Cell[CellGroupData[{
+
+Cell["Calculus", "Section",
+ CellChangeTimes->{{3.4639875719372*^9, 3.4639875743612003`*^9}}],
+
+Cell[TextData[{
+ "Required Reading\n\n",
+ ButtonBox["Calculus",
+  BaseStyle->"Link",
+  ButtonData->"paclet:guide/Calculus"],
+ "\n"
+}], "Text",
+ CellChangeTimes->{{3.4639875975682*^9, 3.4639876128722*^9}}],
+
+Cell[CellGroupData[{
+
+Cell["Partial Derivatives", "Subsection",
+ CellChangeTimes->{{3.4639876264392*^9, 3.4639876305411997`*^9}}],
+
+Cell[TextData[{
+ "Partial derivatives are produced by the function ",
+ ButtonBox["D",
+  BaseStyle->"RefGuideLink"],
+ StyleBox["[f,x]", "InlineInput",
+  FontWeight->"Bold"],
+ ", where the expression ",
+ StyleBox["f", "InlineInput"],
+ " should be either an implicit or explicit function of the variable ",
+ StyleBox["x", "InlineInput"],
+ " for which the derivative is sought.  Partial derivatives with respect to \
+several variables simultaneously are obtained by using a sequence of \
+variables in the argument list.  Multiple derivatives with respect to the \
+same variable are specified by arguments of the form ",
+ StyleBox["{x,n}", "InlineInput"],
+ " where ",
+ StyleBox["n", "InlineInput"],
+ " is the degree of differentiation or by including ",
+ StyleBox["n",
+  FontSlant->"Italic"],
+ " instances of ",
+ StyleBox["x",
+  FontSlant->"Italic"],
+ " in the sequence of differentiation variables.  "
+}], "Text",
+ CellChangeTimes->{3.4639876491982*^9}],
+
+Cell[TextData[{
+ "There are many equivalent input forms for this function to reflect common \
+usages.  The prime notation is convenient for writing ordinary differential \
+equations and can be entered directly from the keyboard; a slightly more \
+appealing form is obtained by entering \[EscapeKey]'\[EscapeKey] in a \
+superscript box.  The ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    SubscriptBox["\[PartialD]", 
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{"x", ",", "n"}], "}"}], ",", 
+      RowBox[{"{", 
+       RowBox[{"y", ",", "m"}], "}"}]}]], 
+    RowBox[{"f", "[", 
+     RowBox[{"x", ",", "y"}], "]"}]}], TraditionalForm]]],
+ " notation is more flexible and more rigorous, superseding the traditional ",
+ Cell[BoxData[
+  FormBox[
+   FractionBox[
+    RowBox[{
+     SuperscriptBox["\[PartialD]", 
+      RowBox[{"n", "+", "m"}]], 
+     RowBox[{"f", "[", 
+      RowBox[{"x", ",", "y"}], "]"}]}], 
+    RowBox[{
+     RowBox[{
+      SuperscriptBox["\[PartialD]", "n"], "x"}], 
+     RowBox[{
+      SuperscriptBox["\[PartialD]", "m"], "y"}]}]], TraditionalForm]]],
+ " notation with its cumbersome fractions which do not divide out.  That \
+traditional notation cannot be used without constructing special notation \
+palettes first.  The partial derivative symbol is entered as \[EscapeKey]pd\
+\[EscapeKey]  subscripts using ",
+ StyleBox["Control", "KeyEvent"],
+ StyleBox["+", "KeyEventDelimiter"],
+ StyleBox["_", "KeyEvent"],
+ ":"
+}], "Text",
+ CellChangeTimes->{
+  3.4639876565912*^9, {3.4639881104992*^9, 3.4639881159222*^9}}],
+
+Cell[TextData[Cell[BoxData[
+ FormBox[
+  ButtonBox[
+   RowBox[{"The", " ", "Representation", " ", "of", " ", "Derivatives"}],
+   BaseStyle->"Link",
+   ButtonData->"paclet:tutorial/TheRepresentationOfDerivatives"], 
+  TraditionalForm]]]], "Text",
+ CellChangeTimes->{{3.4639878242594*^9, 3.4639878939034*^9}}],
+
+Cell[TextData[{
+ Cell[BoxData[
+  RowBox[{
+   RowBox[{"D", "[", 
+    RowBox[{
+     RowBox[{"f", "[", "x", "]"}], ",", "x"}], "]"}], "=", 
+   RowBox[{
+    FractionBox[
+     RowBox[{"\[PartialD]", 
+      RowBox[{"f", "[", "x", "]"}]}], 
+     RowBox[{"\[PartialD]", "x"}]], "=", 
+    RowBox[{
+     RowBox[{
+      RowBox[{"f", "'"}], "[", "x", "]"}], "=", 
+     RowBox[{
+      RowBox[{
+       SuperscriptBox["f", "\[Prime]"], "[", "x", "]"}], "=", 
+      RowBox[{
+       SubscriptBox["\[PartialD]", "x"], 
+       RowBox[{"f", "[", "x", "]"}]}]}]}]}]}]], "InlineInput",
+  Evaluatable->False,
+  CellChangeTimes->{{3.4639876644142*^9, 3.4639876695992002`*^9}}],
+ "\n",
+ Cell[BoxData[
+  RowBox[{
+   RowBox[{"D", "[", 
+    RowBox[{
+     RowBox[{"f", "[", "x", "]"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"x", ",", "n"}], "}"}]}], "]"}], "=", 
+   RowBox[{
+    FractionBox[
+     RowBox[{
+      SuperscriptBox["\[PartialD]", "n"], 
+      RowBox[{"f", "[", "x", "]"}]}], 
+     RowBox[{"\[PartialD]", 
+      SuperscriptBox["x", "n"]}]], "=", 
+    RowBox[{
+     SubscriptBox["\[PartialD]", 
+      RowBox[{"{", 
+       RowBox[{"x", ",", "n"}], "}"}]], 
+     RowBox[{"f", "[", "x", "]"}]}]}]}]], "InlineInput",
+  Evaluatable->False],
+ "\n",
+ Cell[BoxData[
+  RowBox[{
+   RowBox[{"D", "[", 
+    RowBox[{
+     RowBox[{"f", "[", 
+      RowBox[{"x", ",", "y"}], "]"}], ",", "x", ",", "y"}], "]"}], "=", 
+   RowBox[{
+    FractionBox[
+     RowBox[{
+      SuperscriptBox["\[PartialD]", "2"], 
+      RowBox[{"f", "[", 
+       RowBox[{"x", ",", "y"}], "]"}]}], 
+     RowBox[{
+      RowBox[{"\[PartialD]", "x"}], 
+      RowBox[{"\[PartialD]", "y"}]}]], "=", 
+    RowBox[{
+     SubscriptBox["\[PartialD]", 
+      RowBox[{"x", ",", "y"}]], 
+     RowBox[{"f", "[", 
+      RowBox[{"x", ",", "y"}], "]"}]}]}]}]], "InlineInput",
+  Evaluatable->False],
+ "\n",
+ Cell[BoxData[
+  RowBox[{
+   RowBox[{"D", "[", 
+    RowBox[{
+     RowBox[{"f", "[", 
+      RowBox[{"x", ",", "y"}], "]"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"x", ",", "n"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"y", ",", "m"}], "}"}]}], "]"}], "=", 
+   RowBox[{
+    FractionBox[
+     RowBox[{
+      SuperscriptBox["\[PartialD]", 
+       RowBox[{"n", "+", "m"}]], 
+      RowBox[{"f", "[", 
+       RowBox[{"x", ",", "y"}], "]"}]}], 
+     RowBox[{
+      RowBox[{
+       SuperscriptBox["\[PartialD]", "n"], "x"}], 
+      RowBox[{
+       SuperscriptBox["\[PartialD]", "m"], "y"}]}]], "=", 
+    RowBox[{
+     SubscriptBox["\[PartialD]", 
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{"x", ",", "n"}], "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{"y", ",", "m"}], "}"}]}]], 
+     RowBox[{"f", "[", 
+      RowBox[{"x", ",", "y"}], "]"}]}]}]}]], "InlineInput",
+  Evaluatable->False]
+}], "Text",
+ CellChangeTimes->{3.4639879161432*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"D", "[", 
+   RowBox[{
+    RowBox[{"f", "[", "x", "]"}], ",", "x"}], "]"}], "==", 
+  RowBox[{
+   RowBox[{"f", "'"}], "[", "x", "]"}], "==", 
+  RowBox[{
+   SuperscriptBox["f", "\[Prime]"], "[", "x", "]"}], "==", 
+  RowBox[{
+   SubscriptBox["\[PartialD]", "x"], 
+   RowBox[{"f", "[", "x", "]"}]}]}]], "Input",
+ CellChangeTimes->{{3.4639876790472*^9, 3.4639876849832*^9}, 
+   3.4639877207244*^9}],
+
+Cell[BoxData[
+ RowBox[{"D", "[", 
+  RowBox[{
+   RowBox[{"f", "[", "x", "]"}], ",", "x"}], "]"}]], "Input",
+ CellChangeTimes->{{3.4639879233431997`*^9, 3.4639879253032*^9}}],
+
+Cell[BoxData[
+ RowBox[{"D", "[", 
+  RowBox[{
+   RowBox[{"f", "[", 
+    RowBox[{"x", ",", "y"}], "]"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"x", ",", "n"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"y", ",", "m"}], "}"}]}], "]"}]], "Input"],
+
+Cell[BoxData[
+ RowBox[{
+  SubscriptBox["\[PartialD]", 
+   RowBox[{
+    RowBox[{"{", 
+     RowBox[{"x", ",", "n"}], "}"}], ",", 
+    RowBox[{"{", 
+     RowBox[{"y", ",", "m"}], "}"}]}]], 
+  RowBox[{"f", "[", 
+   RowBox[{"x", ",", "y"}], "]"}]}]], "Input"],
+
+Cell[BoxData[
+ RowBox[{
+  SubscriptBox["\[PartialD]", 
+   RowBox[{"x", ",", "x"}]], 
+  RowBox[{"f", "[", "x", "]"}]}]], "Input"],
+
+Cell[BoxData[
+ RowBox[{
+  SubscriptBox["\[PartialD]", 
+   RowBox[{"{", 
+    RowBox[{"x", ",", "4"}], "}"}]], 
+  RowBox[{"f", "[", "x", "]"}]}]], "Input"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{
+   RowBox[{
+    RowBox[{
+     RowBox[{"f", "'"}], "'"}], "'"}], "'"}], "[", "x", "]"}]], "Input"],
+
+Cell["Notation can also be mixed", "Text",
+ CellChangeTimes->{{3.4639879336452*^9, 3.4639879380442*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"D", "[", 
+   RowBox[{
+    RowBox[{"f", "[", "x", "]"}], ",", "x"}], "]"}], "'"}]], "Input",
+ CellChangeTimes->{3.4639879404142*^9}],
+
+Cell[TextData[{
+ "D",
+ StyleBox[" employs all the basic rules for differentiating products and \
+quotients and uses the chain rule.",
+  FontWeight->"Plain"]
+}], "Text",
+ CellChangeTimes->{3.4639880009862003`*^9}],
+
+Cell[BoxData[
+ RowBox[{"Clear", "[", 
+  RowBox[{"f", ",", "g"}], "]"}]], "Input"],
+
+Cell[BoxData[
+ RowBox[{"D", "[", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"f", "[", "x", "]"}], " ", 
+    RowBox[{"g", "[", "x", "]"}]}], ",", "x"}], "]"}]], "Input"],
+
+Cell[BoxData[
+ RowBox[{"D", "[", 
+  RowBox[{
+   RowBox[{"f", "[", 
+    RowBox[{"x", " ", "y"}], "]"}], ",", "x"}], "]"}]], "Input"],
+
+Cell[BoxData[
+ RowBox[{"D", "[", 
+  RowBox[{
+   RowBox[{"f", "[", 
+    RowBox[{"g", "[", "x", "]"}], "]"}], ",", "x"}], "]"}]], "Input"],
+
+Cell[BoxData[
+ RowBox[{"D", "[", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"InverseFunction", "[", "f", "]"}], "[", "x", "]"}], ",", "x"}], 
+  "]"}]], "Input",
+ CellChangeTimes->{{3.4698185597542205`*^9, 3.4698185911942644`*^9}}],
+
+Cell[BoxData[
+ RowBox[{"D", "[", 
+  RowBox[{
+   RowBox[{
+    SubsuperscriptBox["\[Integral]", "a", "x"], 
+    RowBox[{
+     RowBox[{"f", "[", "t", "]"}], 
+     RowBox[{"\[DifferentialD]", "t"}]}]}], ",", "x"}], "]"}]], "Input"],
+
+Cell[BoxData[
+ RowBox[{"D", "[", 
+  RowBox[{
+   RowBox[{
+    SubsuperscriptBox["\[Integral]", "a", 
+     RowBox[{"Cos", "[", "x", "]"}]], 
+    RowBox[{
+     RowBox[{"f", "[", "t", "]"}], 
+     RowBox[{"\[DifferentialD]", "t"}]}]}], ",", "x"}], "]"}]], "Input"],
+
+Cell[TextData[{
+ "Here are some more examples of derivatives that ",
+ StyleBox["Mathematica",
+  FontSlant->"Italic"],
+ " can do"
+}], "Text",
+ CellChangeTimes->{{3.469787467288948*^9, 3.4697875126290116`*^9}}],
+
+Cell[BoxData[
+ RowBox[{"D", "[", 
+  RowBox[{
+   FractionBox[
+    RowBox[{
+     SuperscriptBox["x", "2"], "+", "1"}], 
+    RowBox[{
+     SuperscriptBox["\[ExponentialE]", 
+      RowBox[{"Sin", "[", "x", "]"}]], " ", 
+     RowBox[{"(", 
+      RowBox[{
+       RowBox[{"3", " ", "x"}], "+", "5"}], ")"}]}]], ",", " ", "x"}], 
+  "]"}]], "Input"],
+
+Cell[TextData[{
+ StyleBox["Mathematica",
+  FontSlant->"Italic"],
+ " can also do derivations of  implicit functions "
+}], "Text",
+ CellChangeTimes->{{3.4697875314090376`*^9, 3.469787556839073*^9}}],
+
+Cell[BoxData[
+ FormBox[
+  RowBox[{
+   RowBox[{"ImplicitEquation", "=", 
+    RowBox[{
+     FractionBox[
+      RowBox[{
+       RowBox[{
+        RowBox[{"(", 
+         RowBox[{
+          FractionBox[
+           RowBox[{"y", "(", "x", ")"}], 
+           SuperscriptBox["2", 
+            RowBox[{"2", "/", "3"}]]], "-", 
+          FractionBox["x", 
+           SuperscriptBox["2", 
+            RowBox[{"2", "/", "3"}]]]}], ")"}], " ", 
+        RowBox[{"Ai", "(", 
+         RowBox[{
+          SuperscriptBox[
+           RowBox[{"(", 
+            RowBox[{
+             FractionBox[
+              RowBox[{"y", "(", "x", ")"}], 
+              SuperscriptBox["2", 
+               RowBox[{"2", "/", "3"}]]], "-", 
+             FractionBox["x", 
+              SuperscriptBox["2", 
+               RowBox[{"2", "/", "3"}]]]}], ")"}], "2"], "+", 
+          FractionBox["1", 
+           RowBox[{
+            RadicalBox["2", "3"], " ", "x"}]]}], ")"}]}], "+", 
+       RowBox[{
+        SuperscriptBox["Ai", "\[Prime]"], "(", 
+        RowBox[{
+         SuperscriptBox[
+          RowBox[{"(", 
+           RowBox[{
+            FractionBox[
+             RowBox[{"y", "(", "x", ")"}], 
+             SuperscriptBox["2", 
+              RowBox[{"2", "/", "3"}]]], "-", 
+            FractionBox["x", 
+             SuperscriptBox["2", 
+              RowBox[{"2", "/", "3"}]]]}], ")"}], "2"], "+", 
+         FractionBox["1", 
+          RowBox[{
+           RadicalBox["2", "3"], " ", "x"}]]}], ")"}]}], 
+      RowBox[{
+       RowBox[{
+        RowBox[{"(", 
+         RowBox[{
+          FractionBox[
+           RowBox[{"y", "(", "x", ")"}], 
+           SuperscriptBox["2", 
+            RowBox[{"2", "/", "3"}]]], "-", 
+          FractionBox["x", 
+           SuperscriptBox["2", 
+            RowBox[{"2", "/", "3"}]]]}], ")"}], " ", 
+        RowBox[{"Bi", "(", 
+         RowBox[{
+          SuperscriptBox[
+           RowBox[{"(", 
+            RowBox[{
+             FractionBox[
+              RowBox[{"y", "(", "x", ")"}], 
+              SuperscriptBox["2", 
+               RowBox[{"2", "/", "3"}]]], "-", 
+             FractionBox["x", 
+              SuperscriptBox["2", 
+               RowBox[{"2", "/", "3"}]]]}], ")"}], "2"], "+", 
+          FractionBox["1", 
+           RowBox[{
+            RadicalBox["2", "3"], " ", "x"}]]}], ")"}]}], "+", 
+       RowBox[{
+        SuperscriptBox["Bi", "\[Prime]"], "(", 
+        RowBox[{
+         SuperscriptBox[
+          RowBox[{"(", 
+           RowBox[{
+            FractionBox[
+             RowBox[{"y", "(", "x", ")"}], 
+             SuperscriptBox["2", 
+              RowBox[{"2", "/", "3"}]]], "-", 
+            FractionBox["x", 
+             SuperscriptBox["2", 
+              RowBox[{"2", "/", "3"}]]]}], ")"}], "2"], "+", 
+         FractionBox["1", 
+          RowBox[{
+           RadicalBox["2", "3"], " ", "x"}]]}], ")"}]}]], "\[LongEqual]", 
+     "1"}]}], ";"}], TraditionalForm]], "Input"],
+
+Cell[BoxData[
+ RowBox[{"D", "[", 
+  RowBox[{"ImplicitEquation", ",", " ", "x"}], "]"}]], "Input"],
+
+Cell["Surprisingly, this result can be simplified considerably:", "Text",
+ CellChangeTimes->{{3.469787579589105*^9, 3.4697875935491247`*^9}}],
+
+Cell[BoxData[
+ RowBox[{"Simplify", "[", 
+  RowBox[{"Solve", "[", 
+   RowBox[{"%", ",", 
+    RowBox[{
+     SuperscriptBox["y", "\[Prime]",
+      MultilineFunction->None], "[", "x", "]"}]}], "]"}], "]"}]], "Input",
+ CellChangeTimes->{3.4697876043191395`*^9}],
+
+Cell[CellGroupData[{
+
+Cell["Excercises", "Subsubsection",
+ CellChangeTimes->{{3.463988159816*^9, 3.463988162256*^9}}],
+
+Cell[TextData[{
+ "Calculate the first derivate of the function f(x)=2 ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    SuperscriptBox["x", "4"], "-", 
+    SuperscriptBox["x", "3"], "+", 
+    RowBox[{"3", " ", "x"}], "+", 
+    RowBox[{"5", "x"}]}], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ "-1 with respect to x\[LineSeparator]Calculate also the second, third and \
+fourth derivative with respect to x."
+}], "Text",
+ CellChangeTimes->{
+  3.4639881691870003`*^9, {3.4697865738956184`*^9, 3.469786655025732*^9}},
+ FontWeight->"Bold",
+ FontColor->RGBColor[0, 0, 1]],
+
+Cell[TextData[{
+ "Calculate the first derivate of the function ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    RowBox[{"f", " ", 
+     RowBox[{"(", "x", ")"}]}], " ", "=", " ", 
+    RowBox[{
+     RowBox[{"2", " ", 
+      RowBox[{"x", "^", "2"}], " ", 
+      RowBox[{"y", "^", "2"}]}], "-", 
+     RowBox[{"3", 
+      SuperscriptBox["x", "2"], "y"}], "-", 
+     RowBox[{"2", "x", " ", "y"}], "+", 
+     RowBox[{"3", 
+      SuperscriptBox["y", "2"]}]}]}], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ " with respect to x.\[LineSeparator]Calculate ",
+ Cell[BoxData[
+  RowBox[{
+   RowBox[{
+    RowBox[{
+     SubscriptBox["\[PartialD]", 
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{"x", ",", "1"}], "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{"y", ",", "2"}], "}"}]}]], "f"}], 
+    RowBox[{"(", "x", ")"}]}], ",", " ", 
+   RowBox[{
+    RowBox[{
+     SubscriptBox["\[PartialD]", 
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{"x", ",", "1"}], "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{"y", ",", "1"}], "}"}]}]], "f"}], 
+    RowBox[{"(", "x", ")"}]}], ",", 
+   RowBox[{"and", " ", 
+    RowBox[{
+     SubscriptBox["\[PartialD]", 
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{"x", ",", "2"}], "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{"y", ",", "1"}], "}"}]}]], "f"}], 
+    RowBox[{"(", "x", ")"}]}]}]]]
+}], "Text",
+ CellChangeTimes->{
+  3.4639881691870003`*^9, {3.4697865738956184`*^9, 3.469786789643931*^9}},
+ FontWeight->"Bold",
+ FontColor->RGBColor[0, 0, 1]],
+
+Cell[TextData[{
+ "Locate the extrema of ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    SuperscriptBox["x", "3"], "-", 
+    RowBox[{"2", 
+     SuperscriptBox["x", "2"]}], "-", 
+    RowBox[{"10", "x"}], "+", "5"}], TraditionalForm]]],
+ "."
+}], "Text",
+ CellChangeTimes->{3.4639881691870003`*^9},
+ FontWeight->"Bold",
+ FontColor->RGBColor[0, 0, 1]],
+
+Cell[TextData[{
+ "Find the maximum of ",
+ Cell[BoxData[
+  FormBox[
+   FractionBox[
+    SuperscriptBox["x", "4"], 
+    RowBox[{
+     SuperscriptBox["\[ExponentialE]", "x"], "+", "1"}]], TraditionalForm]]],
+ " for positive ",
+ Cell[BoxData[
+  FormBox["x", TraditionalForm]]],
+ " (both position and value).  [Hint: simplify the equation first to \
+eliminate the trivial but spurious solution.  Then use Solve, NSolve, or \
+FindRoot; all should agree!]"
+}], "Text",
+ CellChangeTimes->{3.463988180178*^9},
+ FontWeight->"Bold",
+ FontColor->RGBColor[0, 0, 1]],
+
+Cell[TextData[{
+ "Given a function r(t) with values in ",
+ Cell[BoxData[
+  FormBox[
+   SuperscriptBox["R", "3"], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ ", the curvature at a given value of t is \[Kappa]=",
+ Cell[BoxData[
+  FormBox[
+   FractionBox[
+    RowBox[{"|", 
+     RowBox[{
+      OverscriptBox["r", "."], "\[Cross]", 
+      OverscriptBox["r", "\[DoubleDot]"]}], "|"}], 
+    RowBox[{"|", 
+     OverscriptBox["r", "."], 
+     SuperscriptBox["|", "3"]}]], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ " ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"(", 
+    RowBox[{
+     OverscriptBox["r", "."], "=", 
+     RowBox[{
+      SubscriptBox["\[PartialD]", "t"], 
+      RowBox[{"r", "(", "t", ")"}]}]}]}], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ "). Create a function that takes a 3-dim parametrized curve r(t)= \
+{x(t),y(t),z(t)} and returns the curvature \[Kappa](t). (Test it using the \
+helix curve { r Cos[t], r Sin[t], c t}).\n"
+}], "Text",
+ CellChangeTimes->{{3.469787836252594*^9, 3.4697879008746862`*^9}, {
+  3.4697879393067408`*^9, 3.4697881036209793`*^9}, {3.469788479521656*^9, 
+  3.4697885240417185`*^9}},
+ FontWeight->"Bold",
+ FontColor->RGBColor[0, 0, 1]]
+}, Closed]]
+}, Closed]],
+
+Cell[CellGroupData[{
+
+Cell["Total derivatives", "Subsection",
+ CellChangeTimes->{3.4639881924230003`*^9}],
+
+Cell[TextData[{
+ "Required Reading\n\n",
+ ButtonBox["Total Derivatives",
+  BaseStyle->"Link",
+  ButtonData->"paclet:tutorial/TotalDerivatives"]
+}], "Text",
+ CellChangeTimes->{{3.463988215701*^9, 3.463988235119*^9}}],
+
+Cell[TextData[{
+ "In ",
+ StyleBox["Mathematica",
+  FontSlant->"Italic"],
+ ", ",
+ Cell[BoxData[
+  RowBox[{
+   ButtonBox["D",
+    BaseStyle->"Link",
+    ButtonData->"paclet:ref/D"], "[", 
+   RowBox[{
+    StyleBox["f", "TI"], ",", 
+    StyleBox["x", "TI"]}], "]"}]], "InlineFormula"],
+ " gives a partial derivative, with all other variables assumed independent \
+of ",
+ Cell[BoxData[
+  StyleBox["x", "TI"]], "InlineFormula"],
+ ". ",
+ Cell[BoxData[
+  RowBox[{
+   ButtonBox["Dt",
+    BaseStyle->"Link",
+    ButtonData->"paclet:ref/Dt"], "[", 
+   RowBox[{
+    StyleBox["f", "TI"], ",", 
+    StyleBox["x", "TI"]}], "]"}]], "InlineFormula"],
+ " gives a total derivative, in which all variables are assumed to depend on ",
+ Cell[BoxData[
+  StyleBox["x", "TI"]], "InlineFormula"],
+ ". In both cases, you can add an argument to give more information on \
+dependencies."
+}], "Text",
+ CellChangeTimes->{3.4639882511029997`*^9}],
+
+Cell[BoxData[
+ RowBox[{"Dt", "[", 
+  RowBox[{
+   RowBox[{"f", "[", 
+    RowBox[{"x", ",", "t"}], "]"}], ",", "t"}], "]"}]], "Input"],
+
+Cell[BoxData[
+ RowBox[{"Dt", "[", 
+  RowBox[{"f", "[", 
+   RowBox[{"x", ",", "y", ",", "z", ",", "t"}], "]"}], "]"}]], "Input"],
+
+Cell[TextData[{
+ "This gives the ",
+ StyleBox["partial derivative",
+  FontSlant->"Italic"],
+ " ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    FractionBox["\[PartialD]", 
+     RowBox[{"\[PartialD]", "x"}]], 
+    RowBox[{"(", 
+     RowBox[{
+      SuperscriptBox["x", "2"], "+", 
+      SuperscriptBox["y", "2"]}], ")"}]}], TraditionalForm]], "InlineMath"],
+ ". ",
+ Cell[BoxData["y"], "InlineFormula"],
+ " is assumed to be independent of ",
+ Cell[BoxData["x"], "InlineFormula"],
+ ". "
+}], "Text",
+ CellChangeTimes->{3.463988260574*^9}],
+
+Cell[BoxData[
+ RowBox[{"D", "[", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"x", "^", "2"}], "+", 
+    RowBox[{"y", "^", "2"}]}], ",", "x"}], "]"}]], "Input"],
+
+Cell[TextData[{
+ "This gives the ",
+ StyleBox["total derivative",
+  FontSlant->"Italic"],
+ " ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    FractionBox["d", 
+     RowBox[{"d", "x"}]], 
+    RowBox[{"(", 
+     RowBox[{
+      SuperscriptBox["x", "2"], "+", 
+      SuperscriptBox["y", "2"]}], ")"}]}], TraditionalForm]], "InlineMath"],
+ ". Now ",
+ Cell[BoxData["y"], "InlineFormula"],
+ " is assumed to depend on ",
+ Cell[BoxData["x"], "InlineFormula"],
+ ". "
+}], "Text",
+ CellChangeTimes->{3.463988268638*^9}],
+
+Cell[BoxData[
+ RowBox[{"Dt", "[", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"x", "^", "2"}], "+", 
+    RowBox[{"y", "^", "2"}]}], ",", "x"}], "]"}]], "Input"],
+
+Cell[TextData[{
+ "This takes the total derivative, with ",
+ Cell[BoxData["z"], "InlineFormula"],
+ " held fixed. "
+}], "Text",
+ CellChangeTimes->{3.463988281715*^9}],
+
+Cell[BoxData[
+ RowBox[{"Dt", "[", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"x", "^", "2"}], "+", 
+    RowBox[{"y", "^", "2"}], "+", 
+    RowBox[{"z", "^", "2"}]}], ",", "x", ",", 
+   RowBox[{"Constants", "->", 
+    RowBox[{"{", "z", "}"}]}]}], "]"}]], "Input"],
+
+Cell["\<\
+However, if expressions involve symbols which should always be constant, such \
+as constants of nature, it is best to declare them constants by setting the \
+appropriate attribute.\
+\>", "Text",
+ CellChangeTimes->{3.4639883687886*^9}],
+
+Cell[BoxData[
+ RowBox[{"SetAttributes", "[", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{"\[HBar]", ",", "m"}], "}"}], ",", "Constant"}], "]"}]], "Input"],
+
+Cell[BoxData[
+ RowBox[{"Dt", "[", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"-", 
+     FractionBox[
+      SuperscriptBox["\[HBar]", "2"], 
+      RowBox[{"2", "m"}]]}], 
+    RowBox[{
+     SubscriptBox["\[PartialD]", 
+      RowBox[{"{", 
+       RowBox[{"x", ",", "2"}], "}"}]], 
+     RowBox[{"\[Psi]", "[", 
+      RowBox[{"x", ",", "t"}], "]"}]}]}], ",", "t"}], "]"}]], "Input"],
+
+Cell[CellGroupData[{
+
+Cell["Example: particle in uniform gravity", "Subsubsection"],
+
+Cell["The energy of a particle in uniform gravity has the form ", "Text"],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"ClearAll", "[", 
+   RowBox[{"m", ",", "g", ",", "x", ",", "y", ",", "z", ",", "t"}], "]"}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{"energy", " ", "=", " ", 
+  RowBox[{
+   RowBox[{"m", " ", "g", " ", 
+    RowBox[{"z", "[", "t", "]"}]}], " ", "+", " ", 
+   RowBox[{
+    FractionBox["1", "2"], "m", " ", 
+    RowBox[{"(", 
+     RowBox[{
+      SuperscriptBox[
+       RowBox[{
+        SuperscriptBox["x", "\[Prime]"], "[", "t", "]"}], "2"], "+", 
+      SuperscriptBox[
+       RowBox[{
+        SuperscriptBox["y", "\[Prime]"], "[", "t", "]"}], "2"], "+", 
+      SuperscriptBox[
+       RowBox[{
+        SuperscriptBox["z", "\[Prime]"], "[", "t", "]"}], "2"]}], 
+     ")"}]}]}]}]}], "Input"],
+
+Cell["\<\
+The time dependence of the energy is given by the total derivative\
+\>", "Text"],
+
+Cell[BoxData[
+ RowBox[{"Dt", "[", 
+  RowBox[{"energy", ",", "t"}], "]"}]], "Input"],
+
+Cell[TextData[{
+ "However, this result includes derivatives of mass with respect to time \
+which should not appear for a simple particle that neither sheds nor accretes \
+mass.  We specify that ",
+ StyleBox["m",
+  FontSlant->"Italic"],
+ " and ",
+ StyleBox["g",
+  FontSlant->"Italic"],
+ " are constants using the option ",
+ StyleBox["Constants", "InlineInput",
+  FontWeight->"Bold"],
+ ", such that"
+}], "Text"],
+
+Cell[BoxData[
+ RowBox[{"Dt", "[", 
+  RowBox[{"energy", ",", "t", ",", 
+   RowBox[{"Constants", "\[Rule]", 
+    RowBox[{"{", 
+     RowBox[{"m", ",", "g"}], "}"}]}]}], "]"}]], "Input"],
+
+Cell["\<\
+Furthermore, Newton's second law can be used to simplify this result\
+\>", "Text"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"Dt", "[", 
+   RowBox[{"energy", ",", "t", ",", 
+    RowBox[{"Constants", "\[Rule]", 
+     RowBox[{"{", 
+      RowBox[{"m", ",", "g"}], "}"}]}]}], "]"}], "/.", 
+  RowBox[{"{", 
+   RowBox[{
+    RowBox[{
+     RowBox[{
+      SuperscriptBox["x", "\[DoublePrime]"], "[", "t", "]"}], "\[Rule]", 
+     "0"}], ",", 
+    RowBox[{
+     RowBox[{
+      SuperscriptBox["y", "\[DoublePrime]"], "[", "t", "]"}], "\[Rule]", 
+     "0"}], ",", 
+    RowBox[{
+     RowBox[{
+      SuperscriptBox["z", "\[DoublePrime]"], "[", "t", "]"}], "\[Rule]", 
+     RowBox[{"-", "g"}]}]}], "}"}]}]], "Input"],
+
+Cell["\<\
+The dependence of the energy on height is then seen to vanish; in other \
+words, energy is conserved.\
+\>", "Text"]
+}, Closed]]
+}, Closed]],
+
+Cell[CellGroupData[{
+
+Cell["Locating minima/maxima", "Subsection",
+ CellChangeTimes->{
+  3.4639884990936003`*^9, {3.4639889970642*^9, 3.4639889980002003`*^9}}],
+
+Cell[TextData[{
+ "Required Reading\n\n",
+ ButtonBox["Unconstrained Optimization\n",
+  BaseStyle->"Link",
+  ButtonData->"paclet:tutorial/UnconstrainedOptimizationOverview"],
+ Cell[BoxData[
+  FormBox[
+   ButtonBox[
+    RowBox[{"Numerical", " ", "Optimization"}],
+    BaseStyle->"Link",
+    ButtonData->"paclet:tutorial/NumericalOptimization"], TraditionalForm]]],
+ "\n",
+ ButtonBox["Minimization and Maximization",
+  BaseStyle->"Link",
+  ButtonData->"paclet:tutorial/MinimizationAndMaximization"]
+}], "Text",
+ CellChangeTimes->{{3.4639887970438004`*^9, 3.4639888113668003`*^9}, {
+  3.4639888414723997`*^9, 3.4639888522892*^9}, {3.4697947747623386`*^9, 
+  3.469794785968358*^9}}],
+
+Cell[TextData[{
+ "The extrema of a function (maxima, minima, and inflection points) can be \
+determined by solving equations, either symbolically or numerically, that set \
+first derivatives to zero and then ascertaining the characteristics of the \
+second derivatives.  Symbolic methods will usually reveal all extrema, while \
+numerical methods search for extrema near a specified starting point.  ",
+ StyleBox["Mathematica",
+  FontSlant->"Italic"],
+ " provides a built-in function ",
+ Cell[BoxData[
+  FormBox[
+   ButtonBox["FindMinimum",
+    BaseStyle->"Link",
+    ButtonData->"paclet:ref/FindMinimum"], TraditionalForm]]],
+ " which searches for a local minimum near the starting point automatically, \
+without the user having to establish the equations for the first derivative \
+or to test the second.  The result is usually the nearest minimum, which may \
+not be the absolute minimum of the function \[LongDash] it is simply a nearby \
+local minimum.  If you need an absolute minimum, it is usually necessary to \
+examine the function graphically in order to supply a reasonably good \
+starting value or set of starting values.  You also need to check that the \
+result truly is the desired minimum \[LongDash] sometimes ",
+ StyleBox["FindMinimum", "InlineInput",
+  FontWeight->"Bold"],
+ " wanders away from your starting values and sometimes it returns incorrect \
+results."
+}], "Text",
+ CellChangeTimes->{{3.4639885107516003`*^9, 3.4639885230875998`*^9}}],
+
+Cell[TextData[{
+ "The basic syntax is ",
+ StyleBox["FindMinimum[", "InlineInput",
+  FontWeight->"Bold"],
+ StyleBox["f,", "InlineInput",
+  FontSlant->"Italic"],
+ StyleBox[Cell[BoxData[
+  FormBox[
+   RowBox[{"{", 
+    RowBox[{"x", ",", 
+     SubscriptBox["x", "0"]}], "}"}], TraditionalForm]], "InlineInput"], 
+  "InlineInput"],
+ StyleBox["]", "InlineInput",
+  FontWeight->"Bold"],
+ " where ",
+ StyleBox["f ",
+  FontSlant->"Italic"],
+ " is a function of ",
+ StyleBox["x",
+  FontSlant->"Italic"],
+ " and ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["x", "0"], TraditionalForm]]],
+ " is the starting value.  The function must evaluate to a real number given \
+a numerical value for ",
+ StyleBox["x",
+  FontSlant->"Italic"],
+ ".  You can limit the range of ",
+ StyleBox["x",
+  FontSlant->"Italic"],
+ " by including ",
+ StyleBox["xmin",
+  FontSlant->"Italic"],
+ ",",
+ StyleBox[" xmax",
+  FontSlant->"Italic"],
+ " after ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["x", "0"], TraditionalForm]]],
+ "."
+}], "Text"],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"Clear", "[", "f", "]"}], ";"}], "\n", 
+ RowBox[{
+  RowBox[{"f", "=", 
+   RowBox[{
+    RowBox[{"(", 
+     RowBox[{"1", "+", "x", "-", 
+      SuperscriptBox["x", "2"]}], ")"}], " ", 
+    RowBox[{"Exp", "[", 
+     RowBox[{
+      RowBox[{"-", 
+       SuperscriptBox["x", "2"]}], "/", "4"}], "]"}]}]}], ";"}]}], "Input"],
+
+Cell[BoxData[
+ RowBox[{"Plot", "[", 
+  RowBox[{"f", ",", 
+   RowBox[{"{", 
+    RowBox[{"x", ",", 
+     RowBox[{"-", "5"}], ",", "5"}], "}"}]}], "]"}]], "Input",
+ CellChangeTimes->{3.4639885404596*^9}],
+
+Cell[TextData[{
+ "The positive minimum is found using an appropriate choice of ",
+ Cell[BoxData[
+  FormBox["x", TraditionalForm]]],
+ ".  The result is returned as a list whose first element is the value of the \
+function as the minimum and the second is a list of replacement rules \
+specifying the location of the minimum."
+}], "Text"],
+
+Cell[BoxData[
+ RowBox[{"FindMinimum", "[", 
+  RowBox[{"f", ",", 
+   RowBox[{"{", 
+    RowBox[{"x", ",", "3"}], "}"}]}], "]"}]], "Input"],
+
+Cell[TextData[{
+ "Like ",
+ Cell[BoxData[
+  ButtonBox["FindRoot",
+   BaseStyle->"Link",
+   ButtonData->"paclet:ref/FindRoot"]], "InlineFormula"],
+ ", ",
+ Cell[BoxData[
+  ButtonBox["FindMinimum",
+   BaseStyle->"Link",
+   ButtonData->"paclet:ref/FindMinimum"]], "InlineFormula"],
+ " and ",
+ Cell[BoxData[
+  ButtonBox["FindMaximum",
+   BaseStyle->"Link",
+   ButtonData->"paclet:ref/FindMaximum"]], "InlineFormula"],
+ " work by starting from a point, then progressively searching for a minimum \
+or maximum. But since they return a result as soon as they find anything, \
+they may give only a local minimum or maximum of your function, not a global \
+one. "
+}], "Text",
+ CellChangeTimes->{3.4639888896492*^9}],
+
+Cell["This curve has two local minima. ", "Text",
+ CellChangeTimes->{3.4639889006062*^9}],
+
+Cell[BoxData[
+ RowBox[{"Plot", "[", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"x", "^", "4"}], "-", 
+    RowBox[{"3", 
+     RowBox[{"x", "^", "2"}]}], "+", "x"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"x", ",", 
+     RowBox[{"-", "3"}], ",", "2"}], "}"}]}], "]"}]], "Input"],
+
+Cell[TextData[{
+ "Starting at ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"x", "=", "1"}], TraditionalForm]], "InlineMath"],
+ ", you get the local minimum on the right. "
+}], "Text",
+ CellChangeTimes->{3.4639889084632*^9}],
+
+Cell[BoxData[
+ RowBox[{"FindMinimum", "[", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"x", "^", "4"}], "-", 
+    RowBox[{"3", " ", 
+     RowBox[{"x", "^", "2"}]}], "+", "x"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"x", ",", "1"}], "}"}]}], "]"}]], "Input"],
+
+Cell["\<\
+This gives the local minimum on the left, which in this case is also the \
+global minimum. \
+\>", "Text",
+ CellChangeTimes->{3.4639889178372*^9}],
+
+Cell[BoxData[
+ RowBox[{"FindMinimum", "[", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"x", "^", "4"}], "-", 
+    RowBox[{"3", " ", 
+     RowBox[{"x", "^", "2"}]}], "+", "x"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"x", ",", 
+     RowBox[{"-", "1"}]}], "}"}]}], "]"}]], "Input"],
+
+Cell[TextData[{
+ "If you want to search for global Minima/Maxima ",
+ StyleBox["Mathematica",
+  FontSlant->"Italic"],
+ " offers different functions."
+}], "Text",
+ CellChangeTimes->{{3.4639889422592*^9, 3.4639889640662003`*^9}}],
+
+Cell["This immediately finds the global minimum. ", "Text",
+ CellChangeTimes->{3.4639889725142*^9}],
+
+Cell[BoxData[
+ RowBox[{"NMinimize", "[", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"x", "^", "4"}], "-", 
+    RowBox[{"3", 
+     RowBox[{"x", "^", "2"}]}], "+", "x"}], ",", "x"}], "]"}]], "Input"],
+
+Cell[TextData[{
+ Cell[BoxData[
+  ButtonBox["NMinimize",
+   BaseStyle->"Link",
+   ButtonData->"paclet:ref/NMinimize"]], "InlineFormula"],
+ " and ",
+ Cell[BoxData[
+  ButtonBox["NMaximize",
+   BaseStyle->"Link",
+   ButtonData->"paclet:ref/NMaximize"]], "InlineFormula"],
+ " are numerical analogs of ",
+ Cell[BoxData[
+  ButtonBox["Minimize",
+   BaseStyle->"Link",
+   ButtonData->"paclet:ref/Minimize"]], "InlineFormula"],
+ " and ",
+ Cell[BoxData[
+  ButtonBox["Maximize",
+   BaseStyle->"Link",
+   ButtonData->"paclet:ref/Maximize"]], "InlineFormula"],
+ ". But unlike ",
+ Cell[BoxData[
+  ButtonBox["Minimize",
+   BaseStyle->"Link",
+   ButtonData->"paclet:ref/Minimize"]], "InlineFormula"],
+ " and ",
+ Cell[BoxData[
+  ButtonBox["Maximize",
+   BaseStyle->"Link",
+   ButtonData->"paclet:ref/Maximize"]], "InlineFormula"],
+ " they usually cannot guarantee to find absolute global minima and maxima. \
+Nevertheless, they typically work well when the function ",
+ Cell[BoxData[
+  StyleBox["f", "TI"]], "InlineFormula"],
+ " is fairly smooth, and has a limited number of local minima and maxima. "
+}], "Text",
+ CellChangeTimes->{3.4639889661892*^9}],
+
+Cell[BoxData[
+ RowBox[{"Plot", "[", 
+  RowBox[{
+   RowBox[{"x", "+", 
+    RowBox[{"2", " ", 
+     RowBox[{"Sin", "[", "x", "]"}]}]}], ",", 
+   RowBox[{"{", 
+    RowBox[{"x", ",", 
+     RowBox[{"-", "10"}], ",", "10"}], "}"}]}], "]"}]], "Input"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"Maximize", "[", 
+   RowBox[{
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"x", "+", 
+       RowBox[{"2", " ", 
+        RowBox[{"Sin", "[", "x", "]"}]}]}], ",", 
+      RowBox[{
+       RowBox[{"-", "10"}], "<=", "x", "<=", "10"}]}], "}"}], ",", "x"}], 
+   "]"}], "//", "N"}]], "Input",
+ CellChangeTimes->{{3.4697949884626503`*^9, 3.4697949888026505`*^9}}],
+
+Cell[TextData[{
+ Cell[BoxData[
+  ButtonBox["Minimize",
+   BaseStyle->"Link",
+   ButtonData->"paclet:ref/Minimize"]], "InlineFormula"],
+ " and ",
+ Cell[BoxData[
+  ButtonBox["Maximize",
+   BaseStyle->"Link",
+   ButtonData->"paclet:ref/Maximize"]], "InlineFormula"],
+ " yield lists giving the value attained at the minimum or maximum, together \
+with rules specifying where the minimum or maximum occurs. "
+}], "Text",
+ CellChangeTimes->{3.469794816758401*^9}],
+
+Cell[BoxData[
+ RowBox[{"Minimize", "[", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"x", "^", "2"}], "-", 
+    RowBox[{"3", "x"}], "+", "6"}], ",", "x"}], "]"}]], "Input"],
+
+Cell[BoxData[
+ RowBox[{"Plot", "[", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"x", "^", "2"}], "-", 
+    RowBox[{"3", "x"}], "+", "6"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"x", ",", "1", ",", "3"}], "}"}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.4697948298784194`*^9, 3.4697948500604486`*^9}}],
+
+Cell[TextData[{
+ "This maximizes with respect to ",
+ Cell[BoxData["x"], "InlineFormula"],
+ " and\[NonBreakingSpace]",
+ Cell[BoxData["y"], "InlineFormula"],
+ ". "
+}], "Text",
+ CellChangeTimes->{3.4697948749004836`*^9}],
+
+Cell[BoxData[
+ RowBox[{"Maximize", "[", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"5", " ", "x", " ", "y"}], "-", 
+    RowBox[{"x", "^", "4"}], "-", 
+    RowBox[{"y", "^", "4"}]}], ",", 
+   RowBox[{"{", 
+    RowBox[{"x", ",", "y"}], "}"}]}], "]"}]], "Input"],
+
+Cell[TextData[{
+ Cell[BoxData[
+  RowBox[{
+   ButtonBox["Minimize",
+    BaseStyle->"Link",
+    ButtonData->"paclet:ref/Minimize"], "[", 
+   RowBox[{
+    StyleBox["expr", "TI"], ",", 
+    StyleBox["x", "TI"]}], "]"}]], "InlineFormula"],
+ " minimizes ",
+ Cell[BoxData[
+  StyleBox["expr", "TI"]], "InlineFormula"],
+ " allowing ",
+ Cell[BoxData[
+  StyleBox["x", "TI"]], "InlineFormula"],
+ " to range over all possible values from ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"-", "\[Infinity]"}], TraditionalForm]], "InlineMath"],
+ " to ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"+", "\[Infinity]"}], TraditionalForm]], "InlineMath"],
+ ". ",
+ Cell[BoxData[
+  RowBox[{
+   ButtonBox["Minimize",
+    BaseStyle->"Link",
+    ButtonData->"paclet:ref/Minimize"], "[", 
+   RowBox[{
+    RowBox[{"{", 
+     RowBox[{
+      StyleBox["expr", "TI"], ",", 
+      StyleBox["cons", "TI"]}], "}"}], ",", 
+    StyleBox["x", "TI"]}], "]"}]], "InlineFormula"],
+ " minimizes ",
+ Cell[BoxData[
+  StyleBox["expr", "TI"]], "InlineFormula"],
+ " subject to the constraints ",
+ Cell[BoxData[
+  StyleBox["cons", "TI"]], "InlineFormula"],
+ " being satisfied. The constraints can consist of any combination of \
+equations and inequalities. "
+}], "Text",
+ CellChangeTimes->{3.469794898050516*^9}],
+
+Cell["This finds the maximum within the unit circle. ", "Text",
+ CellChangeTimes->{3.469794913550538*^9}],
+
+Cell[BoxData[
+ RowBox[{"Maximize", "[", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{
+      RowBox[{"5", " ", "x", " ", "y"}], "-", 
+      RowBox[{"x", "^", "4"}], "-", 
+      RowBox[{"y", "^", "4"}]}], ",", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"x", "^", "2"}], "+", 
+       RowBox[{"y", "^", "2"}]}], "<=", "1"}]}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"x", ",", "y"}], "}"}]}], "]"}]], "Input"],
+
+Cell["This finds the maximum along a line. ", "Text",
+ CellChangeTimes->{3.46979492946056*^9}],
+
+Cell[BoxData[
+ RowBox[{"Maximize", "[", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{
+      RowBox[{"5", " ", "x", " ", "y"}], "-", 
+      RowBox[{"x", "^", "4"}], "-", 
+      RowBox[{"y", "^", "4"}]}], ",", 
+     RowBox[{
+      RowBox[{"x", "+", "y"}], "==", "1"}]}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"x", ",", "y"}], "}"}]}], "]"}]], "Input"],
+
+Cell[TextData[{
+ "This does maximization only over integer values of ",
+ Cell[BoxData["x"], "InlineFormula"],
+ " and ",
+ Cell[BoxData["y"], "InlineFormula"],
+ ". "
+}], "Text",
+ CellChangeTimes->{3.469795084038788*^9}],
+
+Cell[BoxData[
+ RowBox[{"Maximize", "[", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"x", " ", "y"}], ",", 
+     RowBox[{
+      RowBox[{
+       RowBox[{
+        RowBox[{"x", "^", "2"}], "+", 
+        RowBox[{"y", "^", "2"}]}], "<", "120"}], "&&", 
+      RowBox[{
+       RowBox[{"(", 
+        RowBox[{"x", "|", "y"}], ")"}], " ", "\[Element]", " ", 
+       "Integers"}]}]}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"x", ",", "y"}], "}"}]}], "]"}]], "Input"],
+
+Cell[CellGroupData[{
+
+Cell["Example: Minimal sum of squares", "Subsubsection",
+ CellChangeTimes->{{3.469811603401759*^9, 3.4698116585818367`*^9}}],
+
+Cell["Take 1000 points scattered around a circle.", "Text",
+ CellChangeTimes->{{3.469811671841855*^9, 3.469811674601859*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"SeedRandom", "[", "999", "]"}], ";"}]], "Input"],
+
+Cell[BoxData[
+ RowBox[{"\n", 
+  RowBox[{
+   RowBox[{"With", "[", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"\[Delta]", " ", "=", " ", "0.1"}], "}"}], ",", "\n", 
+     RowBox[{"circleData", " ", "=", " ", 
+      RowBox[{"Table", "[", "\n", "  ", 
+       RowBox[{
+        RowBox[{
+         RowBox[{"Function", "[", 
+          RowBox[{"\[CurlyPhi]", ",", " ", 
+           RowBox[{
+            RowBox[{"{", 
+             RowBox[{
+              RowBox[{"Cos", "[", "\[CurlyPhi]", "]"}], ",", " ", 
+              RowBox[{"Sin", "[", "\[CurlyPhi]", "]"}]}], "}"}], " ", "+", 
+            " ", "\n", "            ", 
+            RowBox[{"{", 
+             RowBox[{
+              RowBox[{"Random", "[", 
+               RowBox[{"Real", ",", " ", 
+                RowBox[{"{", 
+                 RowBox[{
+                  RowBox[{"-", "\[Delta]"}], ",", " ", "\[Delta]"}], "}"}]}], 
+               "]"}], ",", " ", 
+              RowBox[{"Random", "[", 
+               RowBox[{"Real", ",", " ", 
+                RowBox[{"{", 
+                 RowBox[{
+                  RowBox[{"-", "\[Delta]"}], ",", " ", "\[Delta]"}], "}"}]}], 
+               "]"}]}], "}"}]}]}], "]"}], "[", "\n", 
+         "                           ", 
+         RowBox[{"Random", "[", 
+          RowBox[{"Real", ",", " ", 
+           RowBox[{"{", 
+            RowBox[{"0", ",", " ", 
+             RowBox[{"2", "Pi"}]}], "}"}]}], "]"}], "]"}], ",", " ", 
+        RowBox[{"{", "1000", "}"}]}], "]"}]}]}], "]"}], ";"}]}]], "Input"],
+
+Cell[BoxData[
+ RowBox[{"Show", "[", 
+  RowBox[{
+   RowBox[{"Graphics", "[", 
+    RowBox[{"Point", " ", "/@", " ", "circleData"}], "]"}], ",", "\n", 
+   "     ", 
+   RowBox[{"PlotRange", " ", "->", " ", "All"}], ",", " ", 
+   RowBox[{"Frame", " ", "->", " ", "True"}], ",", " ", 
+   RowBox[{"AspectRatio", " ", "->", " ", "Automatic"}]}], "]"}]], "Input"],
+
+Cell[TextData[{
+ "We want to find the circle, such that the sum of the squares of the \
+distances of the points to this circle becomes minimal. The function ",
+ StyleBox["distance", "MR"],
+ " measures the distance between a circle and a point "
+}], "Text",
+ CellChangeTimes->{3.4698117040719004`*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"distance", "[", 
+   RowBox[{
+    RowBox[{"Circle", "[", 
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{"mpx_", ",", " ", "mpy_"}], "}"}], ",", " ", "r_"}], "]"}], 
+    ",", " ", 
+    RowBox[{"point", ":", 
+     RowBox[{"{", 
+      RowBox[{"x_", ",", " ", "y_"}], "}"}]}]}], "]"}], " ", ":=", "\n", 
+  RowBox[{"With", "[", 
+   RowBox[{
+    RowBox[{"{", 
+     RowBox[{"R", " ", "=", " ", 
+      RowBox[{"Sqrt", "[", 
+       RowBox[{
+        RowBox[{
+         RowBox[{"(", 
+          RowBox[{"mpx", " ", "-", " ", "x"}], ")"}], "^", "2"}], " ", "+", 
+        " ", 
+        RowBox[{
+         RowBox[{"(", 
+          RowBox[{"mpy", " ", "-", " ", "y"}], ")"}], "^", "2"}]}], "]"}]}], 
+     "}"}], ",", " ", 
+    RowBox[{"Sqrt", "[", 
+     RowBox[{
+      RowBox[{"(", 
+       RowBox[{"r", " ", "-", " ", "R"}], ")"}], "^", "2"}], "]"}]}], "]"}], 
+  " "}]], "Input"],
+
+Cell["These data yield the following function to be minimized.", "Text",
+ CellChangeTimes->{3.4698117486919627`*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"toMinimize", " ", "=", " ", 
+   RowBox[{"Plus", " ", "@@", " ", 
+    RowBox[{"(", 
+     RowBox[{
+      RowBox[{
+       RowBox[{
+        RowBox[{"distance", "[", 
+         RowBox[{
+          RowBox[{"Circle", "[", 
+           RowBox[{
+            RowBox[{"{", 
+             RowBox[{"mpx", ",", " ", "mpy"}], "}"}], ",", " ", "r"}], "]"}], 
+          ",", " ", "#"}], "]"}], "^", "2"}], "&"}], " ", "/@", " ", 
+      "circleData"}], ")"}]}]}], ";"}]], "Input"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{"#", ",", " ", 
+     RowBox[{"Timing", "[", 
+      RowBox[{"FindMinimum", "[", 
+       RowBox[{"toMinimize", ",", " ", 
+        RowBox[{"{", 
+         RowBox[{"mpx", ",", " ", "1"}], "}"}], ",", " ", 
+        RowBox[{"{", 
+         RowBox[{"mpy", ",", " ", "1"}], "}"}], ",", " ", 
+        RowBox[{"{", 
+         RowBox[{"r", ",", " ", "2"}], "}"}], ",", "\n", 
+        "                   ", 
+        RowBox[{"Method", " ", "->", " ", "#"}]}], "]"}], "]"}]}], "}"}], 
+   "&"}], " ", "/@", " ", "\n", "       ", 
+  RowBox[{"Append", "[", 
+   RowBox[{
+    RowBox[{"{", 
+     RowBox[{
+     "\"\<Gradient\>\"", ",", " ", "\"\<Newton\>\"", ",", " ", 
+      "\"\<QuasiNewton\>\"", ",", " ", "\"\<ConjugateGradient\>\""}], "}"}], 
+    ",", "\n", "              ", "\"\<LevenbergMarquardt\>\""}], 
+   "]"}]}]], "Input"],
+
+Cell["\<\
+Here is the calculated circle together with the original points.\
+\>", "Text",
+ CellChangeTimes->{3.469811891304182*^9}],
+
+Cell[BoxData[
+ RowBox[{"Show", "[", 
+  RowBox[{
+   RowBox[{"Graphics", "[", 
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{
+        RowBox[{"Hue", "[", "0", "]"}], ",", " ", 
+        RowBox[{"Thickness", "[", "0.005", "]"}], ",", " ", "\n", 
+        "                ", 
+        RowBox[{
+         RowBox[{"Circle", "[", 
+          RowBox[{
+           RowBox[{"{", 
+            RowBox[{"mpx", ",", " ", "mpy"}], "}"}], ",", " ", "r"}], "]"}], 
+         " ", "/.", " ", 
+         RowBox[{"%", "[", 
+          RowBox[{"[", 
+           RowBox[{
+            RowBox[{"-", "1"}], ",", " ", 
+            RowBox[{"-", "1"}], ",", " ", 
+            RowBox[{"-", "1"}], ",", " ", 
+            RowBox[{"-", "1"}]}], "]"}], "]"}]}]}], "}"}], ",", "\n", 
+      "               ", 
+      RowBox[{"{", 
+       RowBox[{
+        RowBox[{"GrayLevel", "[", "0", "]"}], ",", " ", 
+        RowBox[{"Point", " ", "/@", " ", "circleData"}]}], "}"}]}], "}"}], 
+    "]"}], ",", "\n", "     ", 
+   RowBox[{"PlotRange", " ", "->", " ", "All"}], ",", " ", 
+   RowBox[{"Frame", " ", "->", " ", "True"}], ",", " ", 
+   RowBox[{"AspectRatio", " ", "->", " ", "Automatic"}]}], "]"}]], "Input"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Excercises", "Subsubsection",
+ CellChangeTimes->{{3.4639890713084*^9, 3.4639890727883997`*^9}}],
+
+Cell["Find the global maximum of -1.5 x^4 - 3 x^2 + x", "Text",
+ CellChangeTimes->{{3.4639890755324*^9, 3.4639890822374*^9}},
+ FontWeight->"Bold",
+ FontColor->RGBColor[0, 0, 1]],
+
+Cell[TextData[{
+ "If ",
+ StyleBox["n ",
+  FontSlant->"Italic"],
+ "equally spaced identical antennas radiate in phase, the angular \
+distribution is described by an interference pattern of the form",
+ "\n",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    RowBox[{"f", "[", 
+     RowBox[{"n", ",", "\[Alpha]"}], "]"}], "=", 
+    FractionBox[
+     SuperscriptBox[
+      RowBox[{"Sin", "[", 
+       RowBox[{"n", " ", "\[Alpha]"}], "]"}], "2"], 
+     SuperscriptBox[
+      RowBox[{"Sin", "[", "\[Alpha]", "]"}], "2"]]}], TraditionalForm]], 
+  "DisplayFormula",
+  Evaluatable->False,
+  TextAlignment->Left,
+  TextJustification->0],
+ "\n",
+ "where",
+ "\n",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"\[Alpha]", " ", "=", " ", 
+    RowBox[{
+     FractionBox["d", "\[Lambda]"], 
+     RowBox[{"Sin", "[", "\[Theta]", "]"}]}]}], TraditionalForm]], 
+  "DisplayFormula",
+  TextAlignment->Left,
+  TextJustification->0],
+ "\n",
+ "and where ",
+ StyleBox["d",
+  FontSlant->"Italic"],
+ " is the spacing between sources and \[Lambda] is the wave length.",
+ "\n",
+ "a) Plot the distribution in \[Alpha] for several values of ",
+ StyleBox["n",
+  FontSlant->"Italic"],
+ " and determine the locations of the principal maxima.  How many minor \
+maxima are found between principal maxima?",
+ "\n",
+ "b) Write a function which produces a numerical list of positions for the \
+minor maxima. with ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"0", "<", "\[Alpha]", "<", "\[Pi]"}], TraditionalForm]]],
+ "."
+}], "Text",
+ CellChangeTimes->{3.4639940722476*^9},
+ FontWeight->"Bold",
+ FontColor->RGBColor[0, 0, 1]],
+
+Cell[TextData[{
+ "The angle, ",
+ Cell[BoxData[
+  FormBox["\[Theta]", TraditionalForm]]],
+ ", between two curves, ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    SubscriptBox["y", "1"], "[", "x", "]"}], TraditionalForm]]],
+ " and ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    SubscriptBox["y", "2"], "[", "x", "]"}], TraditionalForm]]],
+ ", at a point of intersection is defined as the angle between the tangents \
+at that point.\na) Derive a formula for ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"Tan", "[", "\[Theta]", "]"}], TraditionalForm]]],
+ " in terms of the slopes ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    SubscriptBox["m", "i"], "=", 
+    RowBox[{
+     RowBox[{"\[DifferentialD]", 
+      SubscriptBox["y", "i"]}], "/", 
+     RowBox[{"\[DifferentialD]", "x"}]}]}], TraditionalForm]]],
+ ".\nb) Recall the \"cylinder in a trough\" problem from the algebra \
+notebook.  A cylinder of radius ",
+ Cell[BoxData[
+  FormBox["R", TraditionalForm]]],
+ " is dropped into a parabolic trough and becomes wedged when its center is \
+at height ",
+ Cell[BoxData[
+  FormBox["h", TraditionalForm]]],
+ ".  Another way to determine ",
+ Cell[BoxData[
+  FormBox["h", TraditionalForm]]],
+ " is to evaluate the angle between the curves ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    RowBox[{
+     SuperscriptBox["x", "2"], "+", 
+     SuperscriptBox[
+      RowBox[{"(", 
+       RowBox[{"y", "-", "h"}], ")"}], "2"]}], "=", 
+    SuperscriptBox["R", "2"]}], TraditionalForm]]],
+ " and ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"y", "=", 
+    RowBox[{"a", " ", 
+     SuperscriptBox["x", "2"]}]}], TraditionalForm]]],
+ " at their points of intersection.  Clearly, this angle should be zero at \
+the proper value of ",
+ Cell[BoxData[
+  FormBox["h", TraditionalForm]]],
+ "."
+}], "Text",
+ CellChangeTimes->{3.4639940914426003`*^9},
+ FontWeight->"Bold",
+ FontColor->RGBColor[0, 0, 1]]
+}, Closed]]
+}, Closed]],
+
+Cell[CellGroupData[{
+
+Cell["Taylor Series, Limits", "Subsection",
+ CellChangeTimes->{{3.4639941445346003`*^9, 3.4639941462706003`*^9}, {
+  3.4639948028098*^9, 3.4639948038568*^9}}],
+
+Cell[TextData[{
+ "Required Reading\n\n",
+ ButtonBox["Series Expansions",
+  BaseStyle->"Link",
+  ButtonData->"paclet:guide/SeriesExpansions"]
+}], "Text",
+ CellChangeTimes->{{3.4639943059488*^9, 3.4639943202948*^9}}],
+
+Cell[TextData[{
+ Cell[BoxData[
+  RowBox[{
+   ButtonBox["Series",
+    BaseStyle->"Link",
+    ButtonData->"paclet:ref/Series"], "[", 
+   RowBox[{
+    StyleBox["f", "TI"], ",", 
+    RowBox[{"{", 
+     RowBox[{
+      StyleBox["x", "TI"], ",", "0", ",", 
+      StyleBox["n", "TI"]}], "}"}]}], "]"}]], "InlineFormula"],
+ " constructs Taylor series for any function ",
+ Cell[BoxData[
+  StyleBox["f", "TI"]], "InlineFormula"],
+ " according to the formula ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"f", 
+    RowBox[{"(", "0", ")"}], "+", 
+    SuperscriptBox["f", "\[Prime]"], 
+    RowBox[{"(", "0", ")"}], "x", "+", 
+    SuperscriptBox["f", "\[Prime]\[Prime]"], 
+    RowBox[{"(", "0", ")"}], 
+    SuperscriptBox["x", "2"], "/", "2", "+", "\[Ellipsis]", 
+    SuperscriptBox["f", 
+     RowBox[{"(", "n", ")"}]], 
+    RowBox[{"(", "0", ")"}], 
+    SuperscriptBox["x", "n"], "/", "n", "!"}], TraditionalForm]], 
+  "InlineMath"],
+ ". ",
+ Cell[BoxData[
+  ButtonBox["Series",
+   BaseStyle->"Link",
+   ButtonData->"paclet:ref/Series"]], "InlineFormula"],
+ " can construct standard Taylor series, as well as certain expansions \
+involving negative powers, fractional powers and logarithms. ",
+ Cell[BoxData[
+  RowBox[{
+   ButtonBox["Normal",
+    BaseStyle->"Link",
+    ButtonData->"paclet:ref/Normal"], "[", 
+   StyleBox["series", "TI"], "]"}]], "InlineFormula"],
+ " truncates a power series and converts it to a normal expression. "
+}], "Text",
+ CellChangeTimes->{{3.4639941679217997`*^9, 3.4639941988948*^9}}],
+
+Cell[BoxData[
+ RowBox[{"Series", "[", 
+  RowBox[{
+   RowBox[{"Exp", "[", "x", "]"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"x", ",", "0", ",", "10"}], "}"}]}], "]"}]], "Input"],
+
+Cell[BoxData[
+ RowBox[{"Normal", "[", "%", "]"}]], "Input"],
+
+Cell[TextData[{
+ "Power series of an arbitrary function around ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"x", "=", "a"}], TraditionalForm]], "InlineMath"],
+ ":"
+}], "Text",
+ CellChangeTimes->{3.4639942167118*^9}],
+
+Cell[BoxData[
+ RowBox[{"Series", "[", 
+  RowBox[{
+   RowBox[{"f", "[", "x", "]"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"x", ",", "a", ",", "3"}], "}"}]}], "]"}]], "Input"],
+
+Cell[BoxData[
+ RowBox[{"Series", "[", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"Exp", "[", 
+     RowBox[{
+      RowBox[{"-", "a"}], " ", "t"}], "]"}], " ", 
+    RowBox[{"(", 
+     RowBox[{"1", "+", 
+      RowBox[{"Sin", "[", 
+       RowBox[{"2", " ", "t"}], "]"}]}], ")"}]}], ",", 
+   RowBox[{"{", 
+    RowBox[{"t", ",", "0", ",", "4"}], "}"}]}], "]"}]], "Input"],
+
+Cell[BoxData[
+ RowBox[{"Series", "[", 
+  RowBox[{
+   RowBox[{"BesselJ", "[", 
+    RowBox[{"n", ",", "x"}], "]"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"x", ",", "0", ",", "4"}], "}"}]}], "]"}]], "Input"],
+
+Cell[BoxData[
+ RowBox[{"Plot", "[", 
+  RowBox[{
+   RowBox[{"Evaluate", "[", 
+    RowBox[{"Table", "[", 
+     RowBox[{
+      RowBox[{"Normal", "[", 
+       RowBox[{"Series", "[", 
+        RowBox[{
+         RowBox[{"Sin", "[", "x", "]"}], ",", 
+         RowBox[{"{", 
+          RowBox[{"x", ",", "0", ",", "n"}], "}"}]}], "]"}], "]"}], ",", 
+      RowBox[{"{", 
+       RowBox[{"n", ",", "20"}], "}"}]}], "]"}], "]"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"x", ",", "0", ",", 
+     RowBox[{"2", "Pi"}]}], "}"}]}], "]"}]], "Input"],
+
+Cell["Piecewise functions:", "Text",
+ CellChangeTimes->{3.4639948673188*^9}],
+
+Cell[BoxData[
+ RowBox[{"Series", "[", 
+  RowBox[{
+   RowBox[{"Min", "[", 
+    RowBox[{"x", ",", 
+     RowBox[{"1", "-", "x"}]}], "]"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"x", ",", "a", ",", "5"}], "}"}]}], "]"}]], "Input"],
+
+Cell[TextData[{
+ "If you give it a function that it does not know, ",
+ Cell[BoxData[
+  ButtonBox["Series",
+   BaseStyle->"Link",
+   ButtonData->"paclet:ref/Series"]], "InlineFormula"],
+ " writes out the power series in terms of derivatives. "
+}], "Text",
+ CellChangeTimes->{3.4639942839518003`*^9}],
+
+Cell[BoxData[
+ RowBox[{"Series", "[", 
+  RowBox[{
+   RowBox[{"1", "+", 
+    RowBox[{"f", "[", "t", "]"}]}], ",", 
+   RowBox[{"{", 
+    RowBox[{"t", ",", "0", ",", "3"}], "}"}]}], "]"}]], "Input"],
+
+Cell[TextData[{
+ Cell[BoxData[
+  RowBox[{
+   ButtonBox["Series",
+    BaseStyle->"Link",
+    ButtonData->"paclet:ref/Series"], "[", 
+   RowBox[{
+    StyleBox["f", "TI"], ",", 
+    RowBox[{"{", 
+     RowBox[{
+      StyleBox["x", "TI"], ",", 
+      SubscriptBox[
+       StyleBox["x", "TI"], 
+       StyleBox["0", "TR"]], ",", 
+      SubscriptBox[
+       StyleBox["n", "TI"], 
+       StyleBox["x", "TI"]]}], "}"}], ",", 
+    RowBox[{"{", 
+     RowBox[{
+      StyleBox["y", "TI"], ",", 
+      SubscriptBox[
+       StyleBox["y", "TI"], 
+       StyleBox["0", "TR"]], ",", 
+      SubscriptBox[
+       StyleBox["n", "TI"], 
+       StyleBox["y", "TI"]]}], "}"}], ",", 
+    StyleBox["\[Ellipsis]", "TR"]}], "]"}]], "InlineFormula"],
+ " ",
+ "successively finds series expansions with respect to ",
+ Cell[BoxData[
+  StyleBox["x", "TI"]], "InlineFormula"],
+ ", then ",
+ Cell[BoxData[
+  StyleBox["y", "TI"]], "InlineFormula"],
+ ", etc."
+}], "Text",
+ CellChangeTimes->{{3.4639948282728*^9, 3.4639948334718*^9}}],
+
+Cell[BoxData[
+ RowBox[{"Series", "[", 
+  RowBox[{
+   RowBox[{"Sin", "[", 
+    RowBox[{"x", "+", "y"}], "]"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"x", ",", "0", ",", "3"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"y", ",", "0", ",", "3"}], "}"}]}], "]"}]], "Input"],
+
+Cell[TextData[{
+ Cell[BoxData[
+  RowBox[{
+   ButtonBox["Limit",
+    BaseStyle->"Link",
+    ButtonData->"paclet:ref/Limit"], "[", 
+   RowBox[{
+    StyleBox["expr", "TI"], ",", 
+    RowBox[{
+     StyleBox["x", "TI"], "->", 
+     SubscriptBox[
+      StyleBox["x", "TI"], 
+      StyleBox["0", "TR"]]}]}], "]"}]], "InlineFormula"],
+ " tells you what the value of ",
+ Cell[BoxData[
+  StyleBox["expr", "TI"]], "InlineFormula"],
+ " is when ",
+ Cell[BoxData[
+  StyleBox["x", "TI"]], "InlineFormula"],
+ " tends to ",
+ Cell[BoxData[
+  SubscriptBox[
+   StyleBox["x", "TI"], 
+   StyleBox["0", "TR"]]], "InlineFormula"],
+ ". When this value is infinite, it is often useful instead to know the ",
+ StyleBox["residue",
+  FontSlant->"Italic"],
+ " of ",
+ Cell[BoxData[
+  StyleBox["expr", "TI"]], "InlineFormula"],
+ " when ",
+ Cell[BoxData[
+  StyleBox["x", "TI"]], "InlineFormula"],
+ " equals ",
+ Cell[BoxData[
+  SubscriptBox[
+   StyleBox["x", "TI"], 
+   StyleBox["0", "TR"]]], "InlineFormula"],
+ ". The residue is given by the coefficient of ",
+ Cell[BoxData[
+  FormBox[
+   SuperscriptBox[
+    RowBox[{"(", 
+     RowBox[{"x", "-", 
+      SubscriptBox["x", "0"]}], ")"}], 
+    RowBox[{"-", "1"}]], TraditionalForm]], "InlineMath"],
+ " in the power series expansion of ",
+ Cell[BoxData[
+  StyleBox["expr", "TI"]], "InlineFormula"],
+ " about the point ",
+ Cell[BoxData[
+  SubscriptBox[
+   StyleBox["x", "TI"], 
+   StyleBox["0", "TR"]]], "InlineFormula"],
+ ". "
+}], "Text",
+ CellChangeTimes->{3.4639944670112*^9}],
+
+Cell[BoxData[
+ RowBox[{"Limit", "[", 
+  RowBox[{
+   RowBox[{"1", "/", "x"}], ",", 
+   RowBox[{"x", "->", "0"}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.4639944806642*^9, 3.4639944880601997`*^9}}],
+
+Cell[BoxData[
+ RowBox[{"Residue", "[", 
+  RowBox[{
+   RowBox[{"1", "/", "x"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"x", ",", "0"}], "}"}]}], "]"}]], "Input",
+ CellChangeTimes->{3.4639944789231997`*^9}],
+
+Cell[BoxData[
+ RowBox[{"Limit", "[", 
+  RowBox[{
+   FractionBox[
+    RowBox[{
+     RowBox[{"2", " ", 
+      SuperscriptBox["n", "2"]}], "+", "5"}], 
+    RowBox[{
+     RowBox[{"3", " ", 
+      SuperscriptBox["n", "2"]}], "+", "1"}]], ",", 
+   RowBox[{"n", "\[Rule]", "\[Infinity]"}]}], "]"}]], "Input"],
+
+Cell["Directional limits can be obtained for some functions.", "Text",
+ CellChangeTimes->{3.4639947434863997`*^9}],
+
+Cell[BoxData[
+ RowBox[{"Limit", "[", 
+  RowBox[{
+   FractionBox["1", "x"], ",", 
+   RowBox[{"x", "\[Rule]", "0"}], ",", 
+   RowBox[{"Direction", "\[Rule]", 
+    RowBox[{"-", "1"}]}]}], "]"}]], "Input"],
+
+Cell[BoxData[
+ RowBox[{"Limit", "[", 
+  RowBox[{
+   FractionBox["1", "x"], ",", 
+   RowBox[{"x", "\[Rule]", "0"}], ",", 
+   RowBox[{"Direction", "\[Rule]", 
+    RowBox[{"+", "1"}]}]}], "]"}]], "Input",
+ CellChangeTimes->{3.4639947526674*^9}],
+
+Cell[BoxData[
+ RowBox[{"Plot", "[", 
+  RowBox[{
+   RowBox[{"Exp", "[", 
+    RowBox[{"Sin", "[", "x", "]"}], "]"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"x", ",", "1", ",", "100"}], "}"}]}], "]"}]], "Input"],
+
+Cell[BoxData[
+ RowBox[{"Limit", "[", 
+  RowBox[{
+   RowBox[{"Exp", "[", 
+    RowBox[{"Sin", "[", "x", "]"}], "]"}], ",", " ", 
+   RowBox[{"x", "\[Rule]", "\[Infinity]"}]}], "]"}]], "Input"],
+
+Cell[CellGroupData[{
+
+Cell["Excercise", "Subsubsection",
+ CellChangeTimes->{{3.4639943465478*^9, 3.4639943479628*^9}}],
+
+Cell["\<\
+Let U[y]=Tanh[y] or U[\[Tau]]=Tanh[1/\[Tau]] be two representations of the \
+same function.  Compare the Taylor expansion of U[y] for small y with the \
+Taylor expansion of U[\[Tau]] for large \[Tau] (expand about \[Infinity]).\
+\>", "Text",
+ CellChangeTimes->{3.4639943523398*^9},
+ FontWeight->"Bold",
+ FontColor->RGBColor[0, 0, 1]],
+
+Cell[TextData[{
+ "Use series expansions to characterize the behavior of ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    RowBox[{"f", "[", "z", "]"}], "=", 
+    RowBox[{"1", "-", 
+     FractionBox["z", 
+      SqrtBox[
+       RowBox[{
+        SuperscriptBox["z", "2"], "+", 
+        SuperscriptBox["R", "2"]}]]]}]}], TraditionalForm]]],
+ " for both small and large values of ",
+ Cell[BoxData[
+  FormBox["z", TraditionalForm]]],
+ ", assuming that ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"R", ">", "0"}], TraditionalForm]]],
+ ".  Compare these approximations with the original function graphically and \
+describe their regions of validity.  How does one obtain a useful \
+approximation for ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"z", "\[TildeTilde]", "R"}], TraditionalForm]]],
+ "?"
+}], "Text",
+ CellChangeTimes->{3.4639943586618*^9},
+ FontWeight->"Bold",
+ FontColor->RGBColor[0, 0, 1]],
+
+Cell[TextData[{
+ "Find the residue of ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"x", " ", 
+    RowBox[{"tan", "(", "x", ")"}]}], TraditionalForm]]],
+ " at ",
+ Cell[BoxData[
+  FormBox[
+   FractionBox["\[Pi]", "2"], TraditionalForm]]],
+ "."
+}], "Text",
+ CellChangeTimes->{3.4639947680204*^9},
+ FontWeight->"Bold",
+ FontColor->RGBColor[0, 0, 1]],
+
+Cell[TextData[{
+ "Evaluate the limit of ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"Tanh", "[", 
+    FractionBox["1", "x"], "]"}], TraditionalForm]]],
+ " as x\[Rule]0.  How does the result depend upon direction?"
+}], "Text",
+ CellChangeTimes->{3.4639947770368*^9},
+ FontWeight->"Bold",
+ FontColor->RGBColor[0, 0, 1]],
+
+Cell["\<\
+Compare the behaviors of BesselJ[2,z] and BesselK[2,z] as z\[Rule]\[Infinity].\
+\>", "Text",
+ CellChangeTimes->{3.4639947826348*^9},
+ FontWeight->"Bold",
+ FontColor->RGBColor[0, 0, 1]]
+}, Open  ]]
+}, Closed]],
+
+Cell[CellGroupData[{
+
+Cell["Symbolic Integration", "Subsection",
+ CellChangeTimes->{{3.4639949206758003`*^9, 3.4639949266177998`*^9}}],
+
+Cell[TextData[{
+ "Required Reading \n\n",
+ ButtonBox["Integration",
+  BaseStyle->"Link",
+  ButtonData->"paclet:tutorial/Integration"],
+ "\n",
+ ButtonBox["Indefinite Integrals",
+  BaseStyle->"Link",
+  ButtonData->"paclet:tutorial/IndefiniteIntegrals"]
+}], "Text",
+ CellChangeTimes->{{3.4639949283548*^9, 3.4639949782618*^9}, {
+  3.4639951986286*^9, 3.4639952079056*^9}}],
+
+Cell[TextData[{
+ "Here is the integral ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"\[Integral]", 
+    SuperscriptBox["x", "n"], " ", "d", "x"}], TraditionalForm]], 
+  "InlineMath"],
+ " in ",
+ StyleBox["Mathematica",
+  FontSlant->"Italic"],
+ ". "
+}], "Text",
+ CellChangeTimes->{3.4639950092438*^9}],
+
+Cell[BoxData[
+ RowBox[{"Integrate", "[", 
+  RowBox[{
+   RowBox[{"x", "^", "n"}], ",", "x"}], "]"}]], "Input"],
+
+Cell[TextData[{
+ "This integral involves ",
+ Cell[BoxData[
+  ButtonBox["Erf",
+   BaseStyle->"Link",
+   ButtonData->"paclet:ref/Erf"]], "InlineFormula"],
+ ". "
+}], "Text",
+ CellChangeTimes->{3.4639950514678*^9}],
+
+Cell[BoxData[
+ RowBox[{"Integrate", "[", 
+  RowBox[{
+   RowBox[{"Exp", "[", 
+    RowBox[{"1", "-", 
+     RowBox[{"x", "^", "2"}]}], "]"}], ",", "x"}], "]"}]], "Input"],
+
+Cell["And this one involves a Fresnel function. ", "Text",
+ CellChangeTimes->{3.4639950670908003`*^9}],
+
+Cell[BoxData[
+ RowBox[{"Integrate", "[", 
+  RowBox[{
+   RowBox[{"Sin", "[", 
+    RowBox[{"x", "^", "2"}], "]"}], ",", "x"}], "]"}]], "Input"],
+
+Cell[TextData[{
+ "Here is the definite integral ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    SubsuperscriptBox["\[Integral]", "a", "b"], 
+    SuperscriptBox["sin", "2"], 
+    RowBox[{"(", "x", ")"}], " ", "d", "x"}], TraditionalForm]], "InlineMath"],
+ "."
+}], "Text",
+ CellChangeTimes->{3.4639950945488*^9}],
+
+Cell[BoxData[
+ RowBox[{"Integrate", "[", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"Sin", "[", "x", "]"}], "^", "2"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"x", ",", "a", ",", "b"}], "}"}]}], "]"}]], "Input"],
+
+Cell[TextData[{
+ StyleBox["Mathematica",
+  FontSlant->"Italic"],
+ " cannot give you a formula for this definite integral. "
+}], "Text",
+ CellChangeTimes->{{3.4639951072488003`*^9, 3.4639951346317997`*^9}}],
+
+Cell[BoxData[
+ RowBox[{"Integrate", "[", 
+  RowBox[{
+   RowBox[{"x", "^", "x"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"x", ",", "0", ",", "1"}], "}"}]}], "]"}]], "Input"],
+
+Cell["You can still get a numerical result, though. ", "Text"],
+
+Cell[BoxData[
+ RowBox[{"N", "[", "%", "]"}]], "Input"],
+
+Cell[TextData[{
+ "This evaluates the multiple integral ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    SubsuperscriptBox["\[Integral]", "0", "1"], "d", "x", 
+    SubsuperscriptBox["\[Integral]", "0", "x"], "d", "y", " ", 
+    RowBox[{"(", 
+     RowBox[{
+      SuperscriptBox["x", "2"], "+", 
+      SuperscriptBox["y", "2"]}], ")"}]}], TraditionalForm]], "InlineMath"],
+ ". The range of the outermost integration variable appears first. "
+}], "Text",
+ CellChangeTimes->{{3.4639951576188*^9, 3.4639951626977997`*^9}}],
+
+Cell[BoxData[
+ RowBox[{"Integrate", "[", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"x", "^", "2"}], " ", "+", " ", 
+    RowBox[{"y", "^", "2"}]}], ",", " ", 
+   RowBox[{"{", 
+    RowBox[{"x", ",", " ", "0", ",", " ", "1"}], "}"}], ",", " ", 
+   RowBox[{"{", 
+    RowBox[{"y", ",", " ", "0", ",", " ", "x"}], "}"}]}], "]"}]], "Input"],
+
+Cell[TextData[{
+ "Multiple integral with ",
+ Cell[BoxData["x"], "InlineFormula"],
+ " integration outermost:"
+}], "Text",
+ CellChangeTimes->{3.4639953839476*^9}],
+
+Cell[BoxData[
+ RowBox[{"Integrate", "[", 
+  RowBox[{
+   RowBox[{"Sin", "[", 
+    RowBox[{"x", " ", "y"}], "]"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"x", ",", "0", ",", "1"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"y", ",", "0", ",", "x"}], "}"}]}], "]"}]], "Input"],
+
+Cell[BoxData[
+ RowBox[{
+  SubsuperscriptBox["\[Integral]", "0", "1"], 
+  RowBox[{
+   SubsuperscriptBox["\[Integral]", "0", "x"], 
+   RowBox[{
+    RowBox[{"Sin", "[", 
+     RowBox[{"x", " ", "y"}], "]"}], 
+    RowBox[{"\[DifferentialD]", "y"}], 
+    RowBox[{"\[DifferentialD]", "x"}]}]}]}]], "Input"],
+
+Cell[TextData[{
+ "Use ",
+ StyleBox["Esc", "KeyEvent"],
+ StyleBox["\[ThinSpace]int\[ThinSpace]", "InlineCode"],
+ StyleBox["Esc", "KeyEvent"],
+ " to enter ",
+ Cell[BoxData["\[Integral]"], "InlineFormula"],
+ " and ",
+ StyleBox["Esc", "KeyEvent"],
+ StyleBox["\[ThinSpace]dd\[ThinSpace]", "InlineCode"],
+ StyleBox["Esc", "KeyEvent"],
+ " to enter ",
+ Cell[BoxData["\[DifferentialD]"], "InlineFormula"],
+ ":"
+}], "Text",
+ CellChangeTimes->{3.4639953495696*^9}],
+
+Cell[BoxData[
+ RowBox[{"\[Integral]", 
+  RowBox[{
+   RowBox[{"Sqrt", "[", 
+    RowBox[{"x", "+", 
+     RowBox[{"Sqrt", "[", "x", "]"}]}], "]"}], 
+   RowBox[{"\[DifferentialD]", "x"}]}]}]], "Input",
+ CellChangeTimes->{{3.4697904225975432`*^9, 3.4697904391115723`*^9}}],
+
+Cell[TextData[{
+ "Use ",
+ StyleBox["Ctrl", "KeyEvent"],
+ StyleBox["+", "KeyEventDelimiter"],
+ StyleBox["_", "KeyEvent"],
+ " to enter the lower limit, then ",
+ StyleBox["Ctrl", "KeyEvent"],
+ StyleBox["+", "KeyEventDelimiter"],
+ StyleBox["%", "KeyEvent"],
+ " for the upper limit:"
+}], "Text",
+ CellChangeTimes->{3.4639953616766*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  SubsuperscriptBox["\[Integral]", "0", "\[Infinity]"], 
+  RowBox[{
+   RowBox[{"Log", "[", "x", "]"}], " ", 
+   RowBox[{"Exp", "[", 
+    RowBox[{"-", 
+     SuperscriptBox["x", "2"]}], "]"}], 
+   RowBox[{"\[DifferentialD]", "x"}]}]}]], "Input"],
+
+Cell[TextData[{
+ "Some more examples (",
+ "The Airy function ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"Ai", "(", "z", ")"}], TraditionalForm]], "InlineMath"],
+ " is a solution to the differential equation ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    SuperscriptBox["y", "\[Prime]\[Prime]"], "-", "x", "y", "=", "0"}], 
+   TraditionalForm]], "InlineMath"],
+ ". )",
+ ":"
+}], "Text",
+ CellChangeTimes->{{3.469790047398991*^9, 3.469790050208995*^9}, {
+  3.4697901030990777`*^9, 3.4697901057990813`*^9}}],
+
+Cell[BoxData[
+ FormBox[
+  RowBox[{"\[Integral]", 
+   RowBox[{
+    RowBox[{"Ai", "(", "z", ")"}], 
+    RowBox[{"\[DifferentialD]", "z"}]}]}], TraditionalForm]], "Input"],
+
+Cell[BoxData[
+ FormBox[
+  RowBox[{
+   SubsuperscriptBox["\[Integral]", "0", "\[Infinity]"], 
+   RowBox[{
+    FractionBox[
+     RowBox[{"sin", "(", 
+      SuperscriptBox["x", "3"], ")"}], 
+     SuperscriptBox["\[ExponentialE]", 
+      RowBox[{"x", "/", "2"}]]], 
+    RowBox[{"\[DifferentialD]", "x"}]}]}], TraditionalForm]], "Input"],
+
+Cell[BoxData[
+ FormBox[
+  RowBox[{
+   SubsuperscriptBox["\[Integral]", "0", "\[Infinity]"], 
+   RowBox[{
+    FractionBox[
+     RowBox[{
+      RowBox[{"sin", "(", "x", ")"}], " ", 
+      RowBox[{"sin", "(", 
+       FractionBox["x", "3"], ")"}], " ", 
+      RowBox[{"sin", "(", 
+       FractionBox["x", "5"], ")"}], " ", 
+      RowBox[{"sin", "(", 
+       FractionBox["x", "7"], ")"}], " ", 
+      RowBox[{"sin", "(", 
+       FractionBox["x", "9"], ")"}], " ", 
+      RowBox[{"sin", "(", 
+       FractionBox["x", "11"], ")"}], " ", 
+      RowBox[{"sin", "(", 
+       FractionBox["x", "13"], ")"}], " ", 
+      RowBox[{"sin", "(", 
+       FractionBox["x", "15"], ")"}], " ", 
+      RowBox[{"sin", "(", 
+       FractionBox["x", "17"], ")"}]}], 
+     SuperscriptBox["x", "9"]], 
+    RowBox[{"\[DifferentialD]", "x"}]}]}], TraditionalForm]], "Input"],
+
+Cell[CellGroupData[{
+
+Cell["Excercises", "Subsubsection",
+ CellChangeTimes->{{3.4639952644316*^9, 3.4639952683976*^9}}],
+
+Cell[TextData[{
+ "Calculate ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"\[Integral]", 
+    FractionBox[
+     StyleBox[
+      RowBox[{"d", "x"}], "TI"], 
+     RowBox[{
+      SuperscriptBox["x", "2"], "-", "1"}]]}], TraditionalForm]]],
+ ". Then differentiate the result and check that you get the original \
+function back. Consider simplifying your result."
+}], "Text",
+ CellChangeTimes->{{3.4639952692866*^9, 3.4639953295546*^9}},
+ FontWeight->"Bold",
+ FontColor->RGBColor[0, 0, 1]],
+
+Cell[TextData[{
+ "Calculate the integral ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"\[Integral]", 
+    RowBox[{"sin", "(", 
+     SuperscriptBox["x", "3"]}]}], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ ")\[DifferentialD]x. "
+}], "Text",
+ CellChangeTimes->{{3.4697905080216684`*^9, 3.469790527811696*^9}},
+ FontWeight->"Bold",
+ FontColor->RGBColor[0, 0, 1]],
+
+Cell[TextData[{
+ "Calculate the integrals ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    SubsuperscriptBox["\[Integral]", "0", "1"], 
+    RowBox[{"sin", "(", 
+     SuperscriptBox["x", "3"]}]}], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ ")\[DifferentialD]x, ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    SubsuperscriptBox["\[Integral]", "0", "\[Infinity]"], 
+    RowBox[{"sin", "(", 
+     SuperscriptBox["x", "3"]}]}], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ ")\[DifferentialD]x, and ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    SubsuperscriptBox["\[Integral]", 
+     RowBox[{"-", "\[Infinity]"}], "1"], 
+    RowBox[{"sin", "(", 
+     SuperscriptBox["x", "3"]}]}], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ ")\[DifferentialD]x",
+ ". "
+}], "Text",
+ CellChangeTimes->{{3.4697905080216684`*^9, 3.4697905837837763`*^9}},
+ FontWeight->"Bold",
+ FontColor->RGBColor[0, 0, 1]],
+
+Cell[TextData[{
+ "Determine the area of the region bounded between the curves f (x) \
+=\:f39fsin x and g(x) =\:f39f",
+ Cell[BoxData[
+  FormBox[
+   SuperscriptBox["csc", "2"], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ " x on [\[Pi]\:f39f/ 4, 3 \[Pi]\:f39f/ 4]."
+}], "Text",
+ CellChangeTimes->{{3.4698183147478385`*^9, 3.4698183233978505`*^9}},
+ FontWeight->"Bold",
+ FontColor->RGBColor[0, 0, 1]],
+
+Cell[TextData[{
+ "Determine the area of the region enclosed between the curves f (x) =\:f39f",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"x", "(", 
+    SuperscriptBox["x", "2"]}], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ " -\:f39f3 x +\:f39f3) and g(x) =\:f39f",
+ Cell[BoxData[
+  FormBox[
+   SuperscriptBox["x", "2"], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ "."
+}], "Text",
+ CellChangeTimes->{{3.469818334477866*^9, 3.469818354247895*^9}},
+ FontWeight->"Bold",
+ FontColor->RGBColor[0, 0, 1]]
+}, Open  ]]
+}, Closed]],
+
+Cell[CellGroupData[{
+
+Cell["Advanced Application: Line integrals", "Subsection",
+ CellChangeTimes->{{3.4639955680136003`*^9, 3.4639955800285997`*^9}}],
+
+Cell["\<\
+A line integral evaluates and integrates a function along a specified path \
+through a multidimensional space, returning a scalar result.  Here we \
+consider two types of line integral.  The integral of scalar function against \
+the path length for a curve in two dimensions takes the form\
+\>", "Text"],
+
+Cell[BoxData[
+ FormBox[
+  RowBox[{
+   SubscriptBox["\[Integral]", "C"], 
+   RowBox[{
+    RowBox[{"f", "[", 
+     RowBox[{"x", ",", "y"}], "]"}], 
+    RowBox[{"\[DifferentialD]", "s"}]}]}], TraditionalForm]], "DisplayFormula",
+ Evaluatable->False,
+ TextAlignment->Left,
+ TextJustification->0],
+
+Cell[TextData[{
+ "where C denotes a curve and ",
+ Cell[BoxData[
+  FormBox[
+   StyleBox[
+    RowBox[{
+     RowBox[{"\[DifferentialD]", "s"}], "=", 
+     SqrtBox[
+      RowBox[{
+       SuperscriptBox[
+        RowBox[{"(", 
+         RowBox[{"\[DifferentialD]", "x"}], ")"}], "2"], "+", 
+       SuperscriptBox[
+        RowBox[{"(", 
+         RowBox[{"\[DifferentialD]", "y"}], ")"}], "2"]}]]}],
+    FontWeight->"Plain"], TraditionalForm]], "InlineInput",
+  Evaluatable->False],
+ StyleBox[" ", "InlineInput"],
+ "represents the path length along the curve.  The curve is generally \
+represented by the parametric equations ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"C", "=", 
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"x", "\[Rule]", 
+       RowBox[{"x", "[", "t", "]"}]}], ",", 
+      RowBox[{"y", "\[Rule]", 
+       RowBox[{"y", "[", "t", "]"}]}]}], "}"}]}], TraditionalForm]]],
+ " ",
+ StyleBox["such that the path length becomes ",
+  Evaluatable->False],
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    RowBox[{"\[DifferentialD]", "s"}], "=", 
+    RowBox[{
+     RowBox[{"\[DifferentialD]", "t"}], 
+     SqrtBox[
+      RowBox[{
+       SuperscriptBox[
+        RowBox[{"(", 
+         FractionBox[
+          RowBox[{"\[DifferentialD]", "x"}], 
+          RowBox[{"\[DifferentialD]", "t"}]], ")"}], "2"], "+", 
+       SuperscriptBox[
+        RowBox[{"(", 
+         FractionBox[
+          RowBox[{"\[DifferentialD]", "y"}], 
+          RowBox[{"\[DifferentialD]", "t"}]], ")"}], "2"]}]]}]}], 
+   TraditionalForm]], "InlineInput",
+  Evaluatable->False,
+  FontWeight->"Plain"],
+ ".  For example, if ",
+ Cell[BoxData[
+  FormBox["f", TraditionalForm]]],
+ " represents mass density, an integral of this type could be used to \
+determine the total mass of a rope with nonuniform density or cross-sectional \
+area.  "
+}], "Text"],
+
+Cell["\<\
+Similarly, the component of a vector field that is parallel to a curve is \
+integrated using\
+\>", "Text"],
+
+Cell[BoxData[
+ FormBox[
+  RowBox[{
+   SubscriptBox["\[Integral]", "C"], 
+   RowBox[{
+    RowBox[{
+     OverscriptBox["f", "\[RightVector]"], "[", 
+     RowBox[{"x", ",", "y"}], "]"}], ".", 
+    RowBox[{"\[DifferentialD]", 
+     OverscriptBox["s", "\[RightVector]"]}]}]}], 
+  TraditionalForm]], "DisplayFormula",
+ Evaluatable->False,
+ TextAlignment->Left,
+ TextJustification->0],
+
+Cell[TextData[{
+ "where ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    RowBox[{"\[DifferentialD]", 
+     OverscriptBox["s", "\[RightVector]"]}], "=", 
+    RowBox[{
+     RowBox[{"\[DifferentialD]", "t"}], 
+     RowBox[{"{", 
+      RowBox[{
+       FractionBox[
+        RowBox[{"\[DifferentialD]", "x"}], 
+        RowBox[{"\[DifferentialD]", "t"}]], ",", 
+       FractionBox[
+        RowBox[{"\[DifferentialD]", "y"}], 
+        RowBox[{"\[DifferentialD]", "t"}]]}], "}"}]}]}], TraditionalForm]], 
+  "InlineInput",
+  Evaluatable->False,
+  FontWeight->"Plain"],
+ StyleBox[" ", "InlineInput"],
+ "is the differential displacement along the curve.  For example, the work \
+performed by a force ",
+ Cell[BoxData[
+  FormBox[
+   OverscriptBox["f", "\[RightVector]"], TraditionalForm]]],
+ " that acts on a particle whose trajectory is described by the parametric \
+curve ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"C", "=", 
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"x", "\[Rule]", 
+       RowBox[{"x", "[", "t", "]"}]}], ",", 
+      RowBox[{"y", "\[Rule]", 
+       RowBox[{"y", "[", "t", "]"}]}]}], "}"}]}], TraditionalForm]]],
+ " ",
+ StyleBox["is given by an integral of this type.",
+  Evaluatable->False],
+ "\nThe following function evaluates these types of path integrals \
+symbolically.  Here we present a relatively simple implementation and do not \
+attempt to cover all possible methods for specifying the function or path.  \
+The path-integration function can be generalized later if needed.  We assume \
+that the function is an implicit function of the two variables represented by \
+patterns ",
+ StyleBox["x_", "InlineInput",
+  FontWeight->"Bold"],
+ " and ",
+ StyleBox["y_", "InlineInput",
+  FontWeight->"Bold"],
+ ".  The path is defined using a pattern argument ",
+ StyleBox["path:{", "InlineInput",
+  FontWeight->"Bold"],
+ StyleBox["pattern rules", "InlineInput",
+  FontWeight->"Bold"],
+ StyleBox["}", "InlineInput",
+  FontWeight->"Bold"],
+ " in which the pattern rules are a list of rewrite rules of the form ",
+ StyleBox["x_\[Rule]u_", "InlineInput",
+  FontWeight->"Bold"],
+ " that replace the variable on the lhs by the pattern on the rhs; hence, \
+blank patterns are used on both sides of the arrow.  The parameter defining \
+the progress along the curve is given by ",
+ StyleBox["t_", "InlineInput",
+  FontWeight->"Bold"],
+ ".  Two versions are given, one for scalar functions and the other for \
+vector functions in two dimensions.  Obviously, it is simple matter to \
+generalize to arbitrary dimensionality."
+}], "Text"],
+
+Cell[BoxData[
+ RowBox[{"ClearAll", "[", "pathIntegrate", "]"}]], "Input"],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{
+   RowBox[{
+    RowBox[{"pathIntegrate", "::", "usage"}], "=", 
+    "\"\<pathIntegrate[f,{x\[Rule]u,y\[Rule]v},t,tmin,tmax,opts] evaluates \
+the line integral of the scalar function f along a curve expressed as a \
+parametric function of t. \\n\\n \
+pathIntegrate[{fx,fy},{x\[Rule]u,y\[Rule]v},t,tmin,tmax] evaluates the line \
+integral of the tangential component of a vector field along a curve \
+expressed as a parametric function of t.\>\""}], ";"}], "\n", "\t\t", "\n", 
+  "\t\t"}], "\n", 
+ RowBox[{
+  RowBox[{
+   RowBox[{
+    RowBox[{"pathIntegrate", "[", 
+     RowBox[{
+      RowBox[{"f_", "/;", 
+       RowBox[{"(", 
+        RowBox[{"Not", "[", 
+         RowBox[{"VectorQ", "[", "f", "]"}], "]"}], ")"}]}], ",", 
+      RowBox[{"path", ":", 
+       RowBox[{"{", 
+        RowBox[{
+         RowBox[{"x_", "\[Rule]", "u_"}], ",", 
+         RowBox[{"y_", "\[Rule]", "v_"}]}], "}"}]}], ",", "t_", ",", "tmin_", 
+      ",", "tmax_", ",", "opts___Rule"}], "]"}], " ", ":=", 
+    RowBox[{"Integrate", "[", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"f", " ", 
+        RowBox[{"\[Sqrt]", 
+         RowBox[{"(", 
+          RowBox[{
+           SuperscriptBox[
+            RowBox[{"D", "[", 
+             RowBox[{"u", ",", "t"}], "]"}], "2"], "+", 
+           SuperscriptBox[
+            RowBox[{"D", "[", 
+             RowBox[{"v", ",", "t"}], "]"}], "2"]}], ")"}]}]}], "/.", 
+       "path"}], ",", 
+      RowBox[{"{", 
+       RowBox[{"t", ",", "tmin", ",", "tmax"}], "}"}], ",", "opts"}], "]"}]}],
+    ";"}], "\n"}], "\n", 
+ RowBox[{
+  RowBox[{"pathIntegrate", "[", 
+   RowBox[{
+    RowBox[{"field", ":", 
+     RowBox[{"{", 
+      RowBox[{"f_", ",", "g_"}], "}"}]}], ",", 
+    RowBox[{"path", ":", 
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"x_", "\[Rule]", "u_"}], ",", 
+       RowBox[{"y_", "\[Rule]", "v_"}]}], "}"}]}], ",", "t_", ",", "tmin_", 
+    ",", "tmax_", ",", "opts___Rule"}], "]"}], " ", ":=", 
+  RowBox[{"Integrate", "[", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"(", 
+      RowBox[{
+       RowBox[{"f", " ", 
+        RowBox[{"D", "[", 
+         RowBox[{"u", ",", "t"}], "]"}]}], "+", 
+       RowBox[{"g", " ", 
+        RowBox[{"D", "[", 
+         RowBox[{"v", ",", "t"}], "]"}]}]}], ")"}], "/.", "path"}], ",", 
+    RowBox[{"{", 
+     RowBox[{"t", ",", "tmin", ",", "tmax"}], "}"}], ",", "opts"}], 
+   "]"}]}]}], "Input"],
+
+Cell[CellGroupData[{
+
+Cell["Application", "Subsubsection",
+ CellChangeTimes->{{3.4639954991616*^9, 3.4639955007125998`*^9}}],
+
+Cell[BoxData[
+ RowBox[{"pathIntegrate", "[", 
+  RowBox[{
+   FractionBox["1", 
+    RowBox[{
+     SuperscriptBox["x", "2"], "+", 
+     SuperscriptBox["y", "2"]}]], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"x", "\[Rule]", 
+      RowBox[{"Cos", "[", "t", "]"}]}], ",", 
+     RowBox[{"y", "\[Rule]", 
+      RowBox[{"Sin", "[", "t", "]"}]}]}], "}"}], ",", "t", ",", "0", ",", 
+   RowBox[{"2", "\[Pi]"}]}], "]"}]], "Input"],
+
+Cell[BoxData[
+ RowBox[{"pathIntegrate", "[", 
+  RowBox[{
+   FractionBox["1", 
+    RowBox[{
+     SuperscriptBox["x", "2"], "+", 
+     SuperscriptBox["y", "2"]}]], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"x", "\[Rule]", "t"}], ",", 
+     RowBox[{"y", "\[Rule]", "t"}]}], "}"}], ",", "t", ",", "1", ",", "2"}], 
+  "]"}]], "Input"],
+
+Cell[BoxData[
+ RowBox[{"pathIntegrate", "[", 
+  RowBox[{
+   FractionBox["1", 
+    RowBox[{
+     SuperscriptBox["x", "2"], "+", 
+     SuperscriptBox["y", "2"]}]], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"x", "\[Rule]", 
+      RowBox[{"a", " ", "+", "t"}]}], ",", 
+     RowBox[{"y", "\[Rule]", 
+      RowBox[{"b", " ", "t"}]}]}], "}"}], ",", "t", ",", "0", ",", "1", ",", 
+   RowBox[{"Assumptions", "\[Rule]", 
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"a", "\[Element]", "Reals"}], ",", 
+      RowBox[{"b", "\[Element]", "Reals"}]}], "}"}]}]}], "]"}]], "Input"],
+
+Cell[BoxData[
+ RowBox[{"pathIntegrate", "[", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{
+     SuperscriptBox["x", "2"], ",", "y"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"x", "\[Rule]", "t"}], ",", 
+     RowBox[{"y", "\[Rule]", "t"}]}], "}"}], ",", "t", ",", "0", ",", "2"}], 
+  "]"}]], "Input"],
+
+Cell[BoxData[
+ RowBox[{"pathIntegrate", "[", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{
+     SuperscriptBox["x", "2"], ",", "y"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"x", "\[Rule]", 
+      RowBox[{"2", 
+       RowBox[{"Sin", "[", "t", "]"}]}]}], ",", 
+     RowBox[{"y", "\[Rule]", 
+      RowBox[{"2", 
+       RowBox[{"Sin", "[", "t", "]"}]}]}]}], "}"}], ",", "t", ",", "0", ",", 
+   FractionBox["\[Pi]", "2"]}], "]"}]], "Input"],
+
+Cell[BoxData[
+ RowBox[{"pathIntegrate", "[", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{"y", ",", "x"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"x", "\[Rule]", 
+      RowBox[{"a", " ", 
+       SuperscriptBox["t", "n"]}]}], ",", 
+     RowBox[{"y", "\[Rule]", 
+      RowBox[{"b", " ", 
+       SuperscriptBox["t", "m"]}]}]}], "}"}], ",", "t", ",", "0", ",", "1"}], 
+  "]"}]], "Input"]
+}, Closed]],
+
+Cell[CellGroupData[{
+
+Cell["Excercises", "Subsubsection",
+ CellChangeTimes->{{3.4639955203515997`*^9, 3.4639955242316*^9}}],
+
+Cell["\<\
+Write line integration functions applicable to arbitrary dimensionality.\
+\>", "Text",
+ CellChangeTimes->{{3.4639955303515997`*^9, 3.4639955491816*^9}}],
+
+Cell[TextData[{
+ "Proper time\nProper time ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    SubscriptBox["\[Integral]", "C"], 
+    RowBox[{"\[DifferentialD]", "\[Tau]"}]}], TraditionalForm]]],
+ " in special relativity is defined by a path length through space-time based \
+upon the invariant interval ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    SuperscriptBox[
+     RowBox[{"(", 
+      RowBox[{"\[DifferentialD]", "\[Tau]"}], ")"}], "2"], "=", " ", 
+    RowBox[{
+     SuperscriptBox[
+      RowBox[{"(", 
+       RowBox[{"\[DifferentialD]", "t"}], ")"}], "2"], "-", 
+     SuperscriptBox[
+      RowBox[{"(", 
+       RowBox[{"\[DifferentialD]", "x"}], ")"}], "2"], "-", 
+     SuperscriptBox[
+      RowBox[{"(", 
+       RowBox[{"\[DifferentialD]", "y"}], ")"}], "2"], "-", 
+     SuperscriptBox[
+      RowBox[{"(", 
+       RowBox[{"\[DifferentialD]", "z"}], ")"}], "2"]}]}], TraditionalForm]]],
+ ".  Write a function which computes the proper time for an arbitrary path in \
+space-time.  One can show that the proper time measures the aging of a \
+particle (or person) in its own rest frame.  However, the elapsed times for \
+other observers who see the particle moving can be quite different.  Compare \
+the proper times for the following two paths, which are relevant to the \
+famous twin paradox.  Peter remains on earth while Paul travels at 99% of \
+light speed away from earth for 25 earth years and then turns instantly and \
+returns at the same speed.  Show that qualitatively similar results are \
+obtained for more realistic itineraries (without incredible acceleration near \
+the turn)."
+}], "Text",
+ CellChangeTimes->{{3.4639955303515997`*^9, 3.4639955530266*^9}}]
+}, Closed]]
+}, Closed]],
+
+Cell[CellGroupData[{
+
+Cell["Numerical Integration", "Subsection",
+ CellChangeTimes->{{3.4639957055406*^9, 3.4639957099566*^9}}],
+
+Cell[TextData[{
+ "Required Reading \n\n",
+ ButtonBox["Numerical Operations on Functions",
+  BaseStyle->"Link",
+  ButtonData->"paclet:tutorial/NumericalOperationsOnFunctionsOverview"],
+ "\n",
+ ButtonBox["Numerical Integration",
+  BaseStyle->"Link",
+  ButtonData->"paclet:tutorial/NumericalIntegration"],
+ "\n",
+ ButtonBox["Advanced Numerical Integration in ",
+  BaseStyle->"Link",
+  ButtonData->"paclet:tutorial/NIntegrateOverview"],
+ StyleBox[ButtonBox["Mathematica",
+  BaseStyle->"Link",
+  ButtonData->"paclet:tutorial/NIntegrateOverview"],
+  FontSlant->"Italic"],
+ "\n",
+ ButtonBox["NIntegrate Integration Strategies\n",
+  BaseStyle->"Link",
+  ButtonData->"paclet:tutorial/NIntegrateIntegrationStrategies"],
+ ButtonBox["The Uncertainties of Numerical Mathematics",
+  BaseStyle->"Link",
+  ButtonData->"paclet:tutorial/TheUncertaintiesOfNumericalMathematics"]
+}], "Text",
+ CellChangeTimes->{{3.4639969421210003`*^9, 3.463996965707*^9}, {
+  3.464970896615*^9, 3.4649709329318*^9}, {3.4649709745994*^9, 
+  3.4649709844586*^9}, {3.4649710631024*^9, 3.464971071776*^9}}],
+
+Cell["Compute a numerical integral:", "Text",
+ CellChangeTimes->{{3.463996992039*^9, 3.463996999454*^9}}],
+
+Cell[BoxData[
+ RowBox[{"NIntegrate", "[", 
+  RowBox[{
+   RowBox[{"Sin", "[", 
+    RowBox[{"Sin", "[", "x", "]"}], "]"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"x", ",", "0", ",", "2"}], "}"}]}], "]"}]], "Input"],
+
+Cell["\<\
+Compute a multidimensional integral (with singularity at the origin):\
+\>", "Text",
+ CellChangeTimes->{3.4639970110629997`*^9}],
+
+Cell[BoxData[
+ RowBox[{"NIntegrate", "[", 
+  RowBox[{
+   FractionBox["1", 
+    SqrtBox[
+     RowBox[{
+      FractionBox["x1", "3"], "+", 
+      FractionBox["x2", "2"], "+", 
+      FractionBox["x3", "2"], "+", 
+      FractionBox["x4", "10"]}]]], ",", 
+   RowBox[{"{", 
+    RowBox[{"x1", ",", "0", ",", "1"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"x2", ",", "0", ",", "1"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"x3", ",", "0", ",", "1"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"x4", ",", "0", ",", "1"}], "}"}]}], "]"}]], "Input"],
+
+Cell[TextData[{
+ "Sometimes, ",
+ StyleBox["Mathematica",
+  FontSlant->"Italic"],
+ " will not be able to find results for symbolic interals, or it will take a \
+very long time. \n",
+ Cell[BoxData[
+  RowBox[{
+   ButtonBox["NIntegrate",
+    BaseStyle->"Link",
+    ButtonData->"paclet:ref/NIntegrate"], "[", 
+   RowBox[{
+    StyleBox["f", "TI"], ",", 
+    RowBox[{"{", 
+     RowBox[{
+      StyleBox["x", "TI"], ",", 
+      SubscriptBox[
+       StyleBox["x", "TI"], 
+       StyleBox["min", "TI"]], ",", 
+      SubscriptBox[
+       StyleBox["x", "TI"], 
+       StyleBox["max", "TI"]]}], "}"}]}], "]"}]], "InlineFormula"],
+ " ",
+ "gives a numerical approximation to the integral ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    SubsuperscriptBox["\[Integral]", 
+     SubscriptBox["x", 
+      StyleBox["min",
+       FontSlant->"Italic"]], 
+     SubscriptBox["x", 
+      StyleBox["max",
+       FontSlant->"Italic"]]], " ", 
+    RowBox[{"f", " ", "d", "\[InvisibleSpace]", "x"}]}], TraditionalForm]], 
+  "InlineMath"],
+ ". "
+}], "Text",
+ CellChangeTimes->{{3.4639959793328*^9, 3.4639960112438*^9}, {
+  3.4639960427248*^9, 3.4639960483648*^9}}],
+
+Cell["Check the computation Time for the following integral:", "Text",
+ CellChangeTimes->{{3.4639960559368*^9, 3.4639960683118*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"Integrate", "[", 
+   RowBox[{
+    FractionBox["1", 
+     SqrtBox[
+      RowBox[{"Sin", "[", 
+       RowBox[{
+        SuperscriptBox["x", "2"], "+", "y"}], "]"}]]], ",", 
+    RowBox[{"{", 
+     RowBox[{"x", ",", 
+      RowBox[{"-", "2"}], ",", "4"}], "}"}], ",", 
+    RowBox[{"{", 
+     RowBox[{"y", ",", 
+      RowBox[{"-", "2"}], ",", "4"}], "}"}]}], "]"}], "//", 
+  "AbsoluteTiming"}]], "Input",
+ CellChangeTimes->{{3.4639960789558*^9, 3.4639960880878*^9}}],
+
+Cell["\<\
+Since this is a definite integral we can also ask for the numerical result:\
+\>", "Text",
+ CellChangeTimes->{{3.4639960970618*^9, 3.4639961139088*^9}}],
+
+Cell[BoxData[
+ RowBox[{"%", "//", "N"}]], "Input",
+ CellChangeTimes->{{3.4639961162598*^9, 3.4639961173498*^9}}],
+
+Cell[TextData[{
+ "However, it is much more efficient to use the numerical integration \
+capabilities of ",
+ StyleBox["Mathematica:",
+  FontSlant->"Italic"]
+}], "Text",
+ CellChangeTimes->{{3.4639961219248*^9, 3.4639961504108*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"NIntegrate", "[", 
+   RowBox[{
+    FractionBox["1", 
+     SqrtBox[
+      RowBox[{"Sin", "[", 
+       RowBox[{
+        SuperscriptBox["x", "2"], "+", "y"}], "]"}]]], ",", 
+    RowBox[{"{", 
+     RowBox[{"x", ",", 
+      RowBox[{"-", "2"}], ",", "4"}], "}"}], ",", 
+    RowBox[{"{", 
+     RowBox[{"y", ",", 
+      RowBox[{"-", "2"}], ",", "4"}], "}"}], ",", 
+    RowBox[{"Exclusions", "\[Rule]", 
+     RowBox[{"(", 
+      RowBox[{
+       RowBox[{"Sin", "[", 
+        RowBox[{
+         SuperscriptBox["x", "2"], "+", "y"}], "]"}], "\[Equal]", "0"}], 
+      ")"}]}]}], "]"}], "//", "AbsoluteTiming"}]], "Input",
+ CellChangeTimes->{{3.4639961898926*^9, 3.4639961900174*^9}, {
+  3.4639963860313997`*^9, 3.4639963895257998`*^9}}],
+
+Cell["Here we excluded the cases where the denominator is 0.", "Text",
+ CellChangeTimes->{{3.4639961595948*^9, 3.463996186835*^9}}],
+
+Cell["We already saw the following integral:", "Text",
+ CellChangeTimes->{{3.4697908119821234`*^9, 3.4697908219741383`*^9}}],
+
+Cell[BoxData[
+ FormBox[
+  RowBox[{
+   SubsuperscriptBox["\[Integral]", "0", "\[Infinity]"], 
+   RowBox[{
+    FractionBox[
+     RowBox[{
+      RowBox[{"sin", "(", "x", ")"}], " ", 
+      RowBox[{"sin", "(", 
+       FractionBox["x", "3"], ")"}], " ", 
+      RowBox[{"sin", "(", 
+       FractionBox["x", "5"], ")"}], " ", 
+      RowBox[{"sin", "(", 
+       FractionBox["x", "7"], ")"}], " ", 
+      RowBox[{"sin", "(", 
+       FractionBox["x", "9"], ")"}], " ", 
+      RowBox[{"sin", "(", 
+       FractionBox["x", "11"], ")"}], " ", 
+      RowBox[{"sin", "(", 
+       FractionBox["x", "13"], ")"}], " ", 
+      RowBox[{"sin", "(", 
+       FractionBox["x", "15"], ")"}], " ", 
+      RowBox[{"sin", "(", 
+       FractionBox["x", "17"], ")"}]}], 
+     SuperscriptBox["x", "9"]], 
+    RowBox[{"\[DifferentialD]", "x"}]}]}], TraditionalForm]], "Input",
+ CellChangeTimes->{{3.393328780794203*^9, 3.3933288333733373`*^9}, {
+  3.393328865670832*^9, 3.393328875092888*^9}, {3.3933289652196183`*^9, 
+  3.393328992892025*^9}}],
+
+Cell[BoxData[
+ RowBox[{"N", "[", "%", "]"}]], "Input",
+ CellChangeTimes->{{3.393348259309062*^9, 3.3933482606217213`*^9}}],
+
+Cell[BoxData[
+ RowBox[{"Quiet", "[", 
+  RowBox[{"NIntegrate", "[", 
+   RowBox[{
+    FractionBox[
+     RowBox[{
+      RowBox[{"Sin", "[", "x", "]"}], " ", 
+      RowBox[{"Sin", "[", 
+       FractionBox["x", "3"], "]"}], " ", 
+      RowBox[{"Sin", "[", 
+       FractionBox["x", "5"], "]"}], " ", 
+      RowBox[{"Sin", "[", 
+       FractionBox["x", "7"], "]"}], " ", 
+      RowBox[{"Sin", "[", 
+       FractionBox["x", "9"], "]"}], " ", 
+      RowBox[{"Sin", "[", 
+       FractionBox["x", "11"], "]"}], " ", 
+      RowBox[{"Sin", "[", 
+       FractionBox["x", "13"], "]"}], " ", 
+      RowBox[{"Sin", "[", 
+       FractionBox["x", "15"], "]"}], " ", 
+      RowBox[{"Sin", "[", 
+       FractionBox["x", "17"], "]"}]}], 
+     SuperscriptBox["x", "9"]], ",", 
+    RowBox[{"{", 
+     RowBox[{"x", ",", "0", ",", "\[Infinity]"}], "}"}]}], "]"}], 
+  "]"}]], "Input",
+ CellChangeTimes->{{3.393328780794203*^9, 3.3933288333733373`*^9}, {
+  3.393328865670832*^9, 3.393328875092888*^9}, {3.3933289652196183`*^9, 
+  3.393328992892025*^9}, {3.393348277936327*^9, 3.393348285062193*^9}}],
+
+Cell[CellGroupData[{
+
+Cell["Numerical contour integration", "Subsubsection",
+ CellChangeTimes->{3.4698176572788124`*^9}],
+
+Cell[TextData[{
+ "Contour integration along a path defined as a series of connected line \
+segments can be performed using the syntax ",
+ ButtonBox["NIntegrate",
+  BaseStyle->"Link",
+  ButtonData->"paclet:ref/NIntegrate"],
+ "[",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"f", ",", 
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"z", ",", 
+       SubscriptBox["z", "1"], ",", 
+       SubscriptBox["z", "2"], ",", "\[CenterEllipsis]"}], ",", 
+      SubscriptBox["z", "n"]}], "}"}]}], TraditionalForm]]],
+ "]",
+ StyleBox[" ",
+  FontWeight->"Bold"],
+ "where the ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["z", "i"], TraditionalForm]]],
+ " are complex numbers that plot the contour.  For example, the following \
+integral is performed along a square contour centered on the origin with \
+edges parallel to the real and imaginary axis."
+}], "Text",
+ CellChangeTimes->{{3.469817662118819*^9, 3.4698176745888367`*^9}}],
+
+Cell[BoxData[
+ RowBox[{"NIntegrate", "[", 
+  RowBox[{
+   FractionBox[
+    RowBox[{"Exp", "[", "z", "]"}], "z"], ",", 
+   RowBox[{"{", 
+    RowBox[{"z", ",", 
+     RowBox[{
+      RowBox[{"-", "1"}], "-", "\[ImaginaryI]"}], ",", 
+     RowBox[{"1", "-", "\[ImaginaryI]"}], ",", 
+     RowBox[{"1", "+", "\[ImaginaryI]"}], ",", 
+     RowBox[{
+      RowBox[{"-", "1"}], "+", "\[ImaginaryI]"}], ",", 
+     RowBox[{
+      RowBox[{"-", "1"}], "-", "\[ImaginaryI]"}]}], "}"}]}], "]"}]], "Input"],
+
+Cell[TextData[{
+ "Because we chose a function exhibiting only one simple pole with unit \
+residue inside the contour, the result is just ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"2", "\[Pi]", " ", "\[ImaginaryI]"}], TraditionalForm]]],
+ ".  Complex analysis tells us that the same result should be obtained for \
+any other contour which encompasses the same poles and which can be deformed \
+continuously into the first without crossing singularities or branch cuts.  \
+Thus, the diamond-shaped contour"
+}], "Text",
+ CellChangeTimes->{3.469817683428849*^9}],
+
+Cell[BoxData[
+ RowBox[{"NIntegrate", "[", 
+  RowBox[{
+   FractionBox[
+    RowBox[{"Exp", "[", "z", "]"}], "z"], ",", 
+   RowBox[{"{", 
+    RowBox[{"z", ",", 
+     RowBox[{"-", "1"}], ",", 
+     RowBox[{"-", "\[ImaginaryI]"}], ",", "1", ",", "\[ImaginaryI]", ",", 
+     RowBox[{"-", "1"}]}], "}"}]}], "]"}]], "Input"],
+
+Cell["does indeed give the same result.", "Text",
+ CellChangeTimes->{3.4698177125708914`*^9}]
+}, Closed]],
+
+Cell[CellGroupData[{
+
+Cell["Excercise", "Subsubsection",
+ CellChangeTimes->{{3.46399684384*^9, 3.4639968460480003`*^9}}],
+
+Cell[TextData[{
+ "Consult the help pages for Integrate and NIntegrate to understand the \
+difference between ",
+ Cell[BoxData[
+  RowBox[{
+   ButtonBox["N",
+    BaseStyle->"Link",
+    ButtonData->"paclet:ref/N"], "[", 
+   ButtonBox["Integrate",
+    BaseStyle->"Link",
+    ButtonData->"paclet:ref/Integrate"], "[", 
+   StyleBox["expr", "TI"], ",", "{", 
+   StyleBox["x", "TI"], ",", 
+   SubscriptBox[
+    StyleBox["x", "TI"], 
+    StyleBox["min", "TI"]], ",", 
+   SubscriptBox[
+    StyleBox["x", "TI"], 
+    StyleBox["max", "TI"]], "}", "]", "]"}]]],
+ " and ",
+ Cell[BoxData[
+  RowBox[{
+   ButtonBox["NIntegrate",
+    BaseStyle->"Link",
+    ButtonData->"paclet:ref/NIntegrate"], "[", 
+   StyleBox["expr", "TI"], ",", "{", 
+   StyleBox["x", "TI"], ",", 
+   SubscriptBox[
+    StyleBox["x", "TI"], 
+    StyleBox["min", "TI"]], ",", 
+   SubscriptBox[
+    StyleBox["x", "TI"], 
+    StyleBox["max", "TI"]], "}", "]"}]]]
+}], "Text",
+ CellChangeTimes->{{3.463996850384*^9, 3.463996909725*^9}},
+ FontWeight->"Bold",
+ FontColor->RGBColor[0, 0, 1]],
+
+Cell[TextData[{
+ "Green's Theorem: The area enclosed by a parametric curve u(t)={x(t),y(t)} \
+with endpoints u(t0)=u(t1) is given by the line integrals ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    SubsuperscriptBox["\[ContourIntegral]", "t0", "t1"], 
+    RowBox[{"x", " ", 
+     OverscriptBox["y", "."], 
+     RowBox[{"\[DifferentialD]", "t"}]}]}], TraditionalForm]]],
+ ". \na) Give the parametric form of the unit circle and calculate the area \
+using NIntegrate and the Green's Theorem. Plot the circle using ",
+ ButtonBox["ParametricPlot",
+  BaseStyle->"Link",
+  ButtonData->"paclet:ref/ParametricPlot"],
+ "\nb) Plot the parametric equations below and calculate the enclosed area.\n\
+x(t) = Cos[t] + 1/7 Cos[7 t + Pi/3]; \ny(t) = Sin[t] + 1/7 Sin[7 t]; "
+}], "Text",
+ CellChangeTimes->{{3.4639972432349997`*^9, 3.4639973386588*^9}, {
+  3.4639973835898*^9, 3.4639973975888*^9}, {3.4639974840498*^9, 
+  3.4639975681438*^9}, {3.4639977709166*^9, 3.4639979464076*^9}, {
+  3.4639979967706003`*^9, 3.4639979980126*^9}},
+ FontWeight->"Bold",
+ FontColor->RGBColor[0, 0, 1]],
+
+Cell[TextData[{
+ "Compare symbolic and numerical evaluations of ",
+ Cell[BoxData[
+  RowBox[{
+   SubsuperscriptBox["\[Integral]", "0", "1"], 
+   FractionBox[
+    RowBox[{
+     SuperscriptBox["\[Omega]", "4"], 
+     SuperscriptBox["\[ExponentialE]", "\[Omega]"]}], 
+    SuperscriptBox[
+     RowBox[{"(", 
+      RowBox[{
+       SuperscriptBox["\[ExponentialE]", "\[Omega]"], "-", "1"}], ")"}], 
+     "2"]]}]]],
+ "."
+}], "Text",
+ CellChangeTimes->{3.4639980834175997`*^9},
+ FontWeight->"Bold",
+ FontColor->RGBColor[0, 0, 1]],
+
+Cell[TextData[{
+ "Evaluate ",
+ Cell[BoxData[
+  RowBox[{
+   SubsuperscriptBox["\[Integral]", "0", "\[Infinity]"], 
+   FractionBox[
+    RowBox[{
+     SuperscriptBox["\[Omega]", "4"], 
+     SuperscriptBox["\[ExponentialE]", "\[Omega]"]}], 
+    SuperscriptBox[
+     RowBox[{"(", 
+      RowBox[{
+       SuperscriptBox["\[ExponentialE]", "\[Omega]"], "-", "1"}], ")"}], 
+     "2"]]}]]],
+ " numerically.  [Hint: use LogPlot to examine the integrand.]"
+}], "Text",
+ CellChangeTimes->{3.4639980899886*^9},
+ FontWeight->"Bold",
+ FontColor->RGBColor[0, 0, 1]]
+}, Open  ]]
+}, Closed]],
+
+Cell[CellGroupData[{
+
+Cell["Sums, Products", "Subsection",
+ CellChangeTimes->{{3.4643332684798*^9, 3.4643332722622004`*^9}}],
+
+Cell[TextData[{
+ "Required Reading:\n\n",
+ ButtonBox["Sums and Products",
+  BaseStyle->"Link",
+  ButtonData->"paclet:tutorial/SumsAndProducts"],
+ "\n",
+ ButtonBox["Summation of Series",
+  BaseStyle->"Link",
+  ButtonData->"paclet:tutorial/SummationOfSeries"],
+ "\n",
+ ButtonBox["Introduction to Numerical Sums, Products and Integrals",
+  BaseStyle->"Link",
+  ButtonData->
+   "paclet:tutorial/IntroductionToNumericalSumsProductsAndIntegrals"]
+}], "Text",
+ CellChangeTimes->{{3.4643332892542*^9, 3.4643333042925997`*^9}, {
+  3.4643341000208*^9, 3.4643341084278*^9}, {3.464336220475*^9, 
+  3.464336230514*^9}}],
+
+Cell[TextData[{
+ Cell[BoxData[
+  RowBox[{
+   ButtonBox["Sum",
+    BaseStyle->"Link",
+    ButtonData->"paclet:ref/Sum"], "[", 
+   StyleBox["f", "TI"], ",", "{", 
+   StyleBox["i", "TI"], ",", 
+   SubscriptBox[
+    StyleBox["i", "TI"], 
+    StyleBox["min", "TI"]], ",", 
+   SubscriptBox[
+    StyleBox["i", "TI"], 
+    StyleBox["max", "TI"]], "}", "]"}]]],
+ "\t",
+ Cell[BoxData[Cell[TextData[{
+   "the sum ",
+   Cell[BoxData[
+    FormBox[
+     RowBox[{
+      UnderoverscriptBox["\[Sum]", 
+       RowBox[{"i", "=", 
+        SubscriptBox["i", 
+         StyleBox["min",
+          FontSlant->"Italic"]]}], 
+       SubscriptBox["i", 
+        StyleBox["max",
+         FontSlant->"Italic"]],
+       LimitsPositioning->True], "f"}], TraditionalForm]], "InlineMath"]
+  }], "TableText"]]],
+ "\n",
+ Cell[BoxData[
+  RowBox[{
+   ButtonBox["Sum",
+    BaseStyle->"Link",
+    ButtonData->"paclet:ref/Sum"], "[", 
+   StyleBox["f", "TI"], ",", "{", 
+   StyleBox["i", "TI"], ",", 
+   SubscriptBox[
+    StyleBox["i", "TI"], 
+    StyleBox["min", "TI"]], ",", 
+   SubscriptBox[
+    StyleBox["i", "TI"], 
+    StyleBox["max", "TI"]], ",", 
+   StyleBox["di", "TI"], "}", "]"}]]],
+ "\t",
+ Cell[BoxData[Cell[TextData[{
+   "the sum with ",
+   Cell[BoxData[
+    StyleBox["i", "TI"]], "InlineFormula"],
+   " increasing in steps of ",
+   Cell[BoxData[
+    StyleBox["di", "TI"]], "InlineFormula"]
+  }], "TableText"]]],
+ "\n",
+ Cell[BoxData[
+  RowBox[{
+   ButtonBox["Sum",
+    BaseStyle->"Link",
+    ButtonData->"paclet:ref/Sum"], "[", 
+   StyleBox["f", "TI"], ",", "{", 
+   StyleBox["i", "TI"], ",", 
+   SubscriptBox[
+    StyleBox["i", "TI"], 
+    StyleBox["min", "TI"]], ",", 
+   SubscriptBox[
+    StyleBox["i", "TI"], 
+    StyleBox["max", "TI"]], "}", ",", "{", 
+   StyleBox["j", "TI"], ",", 
+   SubscriptBox[
+    StyleBox["j", "TI"], 
+    StyleBox["min", "TI"]], ",", 
+   SubscriptBox[
+    StyleBox["j", "TI"], 
+    StyleBox["max", "TI"]], "}", "]"}]]],
+ "\t",
+ Cell[BoxData[Cell[TextData[{
+   "the nested sum ",
+   Cell[BoxData[
+    FormBox[
+     RowBox[{
+      UnderoverscriptBox["\[Sum]", 
+       RowBox[{"i", "=", 
+        SubscriptBox["i", 
+         StyleBox["min",
+          FontSlant->"Italic"]]}], 
+       SubscriptBox["i", 
+        StyleBox["max",
+         FontSlant->"Italic"]],
+       LimitsPositioning->True], 
+      RowBox[{
+       UnderoverscriptBox["\[Sum]", 
+        RowBox[{"j", "=", 
+         SubscriptBox["j", 
+          StyleBox["min",
+           FontSlant->"Italic"]]}], 
+        SubscriptBox["j", 
+         StyleBox["max",
+          FontSlant->"Italic"]],
+        LimitsPositioning->True], "f"}]}], TraditionalForm]], "InlineMath"]
+  }], "TableText"]]],
+ "\n",
+ Cell[BoxData[
+  RowBox[{
+   ButtonBox["Product",
+    BaseStyle->"Link",
+    ButtonData->"paclet:ref/Product"], "[", 
+   StyleBox["f", "TI"], ",", "{", 
+   StyleBox["i", "TI"], ",", 
+   SubscriptBox[
+    StyleBox["i", "TI"], 
+    StyleBox["min", "TI"]], ",", 
+   SubscriptBox[
+    StyleBox["i", "TI"], 
+    StyleBox["max", "TI"]], "}", "]"}]]],
+ "\t",
+ "the product ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    UnderoverscriptBox["\[Product]", 
+     RowBox[{"i", "=", 
+      SubscriptBox["i", 
+       StyleBox["min",
+        FontSlant->"Italic"]]}], 
+     SubscriptBox["i", 
+      StyleBox["max",
+       FontSlant->"Italic"]],
+     LimitsPositioning->True], "f"}], TraditionalForm]], "InlineMath"]
+}], "Text",
+ CellChangeTimes->{{3.464333977804*^9, 3.464334020369*^9}}],
+
+Cell[BoxData[
+ RowBox[{"Sum", "[", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"x", "^", "i"}], "/", "i"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"i", ",", "7"}], "}"}]}], "]"}]], "Input"],
+
+Cell[BoxData[
+ RowBox[{"Sum", "[", 
+  RowBox[{
+   RowBox[{"i", "^", "2"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"i", ",", "1", ",", "n"}], "}"}]}], "]"}]], "Input"],
+
+Cell[TextData[{
+ Cell[BoxData[
+  RowBox[{
+   ButtonBox["Sum",
+    BaseStyle->"Link",
+    ButtonData->"paclet:ref/Sum"], "[", 
+   RowBox[{
+    StyleBox["f", "TI"], ",", 
+    StyleBox["i", "TI"]}], "]"}]], "InlineFormula"],
+ "gives the indefinite sum ",
+ Cell[BoxData[
+  RowBox[{
+   UnderscriptBox[
+    StyleBox["\[Sum]", "TR"], 
+    StyleBox["i", "TI"]], 
+   StyleBox["f", "TI"]}]], "InlineFormula"],
+ "."
+}], "Text",
+ CellChangeTimes->{{3.464334059082*^9, 3.4643340640769997`*^9}}],
+
+Cell[BoxData[
+ RowBox[{"Sum", "[", 
+  RowBox[{
+   RowBox[{"i", "^", "3"}], ",", "i"}], "]"}]], "Input"],
+
+Cell["The following series defines the exponential function.", "Text"],
+
+Cell[BoxData[
+ FormBox[
+  RowBox[{
+   UnderoverscriptBox["\[Sum]", 
+    RowBox[{"n", "=", "0"}], "\[Infinity]"], 
+   FractionBox[
+    SuperscriptBox["x", "n"], 
+    RowBox[{"n", "!"}]]}], TraditionalForm]], "Input",
+ CellChangeTimes->{{3.3932600540431376`*^9, 3.3932600811528597`*^9}, {
+  3.3932601192002215`*^9, 3.3932601196689777`*^9}}],
+
+Cell["The harmonic series is divergent.", "Text"],
+
+Cell[BoxData[
+ FormBox[
+  RowBox[{
+   UnderoverscriptBox["\[Sum]", 
+    RowBox[{"n", "=", "1"}], "\[Infinity]"], 
+   FractionBox["1", "n"]}], TraditionalForm]], "Input",
+ CellChangeTimes->{{3.393260127981584*^9, 3.3932601332941523`*^9}}],
+
+Cell[BoxData[
+ FormBox[
+  RowBox[{
+   UnderoverscriptBox["\[Sum]", 
+    RowBox[{"n", "=", "0"}], "\[Infinity]"], 
+   FractionBox[
+    RowBox[{
+     SuperscriptBox["\[ExponentialE]", 
+      RowBox[{"-", "n"}]], " ", 
+     TagBox[
+      RowBox[{"(", GridBox[{
+         {
+          TagBox[
+           RowBox[{"2", " ", "n"}],
+           Identity,
+           Editable->True,
+           Selectable->True]},
+         {
+          TagBox["n",
+           Identity,
+           Editable->True,
+           Selectable->True]}
+        }], ")"}],
+      InterpretTemplate[Binomial[#, #2]& ],
+      Editable->False,
+      Selectable->False], " ", 
+     SuperscriptBox[
+      RowBox[{"(", 
+       FractionBox["2", "11"], ")"}], "n"]}], 
+    RowBox[{"n", "+", "3"}]]}], TraditionalForm]], "Input"],
+
+Cell["\<\
+Approximate an infinite product numerically and symbolically:\
+\>", "Text",
+ CellChangeTimes->{{3.4643361581661997`*^9, 3.464336188076*^9}}],
+
+Cell[BoxData[
+ RowBox[{"NProduct", "[", 
+  RowBox[{
+   RowBox[{"(", 
+    RowBox[{"1", "+", 
+     RowBox[{"1", "/", 
+      RowBox[{"i", "^", "2"}]}]}], ")"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"i", ",", "1", ",", "\[Infinity]"}], "}"}]}], "]"}]], "Input"],
+
+Cell[BoxData[
+ RowBox[{"Product", "[", 
+  RowBox[{
+   RowBox[{"(", 
+    RowBox[{"1", "+", 
+     RowBox[{"1", "/", 
+      RowBox[{"i", "^", "2"}]}]}], ")"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"i", ",", "1", ",", "\[Infinity]"}], "}"}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.4643361658942003`*^9, 3.4643361676712*^9}}],
+
+Cell["\<\
+The following product is evaluated in terms of special functions.\
+\>", "Text"],
+
+Cell[BoxData[
+ FormBox[
+  RowBox[{
+   UnderoverscriptBox["\[Product]", 
+    RowBox[{"k", "=", "1"}], "n"], 
+   RowBox[{
+    SuperscriptBox[
+     RowBox[{"(", 
+      RowBox[{
+       RowBox[{"3", " ", "k"}], "-", "1"}], ")"}], 
+     RowBox[{
+      RowBox[{"3", " ", "k"}], "-", "1"}]], " ", 
+    SuperscriptBox["\[ExponentialE]", 
+     RowBox[{"-", "k"}]]}]}], TraditionalForm]], "Input",
+ CellChangeTimes->{{3.391354621486173*^9, 3.3913546899397364`*^9}, {
+  3.393596123373789*^9, 3.393596132702033*^9}}],
+
+Cell[CellGroupData[{
+
+Cell["Excercise", "Subsubsection",
+ CellChangeTimes->{{3.4643341327158003`*^9, 3.4643341339708*^9}}],
+
+Cell["Sum the infinite series x^n/n!", "Text",
+ CellChangeTimes->{{3.4643341444178*^9, 3.4643341494198*^9}},
+ FontWeight->"Bold",
+ FontColor->RGBColor[0, 0, 1]],
+
+Cell["\<\
+Find expressions for the sums of powers of natural numbers a)n\tb) n^2\tc) n^3\
+\>", "Text",
+ CellChangeTimes->{{3.4643357856124*^9, 3.4643358226974*^9}},
+ FontWeight->"Bold",
+ FontColor->RGBColor[0, 0, 1]],
+
+Cell[TextData[{
+ "Calculate m ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    UnderoverscriptBox["\[Sum]", 
+     RowBox[{"i", "=", "0"}], "\[Infinity]",
+     LimitsPositioning->True], 
+    FractionBox["1", 
+     RowBox[{
+      SuperscriptBox["i", "2"], "+", "5"}]]}], TraditionalForm]], 
+  "InlineMath"],
+ " symbolically (",
+ ButtonBox["Sum",
+  BaseStyle->"Hyperlink",
+  ButtonData->{"pcalet:ref/Sum", None}],
+ ") and numerically (",
+ ButtonBox["NSum",
+  BaseStyle->"Link",
+  ButtonData->"paclet:ref/NSum"],
+ ")"
+}], "Text",
+ CellChangeTimes->{{3.4643359862334003`*^9, 3.4643360398182*^9}},
+ FontWeight->"Bold",
+ FontColor->RGBColor[0, 0, 1]],
+
+Cell[TextData[{
+ "Calculate  ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    UnderoverscriptBox["\[Product]", 
+     RowBox[{"i", "=", "1"}], "\[Infinity]",
+     LimitsPositioning->True], 
+    FractionBox[
+     RowBox[{"4", " ", 
+      SuperscriptBox["i", "2"]}], 
+     RowBox[{
+      RowBox[{"4", " ", 
+       SuperscriptBox["i", "2"]}], "-", "1"}]]}], TraditionalForm]], 
+  "InlineMath"],
+ " symbolically (",
+ ButtonBox["Product",
+  BaseStyle->"Link",
+  ButtonData->"paclet:ref/Product"],
+ ") and numerically (",
+ ButtonBox["NProduct",
+  BaseStyle->"Link",
+  ButtonData->"paclet:ref/NProduct"],
+ ")"
+}], "Text",
+ CellChangeTimes->{{3.4643360681472*^9, 3.4643361329852*^9}},
+ FontWeight->"Bold",
+ FontColor->RGBColor[0, 0, 1]]
+}, Closed]]
+}, Closed]],
+
+Cell[CellGroupData[{
+
+Cell["Integral Transforms", "Subsection",
+ CellChangeTimes->{{3.4697952714070606`*^9, 3.4697952743170652`*^9}}],
+
+Cell[TextData[{
+ "Required Reading:\n\n",
+ ButtonBox["Integral Transforms\n",
+  BaseStyle->"Link",
+  ButtonData->"paclet:guide/IntegralTransforms"],
+ ButtonBox["Integral Transforms and Related Operations\n",
+  BaseStyle->"Link",
+  ButtonData->"paclet:tutorial/IntegralTransformsAndRelatedOperations"],
+ ButtonBox["Discrete Fourier Transforms\n",
+  BaseStyle->"Link",
+  ButtonData->"paclet:tutorial/FourierTransforms"],
+ ButtonBox["Fourier Analysis\n",
+  BaseStyle->"Link",
+  ButtonData->"paclet:guide/FourierAnalysis"],
+ ButtonBox["Discrete Fourier Transforms",
+  BaseStyle->"Link",
+  ButtonData->"paclet:tutorial/FourierTransforms"],
+ "\n"
+}], "Text",
+ CellChangeTimes->{{3.469795277187069*^9, 3.4697953207011337`*^9}, {
+  3.4697953518851795`*^9, 3.469795361665193*^9}, {3.4697962653165298`*^9, 
+  3.469796273976542*^9}, {3.469796307170591*^9, 3.469796318560607*^9}}],
+
+Cell[TextData[{
+ "The Laplace transform of a function ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"f", "(", "t", ")"}], TraditionalForm]], "InlineMath"],
+ " is given by ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    SubsuperscriptBox["\[Integral]", "0", "\[Infinity]"], 
+    RowBox[{
+     RowBox[{"f", "(", "t", ")"}], 
+     SuperscriptBox["e", 
+      RowBox[{"-", "s", "t"}]], 
+     RowBox[{"\[DifferentialD]", "t"}]}]}], TraditionalForm]], "InlineMath"],
+ ". The inverse Laplace transform of ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"F", "(", "s", ")"}], TraditionalForm]], "InlineMath"],
+ " is given for suitable ",
+ Cell[BoxData[
+  FormBox["\[Gamma]", TraditionalForm]], "InlineMath"],
+ " by ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    FractionBox["1", 
+     RowBox[{"2", "\[Pi]", "i"}]], 
+    RowBox[{
+     SubsuperscriptBox["\[Integral]", 
+      RowBox[{"\[Gamma]", "-", "i", "\[Infinity]"}], 
+      RowBox[{"\[Gamma]", "+", "i", "\[Infinity]"}]], 
+     RowBox[{
+      RowBox[{"F", "(", "s", ")"}], 
+      SuperscriptBox["e", 
+       RowBox[{"s", "\[InvisibleSpace]", "t"}]], 
+      RowBox[{"\[DifferentialD]", "s"}]}]}]}], TraditionalForm]], 
+  "InlineMath"],
+ "."
+}], "Text",
+ CellChangeTimes->{3.4697953817652216`*^9}],
+
+Cell[TextData[{
+ Cell[BoxData[
+  RowBox[{
+   ButtonBox["LaplaceTransform",
+    BaseStyle->"Link",
+    ButtonData->"paclet:ref/LaplaceTransform"], "[", 
+   RowBox[{
+    StyleBox["expr", "TI"], ",", 
+    StyleBox["t", "TI"], ",", 
+    StyleBox["s", "TI"]}], "]"}]], "InlineFormula"],
+ " gives the Laplace transform of ",
+ Cell[BoxData[
+  StyleBox["expr", "TI"]], "InlineFormula"],
+ ".  ",
+ Cell[BoxData[
+  RowBox[{
+   ButtonBox["InverseLaplaceTransform",
+    BaseStyle->"Link",
+    ButtonData->"paclet:ref/InverseLaplaceTransform"], "[", 
+   RowBox[{
+    StyleBox["expr", "TI"], ",", 
+    StyleBox["s", "TI"], ",", 
+    StyleBox["t", "TI"]}], "]"}]], "InlineFormula"],
+ " ",
+ "gives the inverse Laplace transform of ",
+ Cell[BoxData[
+  StyleBox["expr", "TI"]], "InlineFormula"],
+ "."
+}], "Text",
+ CellChangeTimes->{{3.469795473021353*^9, 3.46979547824136*^9}, {
+  3.469795560773477*^9, 3.469795566265486*^9}}],
+
+Cell[BoxData[
+ RowBox[{"LaplaceTransform", "[", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"a", " ", 
+     SuperscriptBox["x", "2"]}], "+", 
+    RowBox[{"b", " ", "x"}], " ", "+", "c"}], ",", "x", ",", "s"}], 
+  "]"}]], "Input",
+ CellChangeTimes->{{3.4697955284634314`*^9, 3.469795538583446*^9}}],
+
+Cell[BoxData[
+ RowBox[{"LaplaceTransform", "[", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"t", "^", "4"}], " ", 
+    RowBox[{"Sin", "[", "t", "]"}]}], ",", "t", ",", "s"}], "]"}]], "Input"],
+
+Cell[BoxData[
+ RowBox[{"InverseLaplaceTransform", "[", 
+  RowBox[{"%", ",", "s", ",", "t"}], "]"}]], "Input",
+ CellChangeTimes->{{3.469795390705234*^9, 3.4697953973052435`*^9}}],
+
+Cell[BoxData[
+ RowBox[{"LaplaceTransform", "[", 
+  RowBox[{
+   RowBox[{"BesselJ", "[", 
+    RowBox[{"3", ",", "t"}], "]"}], ",", "t", ",", "s"}], "]"}]], "Input"],
+
+Cell["\<\
+Laplace transforms have the property that they turn integration and \
+differentiation into essentially algebraic operations. They are therefore \
+commonly used in studying systems governed by differential equations. \
+\>", "Text",
+ CellChangeTimes->{3.469795426405284*^9}],
+
+Cell[BoxData[
+ RowBox[{"LaplaceTransform", "[", 
+  RowBox[{
+   RowBox[{"Integrate", "[", 
+    RowBox[{
+     RowBox[{"f", "[", "u", "]"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"u", ",", "0", ",", "t"}], "}"}]}], "]"}], ",", "t", ",", "s"}],
+   "]"}]], "Input"],
+
+Cell[TextData[{
+ "For many purposes (e.g., analyzing data), Fourier analysis is an extremely \
+valuable tool. Given a periodic function ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"f", "(", "x", ")"}], TraditionalForm]], "InlineFormula"],
+ " given on ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    RowBox[{"0", "\[LessEqual]", "x"}], "<", "L"}], TraditionalForm]], 
+  "InlineFormula"],
+ " (with period ",
+ StyleBox["L", "TI"],
+ "), whose values ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    SubscriptBox["f", "k"], "=", 
+    RowBox[{"f", "(", 
+     SubscriptBox["x", "k"], ")"}]}], TraditionalForm]], "InlineFormula"],
+ " are given at the ",
+ StyleBox["n", "TI"],
+ " points ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    SubscriptBox["x", "k"], "=", 
+    RowBox[{
+     RowBox[{"(", 
+      RowBox[{"k", "-", "1"}], ")"}], 
+     RowBox[{"L", "/", "n"}]}]}], TraditionalForm]], "InlineFormula"],
+ ", ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    RowBox[{"k", "=", "1"}], ",", "2", ",", "\[Ellipsis]", ",", "n"}], 
+   TraditionalForm]], "InlineFormula"],
+ " (and nowhere else), we seek to interpolate these function values using \
+trigonometric functions, that is, as a linear combination of the functions ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    RowBox[{
+     SubscriptBox["\[Phi]", "l"], "(", "x", ")"}], "=", 
+    RowBox[{
+     SuperscriptBox["n", 
+      RowBox[{
+       RowBox[{"-", "1"}], "/", "2"}]], 
+     SuperscriptBox["e", 
+      RowBox[{
+       RowBox[{"-", "2"}], "\[Pi]", "i", 
+       RowBox[{"(", 
+        RowBox[{"l", "-", "1"}], ")"}], 
+       RowBox[{"x", "/", "L"}]}]]}]}], TraditionalForm]], "InlineFormula"],
+ ", ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    RowBox[{"j", "=", "1"}], ",", "\[Ellipsis]", ",", "m"}], 
+   TraditionalForm]]],
+ ". Thus, the expansion has the form ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    RowBox[{"f", "(", "x", ")"}], "=", 
+    RowBox[{
+     UnderoverscriptBox["\[Sum]", 
+      RowBox[{"j", "=", "1"}], "n",
+      LimitsPositioning->True], 
+     RowBox[{
+      SubscriptBox["c", "j"], 
+      RowBox[{
+       SubscriptBox["\[Phi]", "j"], "(", "x", ")"}]}]}]}], TraditionalForm]]],
+ "."
+}], "Text",
+ CellChangeTimes->{3.4697967829412785`*^9}],
+
+Cell[TextData[{
+ "Because ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    RowBox[{
+     UnderoverscriptBox["\[Sum]", 
+      RowBox[{"j", "=", "1"}], "n",
+      LimitsPositioning->True], 
+     RowBox[{
+      RowBox[{
+       SubscriptBox["\[Phi]", "l"], "(", 
+       SubscriptBox["x", "j"], ")"}], 
+      RowBox[{
+       SubscriptBox["\[Phi]", "k"], "(", 
+       SubscriptBox["x", "j"], ")"}]}]}], "=", 
+    SubscriptBox["\[Delta]", 
+     StyleBox["\"\<lk\>\"", "TI"]]}], TraditionalForm]]],
+ ", we get easily ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    SubscriptBox["c", "k"], "=", 
+    RowBox[{
+     SuperscriptBox["n", 
+      RowBox[{
+       RowBox[{"-", "1"}], "/", "2"}]], 
+     RowBox[{
+      UnderoverscriptBox["\[Sum]", 
+       RowBox[{"j", "=", "1"}], "n",
+       LimitsPositioning->True], 
+      RowBox[{
+       SubscriptBox["f", "j"], 
+       RowBox[{"exp", "(", 
+        RowBox[{"2", "\[Pi]", " ", 
+         RowBox[{"i", "(", 
+          RowBox[{"j", "-", "1"}], ")"}], 
+         RowBox[{
+          RowBox[{"(", 
+           RowBox[{"k", "-", "1"}], ")"}], "/", "n"}]}], ")"}]}]}]}]}], 
+   TraditionalForm]]],
+ "."
+}], "Text",
+ CellChangeTimes->{3.46979680430331*^9}],
+
+Cell[TextData[{
+ "In ",
+ StyleBox["Mathematica",
+  FontSlant->"Italic"],
+ " the Fourier transform of a function ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"f", "(", "t", ")"}], TraditionalForm]], "InlineMath"],
+ " is by default defined to be ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    FractionBox["1", 
+     SqrtBox[
+      RowBox[{"2", "\[Pi]"}]]], 
+    RowBox[{
+     SubsuperscriptBox["\[Integral]", 
+      RowBox[{"-", "\[Infinity]"}], "\[Infinity]"], 
+     RowBox[{
+      RowBox[{"f", "(", "t", ")"}], " ", 
+      SuperscriptBox["e", 
+       RowBox[{"i", "\[Omega]", "t"}]], 
+      RowBox[{"\[DifferentialD]", "t"}]}]}]}], TraditionalForm]], 
+  "InlineMath"],
+ ". The inverse Fourier transform of ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"F", "(", "\[Omega]", ")"}], TraditionalForm]], "InlineMath"],
+ " is similarly defined as ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    FractionBox["1", 
+     SqrtBox[
+      RowBox[{"2", "\[Pi]"}]]], 
+    RowBox[{
+     SubsuperscriptBox["\[Integral]", 
+      RowBox[{"-", "\[Infinity]"}], "\[Infinity]"], 
+     RowBox[{
+      RowBox[{"F", "(", "\[Omega]", ")"}], " ", 
+      SuperscriptBox["e", 
+       RowBox[{"-", "i", "\[Omega]", "t"}]], 
+      RowBox[{"\[DifferentialD]", "\[Omega]"}]}]}]}], TraditionalForm]], 
+  "InlineMath"],
+ ". "
+}], "Text",
+ CellChangeTimes->{3.4697954547673244`*^9}],
+
+Cell[TextData[{
+ Cell[BoxData[
+  RowBox[{
+   ButtonBox["FourierTransform",
+    BaseStyle->"Link",
+    ButtonData->"paclet:ref/FourierTransform"], "[", 
+   RowBox[{
+    StyleBox["expr", "TI"], ",", 
+    StyleBox["t", "TI"], ",", "\[Omega]"}], "]"}]], "InlineFormula"],
+ " ",
+ "gives the symbolic Fourier transform of ",
+ Cell[BoxData[
+  StyleBox["expr", "TI"]], "InlineFormula"],
+ ". "
+}], "Text",
+ CellChangeTimes->{{3.469795584687513*^9, 3.469795588947519*^9}}],
+
+Cell[BoxData[
+ RowBox[{"FourierTransform", "[", 
+  RowBox[{"1", ",", "t", ",", "\[Omega]"}], "]"}]], "Input"],
+
+Cell[BoxData[
+ RowBox[{"FourierTransform", "[", 
+  RowBox[{
+   RowBox[{"1", "/", 
+    RowBox[{"(", 
+     RowBox[{"1", "+", 
+      RowBox[{"t", "^", "2"}]}], ")"}]}], ",", "t", ",", "\[Omega]"}], 
+  "]"}]], "Input"],
+
+Cell[BoxData[
+ RowBox[{"FourierTransform", "[", 
+  RowBox[{
+   RowBox[{"Sin", "[", "t", "]"}], ",", "t", ",", "\[Omega]"}], 
+  "]"}]], "Input",
+ CellChangeTimes->{{3.469795844633885*^9, 3.469795850933894*^9}}],
+
+Cell[TextData[{
+ "In different scientific and technical fields different conventions are \
+often used for defining Fourier transforms. The option ",
+ Cell[BoxData[
+  ButtonBox["FourierParameters",
+   BaseStyle->"Link",
+   ButtonData->"paclet:ref/FourierParameters"]], "InlineFormula"],
+ " in ",
+ StyleBox["Mathematica",
+  FontSlant->"Italic"],
+ " allows you to choose any of these conventions you want. "
+}], "Text",
+ CellChangeTimes->{3.469795638831591*^9}],
+
+Cell[BoxData[
+ RowBox[{"FourierTransform", "[", 
+  RowBox[{"1", ",", "t", ",", "\[Omega]"}], "]"}]], "Input",
+ CellChangeTimes->{3.4697957882638063`*^9}],
+
+Cell["Convention for pure mathematics, systems engineering:", "Text",
+ CellChangeTimes->{3.469795795243816*^9}],
+
+Cell[BoxData[
+ RowBox[{"FourierTransform", "[", 
+  RowBox[{"1", ",", "t", ",", "\[Omega]", ",", 
+   RowBox[{"FourierParameters", "->", 
+    RowBox[{"{", 
+     RowBox[{"1", ",", 
+      RowBox[{"-", "1"}]}], "}"}]}]}], "]"}]], "Input",
+ CellChangeTimes->{3.469795799563822*^9}],
+
+Cell["Convention for classical physics:", "Text",
+ CellChangeTimes->{3.469795806173831*^9}],
+
+Cell[BoxData[
+ RowBox[{"FourierTransform", "[", 
+  RowBox[{"1", ",", "t", ",", "\[Omega]", ",", 
+   RowBox[{"FourierParameters", "->", 
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"-", "1"}], ",", "1"}], "}"}]}]}], "]"}]], "Input"],
+
+Cell["\<\
+This evaluates a two\[Hyphen]dimensional Fourier transform. \
+\>", "Text",
+ CellChangeTimes->{3.469795682453658*^9}],
+
+Cell[BoxData[
+ RowBox[{"FourierTransform", "[", 
+  RowBox[{
+   RowBox[{
+    RowBox[{
+     RowBox[{"(", 
+      RowBox[{"u", " ", "v"}], ")"}], "^", "2"}], " ", 
+    RowBox[{"Exp", "[", 
+     RowBox[{
+      RowBox[{"-", 
+       RowBox[{"u", "^", "2"}]}], "-", 
+      RowBox[{"v", "^", "2"}]}], "]"}]}], ",", 
+   RowBox[{"{", 
+    RowBox[{"u", ",", "v"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"a", ",", "b"}], "}"}]}], "]"}]], "Input"],
+
+Cell["Application: The power spectrum of a damped sinusoid:", "Text",
+ CellChangeTimes->{{3.4697958740039263`*^9, 3.4697958763539295`*^9}}],
+
+Cell[BoxData[{
+ RowBox[{"FourierTransform", "[", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"Sin", "[", 
+     RowBox[{
+      RowBox[{"10", "^", "3"}], " ", "t"}], "]"}], 
+    RowBox[{"Exp", "[", 
+     RowBox[{
+      RowBox[{"-", "t"}], "/", "10"}], "]"}], 
+    RowBox[{"UnitStep", "[", "t", "]"}]}], ",", "t", ",", "\[Omega]"}], 
+  "]"}], "\[IndentingNewLine]", 
+ RowBox[{"{", 
+  RowBox[{
+   RowBox[{"LogLogPlot", "[", 
+    RowBox[{
+     RowBox[{"Evaluate", "@", 
+      RowBox[{"Abs", "[", "%", "]"}]}], ",", 
+     RowBox[{"{", 
+      RowBox[{"\[Omega]", ",", "1*^-1", ",", "1*^4"}], "}"}], ",", 
+     RowBox[{"PlotRange", "\[Rule]", "All"}]}], "]"}], ",", 
+   RowBox[{"LogLogPlot", "[", 
+    RowBox[{
+     RowBox[{
+      RowBox[{"Sin", "[", 
+       RowBox[{
+        RowBox[{"10", "^", "3"}], " ", "t"}], "]"}], 
+      RowBox[{"Exp", "[", 
+       RowBox[{
+        RowBox[{"-", "t"}], "/", "10"}], "]"}], 
+      RowBox[{"UnitStep", "[", "t", "]"}]}], ",", 
+     RowBox[{"{", 
+      RowBox[{"t", ",", "0.01", ",", "1"}], "}"}], ",", 
+     RowBox[{"PlotRange", "\[Rule]", "All"}]}], "]"}]}], "}"}]}], "Input",
+ CellChangeTimes->{{3.4697958903439493`*^9, 3.4697959848640814`*^9}}],
+
+Cell[TextData[{
+ Cell[BoxData[
+  RowBox[{
+   ButtonBox["FourierSeries",
+    BaseStyle->"Link",
+    ButtonData->"paclet:ref/FourierSeries"], "[", 
+   RowBox[{
+    StyleBox["expr", "TI"], ",", 
+    StyleBox["t", "TI"], ",", 
+    StyleBox["n", "TI"]}], "]"}]], "InlineFormula"],
+ "gives the ",
+ Cell[BoxData[
+  StyleBox["n", "TI"]], "InlineFormula"],
+ Cell[BoxData[
+  FormBox[
+   SuperscriptBox["\[Null]", "th"], TraditionalForm]]],
+ "\[Dash]order Fourier series expansion of ",
+ Cell[BoxData[
+  StyleBox["expr", "TI"]], "InlineFormula"],
+ " in ",
+ Cell[BoxData[
+  StyleBox["t", "TI"]], "InlineFormula"],
+ ". \n",
+ Cell[BoxData[
+  RowBox[{
+   ButtonBox["FourierCoefficient",
+    BaseStyle->"Link",
+    ButtonData->"paclet:ref/FourierCoefficient"], "[", 
+   RowBox[{
+    StyleBox["expr", "TI"], ",", 
+    StyleBox["t", "TI"], ",", 
+    StyleBox["n", "TI"]}], "]"}]], "InlineFormula"],
+ "  ",
+ "gives the ",
+ Cell[BoxData[
+  StyleBox["n", "TI"]], "InlineFormula"],
+ Cell[BoxData[
+  FormBox[
+   SuperscriptBox["\[Null]", "th"], TraditionalForm]]],
+ " coefficient in the Fourier series expansion of ",
+ Cell[BoxData[
+  StyleBox["expr", "TI"]], "InlineFormula"],
+ "."
+}], "Text",
+ CellChangeTimes->{{3.4697962126244545`*^9, 3.4697962165544605`*^9}, {
+  3.469796356132661*^9, 3.469796361022668*^9}}],
+
+Cell[BoxData[{
+ RowBox[{"FourierSeries", "[", 
+  RowBox[{
+   RowBox[{"t", "/", "2"}], ",", "t", ",", "3"}], 
+  "]"}], "\[IndentingNewLine]", 
+ RowBox[{"Plot", "[", 
+  RowBox[{"%", ",", 
+   RowBox[{"{", 
+    RowBox[{"t", ",", 
+     RowBox[{
+      RowBox[{"-", "3"}], "Pi"}], ",", 
+     RowBox[{"3", "Pi"}]}], "}"}]}], "]"}]}], "Input",
+ CellChangeTimes->{{3.469796234284485*^9, 3.4697962344844856`*^9}}],
+
+Cell[BoxData[
+ RowBox[{"FourierSeries", "[", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"t", "^", "2"}], "+", "t"}], ",", "t", ",", "3"}], "]"}]], "Input",
+ CellChangeTimes->{3.469796560354954*^9}],
+
+Cell[BoxData[
+ RowBox[{"FourierCoefficient", "[", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"t", "^", "2"}], "+", "t"}], ",", "t", ",", "3"}], "]"}]], "Input",
+ CellChangeTimes->{3.469796544064931*^9}],
+
+Cell[BoxData[
+ RowBox[{"Plot", "[", 
+  RowBox[{
+   RowBox[{"SquareWave", "[", "x", "]"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"x", ",", 
+     RowBox[{"-", "3"}], ",", "3"}], "}"}], ",", 
+   RowBox[{"ExclusionsStyle", "\[Rule]", "Dotted"}]}], "]"}]], "Input"],
+
+Cell[BoxData[
+ RowBox[{"FourierSinSeries", "[", 
+  RowBox[{
+   RowBox[{"SquareWave", "[", "x", "]"}], ",", "x", ",", "10", ",", 
+   RowBox[{"FourierParameters", "\[Rule]", 
+    RowBox[{"{", 
+     RowBox[{"1", ",", 
+      RowBox[{"2", "Pi"}]}], "}"}]}]}], "]"}]], "Input"],
+
+Cell[BoxData[
+ RowBox[{"Plot", "[", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"SquareWave", "[", "x", "]"}], ",", "%"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"x", ",", "0", ",", "2"}], "}"}], ",", 
+   RowBox[{"ExclusionsStyle", "\[Rule]", "Dashed"}]}], "]"}]], "Input"],
+
+Cell[BoxData[{
+ RowBox[{"FourierSeries", "[", 
+  RowBox[{
+   RowBox[{"SawtoothWave", "[", "x", "]"}], ",", "x", ",", "10", ",", 
+   RowBox[{"FourierParameters", "\[Rule]", 
+    RowBox[{"{", 
+     RowBox[{"1", ",", 
+      RowBox[{"2", "Pi"}]}], "}"}]}]}], "]"}], "\[IndentingNewLine]", 
+ RowBox[{"Plot", "[", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"SawtoothWave", "[", "x", "]"}], ",", "%"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"x", ",", "0", ",", "2"}], "}"}], ",", 
+   RowBox[{"ExclusionsStyle", "\[Rule]", "Dotted"}]}], "]"}]}], "Input",
+ CellChangeTimes->{{3.469796163714338*^9, 3.469796163874338*^9}}],
+
+Cell[TextData[{
+ " The discrete Fourier transform is implemented in ",
+ StyleBox["Mathematica",
+  FontSlant->"Italic"],
+ " as follows. ",
+ Cell[BoxData[
+  RowBox[{
+   ButtonBox["Fourier",
+    BaseStyle->"Link",
+    ButtonData->"paclet:ref/Fourier"], "[", 
+   StyleBox["list", "TI"], "]"}]], "InlineFormula"],
+ " finds the discrete Fourier transform of a list of complex numbers. ",
+ "Multidimensional data can be transformed by \n",
+ StyleBox["Fourier[{{", "MR"],
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["x", "11"], TraditionalForm]], "InlineFormula"],
+ StyleBox[", ", "MR"],
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["x", "12"], TraditionalForm]], "InlineFormula"],
+ StyleBox[", ", "MR"],
+ Cell[BoxData[
+  FormBox["\[Ellipsis]", TraditionalForm]], "InlineFormula"],
+ StyleBox[", ", "MR"],
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["x", 
+    RowBox[{"1", " ", "n"}]], TraditionalForm]], "InlineFormula"],
+ StyleBox["}, \n         {", "MR"],
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["x", "21"], TraditionalForm]], "InlineFormula"],
+ StyleBox[", ", "MR"],
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["x", "22"], TraditionalForm]], "InlineFormula"],
+ StyleBox[", ", "MR"],
+ Cell[BoxData[
+  FormBox["\[Ellipsis]", TraditionalForm]], "InlineFormula"],
+ StyleBox[", ", "MR"],
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["x", 
+    RowBox[{"2", " ", "n"}]], TraditionalForm]], "InlineFormula"],
+ StyleBox["}, ", "MR"],
+ Cell[BoxData[
+  FormBox["\[Ellipsis]", TraditionalForm]], "InlineFormula"],
+ StyleBox[", \n         {", "MR"],
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["x", 
+    StyleBox[
+     RowBox[{
+      StyleBox["m", "TI"], "1"}]]], TraditionalForm]], "InlineFormula"],
+ StyleBox[", ", "MR"],
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["x", 
+    StyleBox[
+     RowBox[{
+      StyleBox["m", "TI"], "2"}]]], TraditionalForm]], "InlineFormula"],
+ StyleBox[", ", "MR"],
+ Cell[BoxData[
+  FormBox["\[Ellipsis]", TraditionalForm]], "InlineFormula"],
+ StyleBox[", ", "MR"],
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["x", 
+    StyleBox["\"\<mn\>\"", "TI"]], TraditionalForm]], "InlineFormula"],
+ StyleBox["}}]", "MR"],
+ ". \nIf we input exact data, the data will be numericalized to machine \
+precision. "
+}], "Text",
+ CellChangeTimes->{{3.4697968180653305`*^9, 3.46979683931536*^9}, 
+   3.46979692314948*^9}],
+
+Cell[TextData[{
+ "This means that for a vector ",
+ Cell[BoxData[
+  FormBox[
+   StyleBox["l",
+    FontWeight->"Bold"], TraditionalForm]]],
+ " of length ",
+ Cell[BoxData[
+  FormBox["n", TraditionalForm]]],
+ ", ",
+ StyleBox["Fourier[", "MR"],
+ StyleBox["l", "TI",
+  FontWeight->"Bold"],
+ StyleBox["]", "MR"],
+ " effectively carries out the matrix product ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    StyleBox["F",
+     FontWeight->"Bold",
+     FontSlant->"Plain"], ".", 
+    StyleBox["l",
+     FontWeight->"Bold"]}], TraditionalForm]]],
+ ", where the ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"(", 
+    RowBox[{"j", ",", "k"}], ")"}], TraditionalForm]]],
+ " element of the square matrix ",
+ Cell[BoxData[
+  FormBox[
+   StyleBox["F",
+    FontWeight->"Bold",
+    FontSlant->"Plain"], TraditionalForm]]],
+ " is ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    SuperscriptBox["n", 
+     RowBox[{
+      RowBox[{"-", "1"}], "/", "2"}]], 
+    RowBox[{"exp", "(", 
+     RowBox[{"2", "\[Pi]", " ", 
+      RowBox[{"i", "(", 
+       RowBox[{"k", "-", "1"}], ")"}], 
+      RowBox[{
+       RowBox[{"(", 
+        RowBox[{"j", "-", "1"}], ")"}], "/", "n"}]}], ")"}]}], 
+   TraditionalForm]]],
+ "."
+}], "Text",
+ CellChangeTimes->{3.469796952391522*^9}],
+
+Cell[BoxData[
+ RowBox[{"Fourier", "[", 
+  RowBox[{"{", 
+   RowBox[{
+   "1", ",", "1", ",", "2", ",", "2", ",", "1", ",", "1", ",", "0", ",", 
+    "0"}], "}"}], "]"}]], "Input"],
+
+Cell[TextData[{
+ " Here is the Fourier spectrum of the function ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"cos", "(", 
+    RowBox[{
+     RowBox[{"(", 
+      RowBox[{"500", "+", 
+       RowBox[{"10", 
+        RowBox[{
+         UnderoverscriptBox["\[Sum]", 
+          RowBox[{"k", "=", "5"}], "15"], 
+         RowBox[{
+          RowBox[{"cos", "(", 
+           RowBox[{"10", " ", "k", " ", "t"}], ")"}], "/", "k"}]}]}]}], ")"}],
+      "t"}], ")"}], TraditionalForm]]],
+ " sampled at the 32769 data points ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    SubscriptBox["t", "k"], "=", 
+    RowBox[{"k", " ", "2", 
+     RowBox[{"\[Pi]", "/", "32768"}]}]}], TraditionalForm]]]
+}], "Text",
+ CellChangeTimes->{{3.4697970277036285`*^9, 3.469797036203641*^9}, 
+   3.4697971429277925`*^9}],
+
+Cell[BoxData[
+ RowBox[{"ListPlot", "[", 
+  RowBox[{
+   RowBox[{"Abs", "[", 
+    RowBox[{"Take", "[", 
+     RowBox[{
+      RowBox[{"Fourier", "[", "\n", 
+       RowBox[{"Table", "[", 
+        RowBox[{
+         RowBox[{"Evaluate", "[", 
+          RowBox[{"Cos", "[", 
+           RowBox[{
+            RowBox[{"(", 
+             RowBox[{"500.", " ", "+", "  ", 
+              RowBox[{"10", " ", 
+               RowBox[{"Sum", "[", 
+                RowBox[{
+                 RowBox[{
+                  RowBox[{"Cos", "[", 
+                   RowBox[{"k", " ", "t"}], "]"}], "/", "k"}], ",", " ", 
+                 RowBox[{"{", 
+                  RowBox[{
+                  "k", ",", " ", "50.", ",", " ", "150.", ",", " ", "10"}], 
+                  "}"}]}], "]"}]}]}], ")"}], " ", "t"}], "]"}], "]"}], ",", 
+         " ", "\n", "        ", 
+         RowBox[{"{", 
+          RowBox[{"t", ",", " ", "0.", ",", " ", 
+           RowBox[{"2.", "Pi"}], ",", " ", 
+           RowBox[{"2.", 
+            RowBox[{"Pi", "/", "32768"}]}]}], "}"}]}], "]"}], "]"}], ",", " ",
+       "1000"}], "]"}], "]"}], ",", " ", 
+   RowBox[{"PlotRange", " ", "->", " ", "All"}], ",", " ", "\n", "        ", 
+   RowBox[{"Joined", " ", "->", " ", "True"}], ",", " ", 
+   RowBox[{"Frame", " ", "->", " ", "True"}], ",", " ", 
+   RowBox[{"Axes", " ", "->", " ", "False"}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.4697970455036535`*^9, 3.469797155539811*^9}}],
+
+Cell["\<\
+Application: Frequency Identification\[LineSeparator]Here is some periodic \
+data with some noise:\
+\>", "Text",
+ CellChangeTimes->{{3.469797229589922*^9, 3.4697972442399426`*^9}}],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"n", " ", "=", " ", "1000"}], ";"}], "\n", 
+ RowBox[{
+  RowBox[{"per", " ", "=", " ", "12.34"}], ";"}], "\n", 
+ RowBox[{
+  RowBox[{"pdata", " ", "=", " ", 
+   RowBox[{
+    RowBox[{"Table", "[", 
+     RowBox[{
+      RowBox[{"Sin", "[", 
+       RowBox[{"2", " ", "\[Pi]", " ", 
+        RowBox[{"x", "/", "per"}]}], "]"}], ",", " ", 
+      RowBox[{"{", 
+       RowBox[{"x", ",", "n"}], "}"}]}], "]"}], " ", "+", " ", 
+    RowBox[{"RandomReal", "[", 
+     RowBox[{".1", ",", 
+      RowBox[{"{", "n", "}"}]}], "]"}]}]}], ";"}], "\n", 
+ RowBox[{"ListPlot", "[", "pdata", "]"}]}], "Input"],
+
+Cell["Find the maximum mode in the spectrum:", "Text",
+ CellChangeTimes->{3.469797250939952*^9}],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"f", " ", "=", " ", 
+   RowBox[{"Abs", "[", 
+    RowBox[{"Fourier", "[", "pdata", "]"}], "]"}]}], ";"}], "\n", 
+ RowBox[{"pos", " ", "=", " ", 
+  RowBox[{
+   RowBox[{"Position", "[", 
+    RowBox[{"f", ",", " ", 
+     RowBox[{"Max", "[", "f", "]"}]}], "]"}], "[", 
+   RowBox[{"[", 
+    RowBox[{"1", ",", "1"}], "]"}], "]"}]}]}], "Input"],
+
+Cell[BoxData[
+ RowBox[{"Show", "[", 
+  RowBox[{
+   RowBox[{"ListPlot", "[", "f", "]"}], ",", " ", 
+   RowBox[{"Graphics", "[", 
+    RowBox[{"{", 
+     RowBox[{"Red", ",", " ", 
+      RowBox[{"Point", "[", 
+       RowBox[{"{", 
+        RowBox[{"pos", ",", " ", 
+         RowBox[{"f", "[", 
+          RowBox[{"[", "pos", "]"}], "]"}]}], "}"}], "]"}]}], "}"}], "]"}], 
+   ",", " ", 
+   RowBox[{"PlotRange", "\[Rule]", "All"}]}], "]"}]], "Input"],
+
+Cell[TextData[{
+ "Two closely related functions to ",
+ StyleBox["Fourier", "MR"],
+ " and ",
+ StyleBox["InverseFourier", "MR"],
+ " are ",
+ StyleBox["ListConvolve", "MR"],
+ " and ",
+ StyleBox["ListCorrelate", "MR"]
+}], "Text",
+ CellChangeTimes->{3.4697975802104735`*^9}],
+
+Cell[TextData[{
+ Cell[BoxData[
+  RowBox[{
+   ButtonBox["ListConvolve",
+    BaseStyle->"Link",
+    ButtonData->"paclet:ref/ListConvolve"], "[", 
+   RowBox[{
+    StyleBox["ker", "TI"], ",", 
+    StyleBox["list", "TI"]}], "]"}]]],
+ "forms the convolution of the kernel ",
+ Cell[BoxData[
+  StyleBox["ker", "TI"]], "InlineFormula"],
+ " with ",
+ Cell[BoxData[
+  StyleBox["list", "TI"]], "InlineFormula"],
+ ". ",
+ "For a 1D list data of the form ",
+ StyleBox["{", "MR"],
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["x", "1"], TraditionalForm]], "InlineFormula"],
+ StyleBox[", ", "MR"],
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["x", "2"], TraditionalForm]], "InlineFormula"],
+ StyleBox[", ", "MR"],
+ Cell[BoxData[
+  FormBox["\[Ellipsis]", TraditionalForm]], "InlineFormula"],
+ StyleBox[", ", "MR"],
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["x", "n"], TraditionalForm]], "InlineFormula"],
+ StyleBox["}", "MR"],
+ " and a kernel of the form ",
+ StyleBox["{", "MR"],
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["y", "1"], TraditionalForm]], "InlineFormula"],
+ StyleBox[", ", "MR"],
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["y", "2"], TraditionalForm]], "InlineFormula"],
+ StyleBox[", ", "MR"],
+ Cell[BoxData[
+  FormBox["\[Ellipsis]", TraditionalForm]], "InlineFormula"],
+ StyleBox[", ", "MR"],
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["y", "m"], TraditionalForm]], "InlineFormula"],
+ StyleBox["}", "MR"],
+ ", the elements ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["z", "k"], TraditionalForm]]],
+ " of the convolution ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    StyleBox["{", "MR"], 
+    RowBox[{
+     FormBox[
+      SubscriptBox["z", "1"],
+      TraditionalForm], 
+     StyleBox[",", "MR"], 
+     StyleBox[" ", "MR"], 
+     FormBox[
+      SubscriptBox["z", "2"],
+      TraditionalForm], 
+     StyleBox[",", "MR"], 
+     StyleBox[" ", "MR"], 
+     FormBox["\[Ellipsis]",
+      TraditionalForm], 
+     StyleBox[",", "MR"], 
+     StyleBox[" ", "MR"], 
+     FormBox[
+      SubscriptBox["z", 
+       RowBox[{"n", "-", "m", "+", "1"}]],
+      TraditionalForm]}], 
+    StyleBox["}", "MR"]}], TraditionalForm]]],
+ " are ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    SubscriptBox["z", "k"], "=", 
+    RowBox[{
+     UnderoverscriptBox["\[Sum]", 
+      RowBox[{"j", "=", "1"}], "m"], 
+     RowBox[{
+      SubscriptBox["y", "j"], 
+      SubscriptBox["x", 
+       RowBox[{"k", "-", "j"}]]}]}]}], TraditionalForm]]],
+ ". Here is a simple symbolic example."
+}], "Text",
+ CellChangeTimes->{{3.469797592082491*^9, 3.4697976117525187`*^9}}],
+
+Cell[BoxData[
+ RowBox[{"ListConvolve", "[", 
+  RowBox[{
+   RowBox[{"Table", "[", 
+    RowBox[{
+     RowBox[{"k", "[", "i", "]"}], ",", " ", 
+     RowBox[{"{", 
+      RowBox[{"i", ",", " ", "3"}], "}"}]}], "]"}], ",", " ", 
+   RowBox[{"Table", "[", 
+    RowBox[{
+     RowBox[{"a", "[", "i", "]"}], ",", " ", 
+     RowBox[{"{", 
+      RowBox[{"i", ",", " ", "8"}], "}"}]}], "]"}]}], "]"}]], "Input"],
+
+Cell[TextData[{
+ Cell[BoxData[
+  RowBox[{
+   ButtonBox["ListCorrelate",
+    BaseStyle->"Link",
+    ButtonData->"paclet:ref/ListCorrelate"], "[", 
+   RowBox[{
+    StyleBox["ker", "TI"], ",", 
+    StyleBox["list", "TI"]}], "]"}]], "InlineFormula"],
+ " forms the correlation of the kernel ",
+ Cell[BoxData[
+  StyleBox["ker", "TI"]], "InlineFormula"],
+ " with ",
+ Cell[BoxData[
+  StyleBox["list", "TI"]], "InlineFormula"],
+ ". ",
+ "With kernel ",
+ Cell[BoxData[
+  SubscriptBox[
+   StyleBox["K", "TI"], 
+   StyleBox["r", "TI"]]], "InlineFormula"],
+ " and list ",
+ Cell[BoxData[
+  SubscriptBox[
+   StyleBox["a", "TI"], 
+   StyleBox["s", "TI"]]], "InlineFormula"],
+ ", ",
+ Cell[BoxData[
+  RowBox[{
+   ButtonBox["ListCorrelate",
+    BaseStyle->"Link",
+    ButtonData->"paclet:ref/ListCorrelate"], "[", 
+   RowBox[{
+    StyleBox["ker", "TI"], ",", 
+    StyleBox["list", "TI"]}], "]"}]], "InlineFormula"],
+ " computes ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    UnderscriptBox["\[Sum]", "r",
+     LimitsPositioning->True], 
+    RowBox[{
+     SubscriptBox["K", "r"], 
+     SubscriptBox["a", 
+      RowBox[{"s", "+", "r"}]]}]}], TraditionalForm]], "InlineMath"],
+ ", where the limits of the sum are such that the kernel never overhangs \
+either end of the list. "
+}], "Text",
+ CellChangeTimes->{{3.469809559534274*^9, 3.4698095846743093`*^9}}],
+
+Cell[TextData[{
+ "Correlate a kernel ",
+ Cell[BoxData[
+  RowBox[{"{", 
+   RowBox[{"x", ",", "y"}], "}"}]], "InlineFormula"],
+ " with a list of data:"
+}], "Text",
+ CellChangeTimes->{3.469809613748352*^9}],
+
+Cell[BoxData[
+ RowBox[{"ListCorrelate", "[", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{"x", ",", "y"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"a", ",", "b", ",", "c", ",", "d", ",", "e", ",", "f"}], "}"}]}], 
+  "]"}]], "Input"],
+
+Cell["Two-dimensional correlation:", "Text",
+ CellChangeTimes->{3.4698096224303656`*^9}],
+
+Cell[BoxData[
+ RowBox[{"ListCorrelate", "[", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"1", ",", "1"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"1", ",", "1"}], "}"}]}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"a", ",", "b", ",", "c"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"d", ",", "e", ",", "f"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"g", ",", "h", ",", "i"}], "}"}]}], "}"}]}], "]"}]], "Input"],
+
+Cell["Application: Smooth data with a weighted running average:", "Text",
+ CellChangeTimes->{{3.469809648740402*^9, 3.4698096579904156`*^9}}],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"x", " ", "=", " ", 
+   RowBox[{"N", "[", 
+    RowBox[{
+     RowBox[{"Range", "[", "1000", "]"}], "/", "1000"}], "]"}]}], ";"}], "\n", 
+ RowBox[{
+  RowBox[{"data", " ", "=", " ", 
+   RowBox[{
+    RowBox[{"RandomReal", "[", 
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{
+        RowBox[{"-", "1"}], ",", "1"}], "}"}], ",", " ", "1000"}], "]"}], " ",
+     "+", 
+    RowBox[{"2", "  ", 
+     RowBox[{"Sin", "[", 
+      RowBox[{"7", " ", "x"}], "]"}]}]}]}], ";"}]}], "Input"],
+
+Cell["Normalized Gaussian profile for averaging weights:", "Text",
+ CellChangeTimes->{3.469809665570426*^9}],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"w", " ", "=", " ", 
+   RowBox[{"Exp", "[", 
+    RowBox[{
+     RowBox[{"-", ".01"}], " ", 
+     RowBox[{"N", "[", 
+      RowBox[{
+       RowBox[{"Range", "[", 
+        RowBox[{
+         RowBox[{"-", "24"}], ",", "24"}], "]"}], "^", "2"}], "]"}]}], 
+    "]"}]}], ";"}], "\n", 
+ RowBox[{
+  RowBox[{"w", " ", "/=", " ", 
+   RowBox[{"Total", "[", "w", "]"}]}], ";"}]}], "Input"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"smoother", " ", "=", " ", 
+   RowBox[{"ListCorrelate", "[", 
+    RowBox[{"w", ",", " ", "data"}], "]"}]}], ";"}]], "Input"],
+
+Cell[BoxData[
+ RowBox[{"Show", "[", 
+  RowBox[{
+   RowBox[{"ListLinePlot", "[", 
+    RowBox[{"Transpose", "[", 
+     RowBox[{"{", 
+      RowBox[{"x", ",", "data"}], "}"}], "]"}], "]"}], ",", " ", 
+   RowBox[{"ListLinePlot", "[", 
+    RowBox[{
+     RowBox[{"Transpose", "[", 
+      RowBox[{"{", 
+       RowBox[{
+        RowBox[{"Take", "[", 
+         RowBox[{"x", ",", 
+          RowBox[{"{", 
+           RowBox[{"25", ",", 
+            RowBox[{"-", "25"}]}], "}"}]}], "]"}], ",", "smoother"}], "}"}], 
+      "]"}], ",", " ", 
+     RowBox[{"PlotStyle", "\[Rule]", "Red"}]}], "]"}]}], "]"}]], "Input"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"Clear", "[", 
+   RowBox[{"x", ",", "w", ",", "smoother"}], "]"}], ";"}]], "Input",
+ CellChangeTimes->{{3.469809679520446*^9, 3.469809686670456*^9}}],
+
+Cell["Gaussian smoothing of an image:", "Text",
+ CellChangeTimes->{3.469809705150481*^9}],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"SetDirectory", "[", 
+   RowBox[{"NotebookDirectory", "[", "]"}], "]"}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"img", " ", "=", " ", 
+   RowBox[{"ReadList", "[", 
+    RowBox[{"\"\<ExampleData/fish.data\>\"", ",", "Number", ",", 
+     RowBox[{"RecordLists", "->", "True"}]}], "]"}]}], ";"}]}], "Input",
+ CellChangeTimes->{{3.4698097274125137`*^9, 3.469809797974614*^9}, {
+   3.4698101192070713`*^9, 3.4698101447491083`*^9}, {3.4698102730995164`*^9, 
+   3.4698103105356293`*^9}, {3.4698103804197903`*^9, 3.469810382289793*^9}, 
+   3.469810481328068*^9, {3.469810600806302*^9, 3.4698106371023617`*^9}, {
+   3.469810730118496*^9, 3.4698107439305162`*^9}, {3.469810782820571*^9, 
+   3.4698107886325808`*^9}, {3.4698108396026516`*^9, 3.469810841122654*^9}, 
+   3.469810936114788*^9}],
+
+Cell["\<\
+Gaussian kernel with a 5\[Times]5 pixel stencil:\
+\>", "Text",
+ CellChangeTimes->{3.46981066843841*^9}],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{
+   RowBox[{
+    RowBox[{"g", "[", "\[Sigma]_", "]"}], "[", 
+    RowBox[{"x_", ",", " ", "y_"}], "]"}], " ", ":=", " ", 
+   RowBox[{
+    FractionBox["1", 
+     RowBox[{"2", " ", "\[Pi]", " ", 
+      SuperscriptBox["\[Sigma]", "2"]}]], 
+    RowBox[{"Exp", "[", 
+     RowBox[{
+      RowBox[{"-", 
+       FractionBox["1", 
+        RowBox[{"2", 
+         SuperscriptBox["\[Sigma]", "2"]}]]}], 
+      RowBox[{"(", 
+       RowBox[{
+        RowBox[{"x", "^", "2"}], " ", "+", " ", 
+        RowBox[{"y", "^", "2"}]}], ")"}]}], "]"}]}]}], ";"}], "\n", 
+ RowBox[{
+  RowBox[{"gk", " ", "=", " ", 
+   RowBox[{"N", "[", 
+    RowBox[{"Outer", "[", 
+     RowBox[{
+      RowBox[{"g", "[", "1", "]"}], ",", " ", 
+      RowBox[{"Range", "[", 
+       RowBox[{
+        RowBox[{"-", "2"}], ",", "2"}], "]"}], ",", " ", 
+      RowBox[{"Range", "[", 
+       RowBox[{
+        RowBox[{"-", "2"}], ",", "2"}], "]"}]}], "]"}], "]"}]}], 
+  ";"}]}], "Input"],
+
+Cell["Smooth the image:", "Text",
+ CellChangeTimes->{3.4698106798784256`*^9}],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"smooth", " ", "=", " ", 
+   RowBox[{"ListCorrelate", "[", 
+    RowBox[{"gk", ",", " ", "img"}], "]"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{"{", 
+  RowBox[{
+   RowBox[{"ArrayPlot", "@", "img"}], ",", 
+   RowBox[{"ArrayPlot", "@", "smooth"}]}], "}"}]}], "Input",
+ CellChangeTimes->{{3.469810686248434*^9, 3.46981069757845*^9}, {
+  3.4698108672526903`*^9, 3.4698108680626917`*^9}, {3.469810946294802*^9, 
+  3.4698109611368327`*^9}}],
+
+Cell["\<\
+Edge detection in an image: Correlate with a Laplacian filter kernel:\
+\>", "Text",
+ CellChangeTimes->{{3.469811011598913*^9, 3.469811017178921*^9}}],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"edge", "=", 
+   RowBox[{"ListCorrelate", "[", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{"1", ",", "0", ",", "1"}], "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{"0", ",", 
+         RowBox[{"-", "4"}], ",", "0"}], "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{"1", ",", "0", ",", "1"}], "}"}]}], "}"}], ",", "img"}], 
+    "]"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{"{", 
+  RowBox[{
+   RowBox[{"ArrayPlot", "@", "img"}], ",", 
+   RowBox[{"ArrayPlot", "@", "edge"}]}], "}"}]}], "Input",
+ CellChangeTimes->{{3.46981103053894*^9, 3.469811091919026*^9}}]
+}, Closed]],
+
+Cell[CellGroupData[{
+
+Cell["Excercise", "Subsection",
+ CellChangeTimes->{{3.469815744848028*^9, 3.4698157480880327`*^9}}],
+
+Cell["\<\
+Find the total length of the Lissajous knot parametrized by
+x(t)=cos(2t)
+y(t)=cos(3t + \[Pi]/4)
+z(t)=cos(5t + 2)
+(Hint: calculate the norm of the velocity vector and integrate it to get the \
+length.)\
+\>", "Text",
+ CellChangeTimes->{{3.46981575314804*^9, 3.4698158567081847`*^9}},
+ FontWeight->"Bold",
+ FontColor->RGBColor[0, 0, 1]],
+
+Cell[TextData[{
+ "Find the mass of a thin disk of radius 1 whose density r units from the \
+center is given by ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"\[Delta]", "=", 
+    SqrtBox[
+     RowBox[{
+      FractionBox["1", "4"], "+", 
+      SuperscriptBox["r", "2"]}]]}], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ "."
+}], "Text",
+ CellChangeTimes->{{3.4698158734682083`*^9, 3.469815920468274*^9}},
+ FontWeight->"Bold",
+ FontColor->RGBColor[0, 0, 1]],
+
+Cell["\<\
+Find the area of one \[OpenCurlyDoubleQuote]leaf\[CloseCurlyDoubleQuote] of \
+the curve given in polar coordinates as r(\[Theta])=sin(3\[Theta]) (Remember \
+that in polar coordinates the element of area is given by dA = r dr \
+d\[Theta].)\
+\>", "Text",
+ CellChangeTimes->{{3.469815940398302*^9, 3.4698159846183643`*^9}},
+ FontWeight->"Bold",
+ FontColor->RGBColor[0, 0, 1]],
+
+Cell[TextData[{
+ "Find the limits of ",
+ Cell[BoxData[
+  FormBox[
+   FractionBox[
+    RowBox[{"sin", " ", 
+     SuperscriptBox["x", "2"]}], "x"], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ "as x\[Rule]0. "
+}], "Text",
+ CellChangeTimes->{{3.469816033772435*^9, 3.4698160674824824`*^9}, {
+  3.469816166814623*^9, 3.4698161704746275`*^9}},
+ FontWeight->"Bold",
+ FontColor->RGBColor[0, 0, 1]],
+
+Cell[TextData[{
+ "Find the closest point on the hyperbola ",
+ Cell[BoxData[
+  FormBox[
+   SuperscriptBox["x", "2"], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ " \[Minus] ",
+ Cell[BoxData[
+  FormBox[
+   SuperscriptBox["y", "2"], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ " \[Equal] 1 to the point (3, 5)."
+}], "Text",
+ CellChangeTimes->{{3.469816081052501*^9, 3.4698160975225244`*^9}},
+ FontWeight->"Bold",
+ FontColor->RGBColor[0, 0, 1]],
+
+Cell[TextData[{
+ "Compare symbolic and numerical evaluations of ",
+ Cell[BoxData[
+  RowBox[{
+   SubsuperscriptBox["\[Integral]", "0", "1"], 
+   FractionBox[
+    RowBox[{
+     SuperscriptBox["\[Omega]", "4"], 
+     SuperscriptBox["\[ExponentialE]", "\[Omega]"]}], 
+    SuperscriptBox[
+     RowBox[{"(", 
+      RowBox[{
+       SuperscriptBox["\[ExponentialE]", "\[Omega]"], "-", "1"}], ")"}], 
+     "2"]]}]]],
+ "."
+}], "Text",
+ CellChangeTimes->{3.4698176002087326`*^9},
+ FontWeight->"Bold",
+ FontColor->RGBColor[0, 0, 1]],
+
+Cell[TextData[{
+ "Evaluate ",
+ Cell[BoxData[
+  RowBox[{
+   SubsuperscriptBox["\[Integral]", "0", "\[Infinity]"], 
+   FractionBox[
+    RowBox[{
+     SuperscriptBox["\[Omega]", "4"], 
+     SuperscriptBox["\[ExponentialE]", "\[Omega]"]}], 
+    SuperscriptBox[
+     RowBox[{"(", 
+      RowBox[{
+       SuperscriptBox["\[ExponentialE]", "\[Omega]"], "-", "1"}], ")"}], 
+     "2"]]}]]],
+ " numerically.  [Hint: use LogPlot to examine the integrand.]"
+}], "Text",
+ CellChangeTimes->{3.4698176143387527`*^9},
+ FontWeight->"Bold",
+ FontColor->RGBColor[0, 0, 1]],
+
+Cell[TextData[{
+ StyleBox["Interference maxima",
+  FontWeight->"Bold",
+  FontVariations->{"Underline"->True}],
+ "\nIf ",
+ StyleBox["n ",
+  FontSlant->"Italic"],
+ "equally spaced identical antennas radiate in phase, the angular \
+distribution is described by an interference pattern of the form\n",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    RowBox[{"f", "[", 
+     RowBox[{"n", ",", "\[Alpha]"}], "]"}], "=", 
+    FractionBox[
+     SuperscriptBox[
+      RowBox[{"Sin", "[", 
+       RowBox[{"n", " ", "\[Alpha]"}], "]"}], "2"], 
+     SuperscriptBox[
+      RowBox[{"Sin", "[", "\[Alpha]", "]"}], "2"]]}], TraditionalForm]], 
+  "Text",
+  Evaluatable->False,
+  TextAlignment->Left,
+  TextJustification->0],
+ "\nwhere\n",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"\[Alpha]", " ", "=", " ", 
+    RowBox[{
+     FractionBox["d", "\[Lambda]"], 
+     RowBox[{"Sin", "[", "\[Theta]", "]"}]}]}], TraditionalForm]], "Text",
+  TextAlignment->Left,
+  TextJustification->0],
+ "\nand where ",
+ StyleBox["d",
+  FontSlant->"Italic"],
+ " is the spacing between sources and \[Lambda] is the wave length.\na) Plot \
+the distribution in \[Alpha] for several values of ",
+ StyleBox["n",
+  FontSlant->"Italic"],
+ " and determine the locations of the principal maxima.  How many minor \
+maxima are found between principal maxima?\nb) Write a function which \
+produces a numerical list of positions for the minor maxima. with ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"0", "<", "\[Alpha]", "<", "\[Pi]"}], TraditionalForm]]],
+ "."
+}], "Text",
+ CellChangeTimes->{3.469817864301116*^9},
+ FontWeight->"Bold",
+ FontColor->RGBColor[0, 0, 1]]
+}, Closed]]
+}, Open  ]]
+}, Open  ]]
+},
+WindowSize->{704, 822},
+WindowMargins->{{279, Automatic}, {Automatic, 25}},
+ShowSelection->True,
+Magnification->1.100000023841858,
+FrontEndVersion->"7.0 for Microsoft Windows (64-bit) (February 18, 2009)",
+StyleDefinitions->FrontEnd`FileName[{"Creative"}, "NaturalColor.nb", 
+  CharacterEncoding -> "WindowsANSI"]
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[567, 22, 187, 5, 138, "Title"],
+Cell[757, 29, 606, 13, 131, "Subtitle"],
+Cell[CellGroupData[{
+Cell[1388, 46, 93, 1, 83, "Section"],
+Cell[1484, 49, 204, 7, 89, "Text"],
+Cell[CellGroupData[{
+Cell[1713, 60, 107, 1, 40, "Subsection"],
+Cell[1823, 63, 949, 25, 128, "Text"],
+Cell[2775, 90, 1532, 41, 160, "Text"],
+Cell[4310, 133, 306, 7, 31, "Text"],
+Cell[4619, 142, 2776, 99, 114, "Text"],
+Cell[7398, 243, 427, 13, 43, "Input"],
+Cell[7828, 258, 172, 4, 43, "Input"],
+Cell[8003, 264, 239, 8, 43, "Input"],
+Cell[8245, 274, 254, 9, 43, "Input"],
+Cell[8502, 285, 128, 4, 43, "Input"],
+Cell[8633, 291, 153, 5, 43, "Input"],
+Cell[8789, 298, 132, 5, 43, "Input"],
+Cell[8924, 305, 104, 1, 31, "Text"],
+Cell[9031, 308, 166, 5, 43, "Input"],
+Cell[9200, 315, 212, 6, 31, "Text"],
+Cell[9415, 323, 81, 2, 43, "Input"],
+Cell[9499, 327, 161, 5, 43, "Input"],
+Cell[9663, 334, 131, 4, 43, "Input"],
+Cell[9797, 340, 136, 4, 43, "Input"],
+Cell[9936, 346, 223, 6, 43, "Input"],
+Cell[10162, 354, 227, 7, 59, "Input"],
+Cell[10392, 363, 260, 8, 60, "Input"],
+Cell[10655, 373, 208, 6, 31, "Text"],
+Cell[10866, 381, 340, 12, 64, "Input"],
+Cell[11209, 395, 196, 5, 31, "Text"],
+Cell[11408, 402, 2908, 90, 105, "Input"],
+Cell[14319, 494, 97, 2, 43, "Input"],
+Cell[14419, 498, 141, 1, 31, "Text"],
+Cell[14563, 501, 256, 7, 45, "Input"],
+Cell[CellGroupData[{
+Cell[14844, 512, 95, 1, 29, "Subsubsection"],
+Cell[14942, 515, 570, 16, 51, "Text"],
+Cell[15515, 533, 1501, 51, 71, "Text"],
+Cell[17019, 586, 343, 13, 31, "Text"],
+Cell[17365, 601, 552, 17, 83, "Text"],
+Cell[17920, 620, 1200, 36, 105, "Text"]
+}, Closed]]
+}, Closed]],
+Cell[CellGroupData[{
+Cell[19169, 662, 83, 1, 30, "Subsection"],
+Cell[19255, 665, 215, 6, 70, "Text"],
+Cell[19473, 673, 914, 32, 72, "Text"],
+Cell[20390, 707, 132, 4, 43, "Input"],
+Cell[20525, 713, 127, 3, 43, "Input"],
+Cell[20655, 718, 529, 20, 40, "Text"],
+Cell[21187, 740, 151, 5, 43, "Input"],
+Cell[21341, 747, 503, 20, 41, "Text"],
+Cell[21847, 769, 152, 5, 43, "Input"],
+Cell[22002, 776, 164, 5, 32, "Text"],
+Cell[22169, 783, 255, 8, 43, "Input"],
+Cell[22427, 793, 244, 5, 51, "Text"],
+Cell[22674, 800, 151, 4, 43, "Input"],
+Cell[22828, 806, 370, 13, 62, "Input"],
+Cell[CellGroupData[{
+Cell[23223, 823, 61, 0, 29, "Subsubsection"],
+Cell[23287, 825, 73, 0, 31, "Text"],
+Cell[23363, 827, 723, 22, 79, "Input"],
+Cell[24089, 851, 90, 2, 31, "Text"],
+Cell[24182, 855, 83, 2, 43, "Input"],
+Cell[24268, 859, 409, 13, 70, "Text"],
+Cell[24680, 874, 182, 5, 43, "Input"],
+Cell[24865, 881, 92, 2, 31, "Text"],
+Cell[24960, 885, 609, 20, 45, "Input"],
+Cell[25572, 907, 125, 3, 51, "Text"]
+}, Closed]]
+}, Closed]],
+Cell[CellGroupData[{
+Cell[25746, 916, 137, 2, 30, "Subsection"],
+Cell[25886, 920, 676, 18, 105, "Text"],
+Cell[26565, 940, 1464, 27, 244, "Text"],
+Cell[28032, 969, 1005, 42, 70, "Text"],
+Cell[29040, 1013, 351, 12, 66, "Input"],
+Cell[29394, 1027, 200, 6, 43, "Input"],
+Cell[29597, 1035, 336, 7, 70, "Text"],
+Cell[29936, 1044, 136, 4, 43, "Input"],
+Cell[30075, 1050, 704, 21, 90, "Text"],
+Cell[30782, 1073, 89, 1, 31, "Text"],
+Cell[30874, 1076, 265, 9, 43, "Input"],
+Cell[31142, 1087, 218, 7, 31, "Text"],
+Cell[31363, 1096, 246, 8, 43, "Input"],
+Cell[31612, 1106, 155, 4, 31, "Text"],
+Cell[31770, 1112, 267, 9, 43, "Input"],
+Cell[32040, 1123, 226, 6, 31, "Text"],
+Cell[32269, 1131, 99, 1, 31, "Text"],
+Cell[32371, 1134, 190, 6, 43, "Input"],
+Cell[32564, 1142, 1135, 36, 91, "Text"],
+Cell[33702, 1180, 244, 8, 43, "Input"],
+Cell[33949, 1190, 389, 12, 43, "Input"],
+Cell[34341, 1204, 457, 13, 52, "Text"],
+Cell[34801, 1219, 163, 5, 43, "Input"],
+Cell[34967, 1226, 288, 8, 43, "Input"],
+Cell[35258, 1236, 217, 7, 32, "Text"],
+Cell[35478, 1245, 252, 8, 43, "Input"],
+Cell[35733, 1255, 1252, 44, 72, "Text"],
+Cell[36988, 1301, 105, 1, 31, "Text"],
+Cell[37096, 1304, 419, 14, 43, "Input"],
+Cell[37518, 1320, 94, 1, 31, "Text"],
+Cell[37615, 1323, 363, 12, 43, "Input"],
+Cell[37981, 1337, 217, 7, 32, "Text"],
+Cell[38201, 1346, 468, 16, 43, "Input"],
+Cell[CellGroupData[{
+Cell[38694, 1366, 124, 1, 29, "Subsubsection"],
+Cell[38821, 1369, 125, 1, 31, "Text"],
+Cell[38949, 1372, 83, 2, 43, "Input"],
+Cell[39035, 1376, 1495, 39, 144, "Input"],
+Cell[40533, 1417, 354, 8, 64, "Input"],
+Cell[40890, 1427, 300, 6, 71, "Text"],
+Cell[41193, 1435, 897, 30, 64, "Input"],
+Cell[42093, 1467, 116, 1, 31, "Text"],
+Cell[42212, 1470, 493, 15, 64, "Input"],
+Cell[42708, 1487, 876, 24, 124, "Input"],
+Cell[43587, 1513, 130, 3, 31, "Text"],
+Cell[43720, 1518, 1181, 32, 104, "Input"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[44938, 1555, 101, 1, 29, "Subsubsection"],
+Cell[45042, 1558, 177, 3, 31, "Text"],
+Cell[45222, 1563, 1564, 55, 223, "Text"],
+Cell[46789, 1620, 1853, 63, 167, "Text"]
+}, Closed]]
+}, Closed]],
+Cell[CellGroupData[{
+Cell[48691, 1689, 158, 2, 30, "Subsection"],
+Cell[48852, 1693, 214, 6, 70, "Text"],
+Cell[49069, 1701, 1491, 45, 94, "Text"],
+Cell[50563, 1748, 173, 5, 43, "Input"],
+Cell[50739, 1755, 59, 1, 43, "Input"],
+Cell[50801, 1758, 210, 7, 31, "Text"],
+Cell[51014, 1767, 170, 5, 43, "Input"],
+Cell[51187, 1774, 358, 12, 43, "Input"],
+Cell[51548, 1788, 201, 6, 43, "Input"],
+Cell[51752, 1796, 525, 16, 64, "Input"],
+Cell[52280, 1814, 76, 1, 31, "Text"],
+Cell[52359, 1817, 223, 7, 43, "Input"],
+Cell[52585, 1826, 298, 8, 52, "Text"],
+Cell[52886, 1836, 195, 6, 43, "Input"],
+Cell[53084, 1844, 995, 36, 54, "Text"],
+Cell[54082, 1882, 266, 8, 43, "Input"],
+Cell[54351, 1892, 1491, 56, 73, "Text"],
+Cell[55845, 1950, 196, 5, 43, "Input"],
+Cell[56044, 1957, 200, 6, 43, "Input"],
+Cell[56247, 1965, 301, 10, 63, "Input"],
+Cell[56551, 1977, 114, 1, 31, "Text"],
+Cell[56668, 1980, 201, 6, 58, "Input"],
+Cell[56872, 1988, 241, 7, 58, "Input"],
+Cell[57116, 1997, 204, 6, 43, "Input"],
+Cell[57323, 2005, 189, 5, 43, "Input"],
+Cell[CellGroupData[{
+Cell[57537, 2014, 96, 1, 29, "Subsubsection"],
+Cell[57636, 2017, 343, 7, 70, "Text"],
+Cell[57982, 2026, 880, 29, 103, "Text"],
+Cell[58865, 2057, 340, 14, 38, "Text"],
+Cell[59208, 2073, 313, 10, 40, "Text"],
+Cell[59524, 2085, 194, 5, 31, "Text"]
+}, Open  ]]
+}, Closed]],
+Cell[CellGroupData[{
+Cell[59767, 2096, 112, 1, 30, "Subsection"],
+Cell[59882, 2099, 369, 11, 89, "Text"],
+Cell[60254, 2112, 294, 12, 34, "Text"],
+Cell[60551, 2126, 109, 3, 43, "Input"],
+Cell[60663, 2131, 210, 8, 32, "Text"],
+Cell[60876, 2141, 167, 5, 43, "Input"],
+Cell[61046, 2148, 102, 1, 31, "Text"],
+Cell[61151, 2151, 141, 4, 43, "Input"],
+Cell[61295, 2157, 307, 10, 35, "Text"],
+Cell[61605, 2169, 200, 6, 43, "Input"],
+Cell[61808, 2177, 205, 5, 31, "Text"],
+Cell[62016, 2184, 168, 5, 43, "Input"],
+Cell[62187, 2191, 62, 0, 31, "Text"],
+Cell[62252, 2193, 54, 1, 43, "Input"],
+Cell[62309, 2196, 512, 13, 55, "Text"],
+Cell[62824, 2211, 327, 9, 43, "Input"],
+Cell[63154, 2222, 160, 5, 32, "Text"],
+Cell[63317, 2229, 269, 8, 43, "Input"],
+Cell[63589, 2239, 299, 9, 60, "Input"],
+Cell[63891, 2250, 453, 15, 32, "Text"],
+Cell[64347, 2267, 267, 7, 58, "Input"],
+Cell[64617, 2276, 330, 11, 31, "Text"],
+Cell[64950, 2289, 267, 8, 59, "Input"],
+Cell[65220, 2299, 498, 16, 51, "Text"],
+Cell[65721, 2317, 168, 5, 57, "Input"],
+Cell[65892, 2324, 332, 10, 65, "Input"],
+Cell[66227, 2336, 844, 25, 71, "Input"],
+Cell[CellGroupData[{
+Cell[67096, 2365, 97, 1, 29, "Subsubsection"],
+Cell[67196, 2368, 478, 15, 65, "Text"],
+Cell[67677, 2385, 365, 12, 34, "Text"],
+Cell[68045, 2399, 902, 31, 35, "Text"],
+Cell[68950, 2432, 406, 11, 51, "Text"],
+Cell[69359, 2445, 513, 16, 54, "Text"]
+}, Open  ]]
+}, Closed]],
+Cell[CellGroupData[{
+Cell[69921, 2467, 128, 1, 30, "Subsection"],
+Cell[70052, 2470, 313, 5, 70, "Text"],
+Cell[70368, 2477, 291, 10, 40, "DisplayFormula",
+ Evaluatable->False],
+Cell[70662, 2489, 1807, 59, 142, "Text"],
+Cell[72472, 2550, 116, 3, 31, "Text"],
+Cell[72591, 2555, 377, 13, 40, "DisplayFormula",
+ Evaluatable->False],
+Cell[72971, 2570, 2528, 69, 276, "Text"],
+Cell[75502, 2641, 73, 1, 43, "Input"],
+Cell[75578, 2644, 2376, 69, 367, "Input"],
+Cell[CellGroupData[{
+Cell[77979, 2717, 102, 1, 29, "Subsubsection"],
+Cell[78084, 2720, 424, 13, 61, "Input"],
+Cell[78511, 2735, 336, 11, 57, "Input"],
+Cell[78850, 2748, 573, 17, 86, "Input"],
+Cell[79426, 2767, 311, 10, 41, "Input"],
+Cell[79740, 2779, 448, 14, 52, "Input"],
+Cell[80191, 2795, 396, 13, 41, "Input"]
+}, Closed]],
+Cell[CellGroupData[{
+Cell[80624, 2813, 101, 1, 22, "Subsubsection"],
+Cell[80728, 2816, 162, 3, 75, "Text"],
+Cell[80893, 2821, 1667, 39, 596, "Text"]
+}, Closed]]
+}, Closed]],
+Cell[CellGroupData[{
+Cell[82609, 2866, 105, 1, 30, "Subsection"],
+Cell[82717, 2869, 1066, 27, 147, "Text"],
+Cell[83786, 2898, 105, 1, 31, "Text"],
+Cell[83894, 2901, 208, 6, 43, "Input"],
+Cell[84105, 2909, 137, 3, 31, "Text"],
+Cell[84245, 2914, 543, 17, 118, "Input"],
+Cell[84791, 2933, 1129, 39, 77, "Text"],
+Cell[85923, 2974, 132, 1, 31, "Text"],
+Cell[86058, 2977, 494, 16, 71, "Input"],
+Cell[86555, 2995, 161, 3, 27, "Text"],
+Cell[86719, 3000, 112, 2, 43, "Input"],
+Cell[86834, 3004, 229, 6, 31, "Text"],
+Cell[87066, 3012, 757, 23, 101, "Input"],
+Cell[87826, 3037, 131, 1, 31, "Text"],
+Cell[87960, 3040, 124, 1, 31, "Text"],
+Cell[88087, 3043, 1012, 28, 71, "Input"],
+Cell[89102, 3073, 122, 2, 43, "Input"],
+Cell[89227, 3077, 1071, 29, 154, "Input"],
+Cell[CellGroupData[{
+Cell[90323, 3110, 98, 1, 29, "Subsubsection"],
+Cell[90424, 3113, 907, 27, 89, "Text"],
+Cell[91334, 3142, 485, 14, 58, "Input"],
+Cell[91822, 3158, 556, 11, 89, "Text"],
+Cell[92381, 3171, 316, 9, 58, "Input"],
+Cell[92700, 3182, 93, 1, 31, "Text"]
+}, Closed]],
+Cell[CellGroupData[{
+Cell[92830, 3188, 98, 1, 22, "Subsubsection"],
+Cell[92931, 3191, 1035, 36, 68, "Text"],
+Cell[93969, 3229, 1068, 23, 151, "Text"],
+Cell[95040, 3254, 520, 18, 47, "Text"],
+Cell[95563, 3274, 548, 18, 47, "Text"]
+}, Open  ]]
+}, Closed]],
+Cell[CellGroupData[{
+Cell[96160, 3298, 102, 1, 30, "Subsection"],
+Cell[96265, 3301, 606, 17, 109, "Text"],
+Cell[96874, 3320, 3419, 130, 113, "Text"],
+Cell[100296, 3452, 177, 6, 43, "Input"],
+Cell[100476, 3460, 162, 5, 43, "Input"],
+Cell[100641, 3467, 481, 18, 32, "Text"],
+Cell[101125, 3487, 103, 3, 43, "Input"],
+Cell[101231, 3492, 70, 0, 31, "Text"],
+Cell[101304, 3494, 338, 9, 69, "Input"],
+Cell[101645, 3505, 49, 0, 31, "Text"],
+Cell[101697, 3507, 237, 6, 69, "Input"],
+Cell[101937, 3515, 778, 29, 83, "Input"],
+Cell[102718, 3546, 150, 3, 31, "Text"],
+Cell[102871, 3551, 255, 8, 43, "Input"],
+Cell[103129, 3561, 320, 9, 43, "Input"],
+Cell[103452, 3572, 89, 2, 31, "Text"],
+Cell[103544, 3576, 503, 15, 70, "Input"],
+Cell[CellGroupData[{
+Cell[104072, 3595, 100, 1, 29, "Subsubsection"],
+Cell[104175, 3598, 160, 3, 31, "Text"],
+Cell[104338, 3603, 216, 5, 31, "Text"],
+Cell[104557, 3610, 639, 24, 41, "Text"],
+Cell[105199, 3636, 723, 27, 46, "Text"]
+}, Closed]]
+}, Closed]],
+Cell[CellGroupData[{
+Cell[105971, 3669, 111, 1, 30, "Subsection"],
+Cell[106085, 3672, 868, 21, 167, "Text"],
+Cell[106956, 3695, 1221, 40, 66, "Text"],
+Cell[108180, 3737, 907, 30, 53, "Text"],
+Cell[109090, 3769, 289, 8, 45, "Input"],
+Cell[109382, 3779, 183, 5, 43, "Input"],
+Cell[109568, 3786, 177, 3, 43, "Input"],
+Cell[109748, 3791, 162, 4, 43, "Input"],
+Cell[109913, 3797, 282, 5, 70, "Text"],
+Cell[110198, 3804, 261, 8, 43, "Input"],
+Cell[110462, 3814, 2183, 76, 113, "Text"],
+Cell[112648, 3892, 1173, 43, 35, "Text"],
+Cell[113824, 3937, 1332, 46, 92, "Text"],
+Cell[115159, 3985, 462, 15, 32, "Text"],
+Cell[115624, 4002, 109, 2, 43, "Input"],
+Cell[115736, 4006, 214, 7, 43, "Input"],
+Cell[115953, 4015, 209, 5, 43, "Input"],
+Cell[116165, 4022, 458, 12, 71, "Text"],
+Cell[116626, 4036, 153, 3, 43, "Input"],
+Cell[116782, 4041, 111, 1, 31, "Text"],
+Cell[116896, 4044, 275, 7, 43, "Input"],
+Cell[117174, 4053, 91, 1, 31, "Text"],
+Cell[117268, 4056, 233, 6, 43, "Input"],
+Cell[117504, 4064, 126, 3, 31, "Text"],
+Cell[117633, 4069, 437, 15, 43, "Input"],
+Cell[118073, 4086, 139, 1, 31, "Text"],
+Cell[118215, 4089, 1169, 34, 104, "Input"],
+Cell[119387, 4125, 1290, 45, 72, "Text"],
+Cell[120680, 4172, 402, 12, 64, "Input"],
+Cell[121085, 4186, 190, 5, 43, "Input"],
+Cell[121278, 4193, 195, 5, 43, "Input"],
+Cell[121476, 4200, 257, 7, 43, "Input"],
+Cell[121736, 4209, 271, 7, 43, "Input"],
+Cell[122010, 4218, 287, 8, 43, "Input"],
+Cell[122300, 4228, 628, 16, 64, "Input"],
+Cell[122931, 4246, 2300, 75, 153, "Text"],
+Cell[125234, 4323, 1227, 51, 52, "Text"],
+Cell[126464, 4376, 176, 5, 43, "Input"],
+Cell[126643, 4383, 772, 25, 54, "Text"],
+Cell[127418, 4410, 1426, 35, 144, "Input"],
+Cell[128847, 4447, 190, 4, 51, "Text"],
+Cell[129040, 4453, 617, 18, 104, "Input"],
+Cell[129660, 4473, 96, 1, 31, "Text"],
+Cell[129759, 4476, 371, 11, 64, "Input"],
+Cell[130133, 4489, 442, 13, 64, "Input"],
+Cell[130578, 4504, 268, 10, 52, "Text"],
+Cell[130849, 4516, 2513, 93, 76, "Text"],
+Cell[133365, 4611, 397, 12, 43, "Input"],
+Cell[133765, 4625, 1332, 48, 73, "Text"],
+Cell[135100, 4675, 203, 7, 32, "Text"],
+Cell[135306, 4684, 230, 7, 43, "Input"],
+Cell[135539, 4693, 88, 1, 31, "Text"],
+Cell[135630, 4696, 492, 16, 43, "Input"],
+Cell[136125, 4714, 141, 1, 31, "Text"],
+Cell[136269, 4717, 510, 17, 64, "Input"],
+Cell[136782, 4736, 108, 1, 31, "Text"],
+Cell[136893, 4739, 409, 14, 64, "Input"],
+Cell[137305, 4755, 158, 4, 43, "Input"],
+Cell[137466, 4761, 599, 18, 84, "Input"],
+Cell[138068, 4781, 183, 4, 43, "Input"],
+Cell[138254, 4787, 89, 1, 31, "Text"],
+Cell[138346, 4790, 828, 16, 84, "Input"],
+Cell[139177, 4808, 113, 3, 31, "Text"],
+Cell[139293, 4813, 964, 32, 82, "Input"],
+Cell[140260, 4847, 77, 1, 31, "Text"],
+Cell[140340, 4850, 471, 11, 64, "Input"],
+Cell[140814, 4863, 159, 3, 31, "Text"],
+Cell[140976, 4868, 641, 19, 64, "Input"]
+}, Closed]],
+Cell[CellGroupData[{
+Cell[141654, 4892, 99, 1, 30, "Subsection"],
+Cell[141756, 4895, 343, 10, 109, "Text"],
+Cell[142102, 4907, 457, 15, 75, "Text"],
+Cell[142562, 4924, 382, 8, 51, "Text"],
+Cell[142947, 4934, 399, 13, 44, "Text"],
+Cell[143349, 4949, 459, 15, 31, "Text"],
+Cell[143811, 4966, 520, 18, 47, "Text"],
+Cell[144334, 4986, 552, 18, 47, "Text"],
+Cell[144889, 5006, 1602, 50, 242, "Text"]
+}, Closed]]
+}, Open  ]]
+}, Open  ]]
+}
+]
+*)
+
+(* End of internal cache information *)
