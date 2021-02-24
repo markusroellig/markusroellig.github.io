@@ -1,5 +1,5 @@
 ---
-title: "•	The physics of interstellar photon dominated regions"
+title: "The physics of interstellar photon dominated regions"
 collection: teaching
 type: "Diploma course"
 permalink: /teaching/2005-spring-teaching-1
