@@ -2,7 +2,7 @@
 title: "2019 &mdash; Velocity profiles of [CII], [CI], CO, and [OI] and physical conditions in four star-forming regions in the Large Magellanic Cloud"
 collection: publications
 refereed: 'yes'
-tag: low-Z
+tags: low-Z
 permalink: \publication\2019-01-01-Velocity-profiles-of-[CII],-[CI],-CO,-and-[OI]-and-physical
 date: "2019-01-01"
 venue: "Astronomy &amp; Astrophysics"

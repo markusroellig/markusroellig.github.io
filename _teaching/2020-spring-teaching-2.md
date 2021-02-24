@@ -10,6 +10,9 @@ location: "Cologne, Germany"
 ---
 
 [<i class="fas fa-link"></i>](https://www.ilias.uni-koeln.de/ilias/goto_uk_crs_3182962.html) ILIAS course page (restricted access)
+[Lecture Videos <i class="fab fa-youtube"></i>](https://www.youtube.com/playlist?list=PL39FzCVlEO_c7PAqV1bOgFuNn0HJ8jhYm){: .btn--research}
+
+
 
 # Content
 The lecture introduces the basic aspects of data analysis and the application of statistical methods to data in astronomy and other physical sciences.

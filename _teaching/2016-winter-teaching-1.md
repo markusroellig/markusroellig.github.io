@@ -9,6 +9,8 @@ semester: WiSe
 location: "Frankfurt, Germany"
 ---
 
+
+
 Full course, open to BSc and MSc students.
 
 <img style="float: right;" src="/images/ism-image.jpg" width="400">

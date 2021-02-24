@@ -11,6 +11,8 @@ location: "Cologne, Germany"
 
 Anwendung physikalischer Prinzipien auf astrophysikalische Problemstellungen / Verständnis der grundlegenden Konzepte der Astrophysik / Überblick über experimentelle Methoden der Astronomie und selbstständige Behandlung einfacher Probleme in Übungsaufgaben.
 
+
+
 ## Inhalt
 
 *Grundlagen:

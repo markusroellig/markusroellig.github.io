@@ -11,6 +11,8 @@ location: "Cologne, Germany"
 
 Ziel der Veranstaltung ist, dass alle Teilnehmer möglichst viel Erfahrung im Umgang mit Mathematica sammeln.
 
+
+
 Das erfordert natürlich den Zugriff auf eine gültige Mathematica Lizenz. Die Rechner im CIP Pool erlauben die Nutzung der Rechenzentrums-Lizenzen. Davon gibt es derzeit 10. Natürlich können diese auch anderweitig innerhalb des Rechenzentrums-Netzes in Verwendung sein. Sollte dies Zahl an Lizenzen nicht ausreichen, müssen sich mehrer Studenten jeweils eine Lizenz teilen. Im Notfall können die Mathematica Notebooks auch per Mathematica Player (früher MathReader) passiv angeschaut werden.
 
 Die zur Vorlesung gehörenden Mathematica Notebooks werden vor den entsprechenden Terminen auf dieser Seite bereit gestellt.

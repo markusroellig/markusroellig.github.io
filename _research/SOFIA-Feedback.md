@@ -26,8 +26,7 @@ The [CII] line uniquely provides the kinematics of the gas exposed to the mechan
 
 ## Publications
 
-{% for post in site.publications reversed %}
-  {% if post.tag == 'sofia_feedback' %}
+{% assign sorted-publications = site.publications | where: "tags","sofia-feedback" %}
+{% for post in sorted-publications reversed %}
     {% include archive-single.html %}
-  {% endif %}
 {% endfor %}

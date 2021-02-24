@@ -3,7 +3,7 @@ title: "KOSMA-tau"
 collection: research
 category: modelling
 order_number: 40
-layout: single-portfolio
+layout: archive
 excerpt: "<img src='/images/research/clump-2.png' alt=''>"
 header:
   og_image: "research/clump-2.png.jpg"
@@ -11,9 +11,9 @@ header:
 
 *Keywords:* photon dominated regions, astrochemistry, physics of the interstellar medium, numerical simulation
 
+<img align="right" src="/images/research/kosma-tau-1.png"/>
 # KOSMA-tau - The Cologne PDR code
 
-<img align="right" src="/images/research/kosma-tau-1.png"/>
 KOSMA-tau is a numerical code to compute the physical and chemical structure of a spherical molecular cloud, a so called photo-dissociation region (PDR). This code has been developed from an earlier PDR code, written by A. Sternberg from Tel Aviv University in Israel (Sternberg & Dalgarno 1989; Sternberg & Dalgarno 1995). His original code uses a plane-parallel geometry and was updated to employ spherical geometry (Gierens, Stutzki and Winnewisser 1992; Köster et al. 1994; Störzer, Stutzki and Sternberg 1996; Zielinsky, Stutzki & Störzer 2000).
 
 ## The main blocks of the problem to be solved
@@ -65,8 +65,7 @@ The different 'blocks' in the mentioned scheme depend on each other which makes 
 [Summary Article](https://ui.adsabs.harvard.edu/abs/2013A&A...549A..85R){: .btn--research}
 ## Publications
 
-{% for post in site.publications reversed %}
-  {% if post.tag == 'kosma-tau' %}
+{% assign sorted-publications = site.publications | where: "tags","kosma-tau" %}
+{% for post in sorted-publications reversed %}
     {% include archive-single.html %}
-  {% endif %}
 {% endfor %}

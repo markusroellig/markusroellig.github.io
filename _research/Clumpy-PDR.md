@@ -3,7 +3,7 @@ title: "Clumpy PDRs"
 collection: research
 category: modelling
 order_number: 20
-layout: single-portfolio
+layout: archive
 excerpt: "<img src='/images/research/clumpyDR21.jpg' width='230px' height='234px' alt=''>"
 header:
   og_image: "research/clumpyDR21.jpg"
@@ -40,3 +40,12 @@ Herschel/HIFI observations provided the full range of far infrared (FIR) cooling
 
 <img align="right" src="/images/research/clumpyDR21.jpg" width="30%" />
 Figure: Examplary realisation of a two-ensemble model configuration. All dimensions are plotted true to scale. The position of the central OB cluster is indicated by a blue sphere. The edge of the surrounding HII region is shown by the red wireframe sphere. The hot component clumps are shown as orange spheres. They populate the inner shell. The cool component clumps are shown in beige populating the outer shell. All clumps are randomly positioned and assumedly embedded in a diffuse inter-clump gas.
+
+
+## Publications
+
+{% assign sorted-publications = site.publications | where: "tags","massiveSF" %}
+{% assign sorted-publications2 = sorted-publications | where: "tags","kosma-tau" %}
+{% for post in sorted-publications2 reversed %}
+    {% include archive-single.html %}
+{% endfor %}
