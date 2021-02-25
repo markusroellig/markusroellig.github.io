@@ -2,7 +2,7 @@
 title: "2021 &mdash; Stellar feedback and triggered star formation in the prototypical bubble RCW 120"
 collection: publications
 refereed: 'no'
-tags: sofia_feedback
+tags: sofia-feedback
 date: "2021-01-01"
 venue: "American Astronomical Society meeting #237"
 paperurl:

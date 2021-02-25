@@ -2,7 +2,7 @@
 title: "2020 &mdash; FEEDBACK: a SOFIA Legacy Program to Study Stellar Feedback in Regions of Massive Star Formation"
 collection: publications
 refereed: 'yes'
-tags: sofia_feedback
+tags: sofia-feedback
 permalink: \publication\2020-10-01-FEEDBACK-a-SOFIA-Legacy-Program-to-Study-Stellar-Feedback-in
 date: "2020-10-01"
 venue: "Publications of the Astronomical Society of the Pacific"
