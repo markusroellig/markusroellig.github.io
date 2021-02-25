@@ -42,49 +42,6 @@ Research Expertise and Interests
 * Radiative transfer
 * CRC/SFB planning and application (total CRC 956 volume: 33 mil. EUR)
 
-
-Refereed Publications
-======
-
-  <ul>
-  {% for post in site.publications reversed %}
-	{% if post.refereed == 'yes' %}
-		{% include archive-single-cv.html %}
-	{% endif %}
-  {% endfor %}
-  </ul>
-
-Non-refereed Publications
-======
-
-  <ul>
-  {% for post in site.publications reversed %}
-	{% if post.refereed == 'no' %}
-		{% include archive-single-cv.html %}
-	{% endif %}
-  {% endfor %}
-  </ul>
-
-Academic Talks
-======
-  <ul>
-  {% for post in site.talks reversed %}
-	{% if post.tag == 'academic' %}
-		{% include archive-single-talk-cv.html %}
-	{% endif %}
-  {% endfor %}
-  </ul>
-
-Public Outreach Talks
-======
-  <ul>
-  {% for post in site.talks reversed %}
-	{% if post.tag == 'public' %}
-		{% include archive-single-talk-cv.html %}
-	{% endif %}
-  {% endfor %}
-  </ul>
-
 Teaching at Frankfurt
 ======
   <ul>{% for post in site.teaching %}
@@ -179,3 +136,45 @@ Research Visits
 * Dez 2006	CEA/Saclay
 * Apr 2006	Torun, Poland
 * Nov 2004	Tel Aviv University, Israel
+
+Refereed Publications
+======
+
+  <ul>
+  {% for post in site.publications reversed %}
+	{% if post.refereed == 'yes' %}
+		{% include archive-single-cv.html %}
+	{% endif %}
+  {% endfor %}
+  </ul>
+
+Non-refereed Publications
+======
+
+  <ul>
+  {% for post in site.publications reversed %}
+	{% if post.refereed == 'no' %}
+		{% include archive-single-cv.html %}
+	{% endif %}
+  {% endfor %}
+  </ul>
+
+Academic Talks
+======
+  <ul>
+  {% for post in site.talks reversed %}
+	{% if post.tag == 'academic' %}
+		{% include archive-single-talk-cv.html %}
+	{% endif %}
+  {% endfor %}
+  </ul>
+
+Public Outreach Talks
+======
+  <ul>
+  {% for post in site.talks reversed %}
+	{% if post.tag == 'public' %}
+		{% include archive-single-talk-cv.html %}
+	{% endif %}
+  {% endfor %}
+  </ul>

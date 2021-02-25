@@ -26,3 +26,20 @@ S106 IR and its bipolar HII region are embedded in a larger molecular cloud that
 Summarizing, this study shows that the new detection of high-velocity emission in the \[OI\] line, and the identification
 of various velocity components in other FIR lines (\[CII\], high-J CO), which are only now possible with the (up)GREAT receiver
 on SOFIA, help to diagnose more precisely the physical properties of different gas phases in complex star-forming regions.
+
+[Research paper](https://ui.adsabs.harvard.edu/abs/2018A&A...617A..45S){: .btn--research}
+
+## The atypical rotation of the galaxy IC 342
+IC 342 is a gas-rich spiral galaxy with active star formation in its nucleus. IC 342 is located behind the Galactic plane und is there-fore highly obscured; the distance to the nearly face-on galaxy is still debated. Tikhonov & Galazutdinova(2010) give a distance of 3.9±0.1 Mpc derived from stellar photometry. Within its central 30′′two molecular arms of a mini-spiralend  in  a  clumpy  central  ring  of  dense  gas,  which  surrounds a  young  star  cluster. Downes  et  al.(1992)  showed  the  presence  of  five  giant  molecular  clouds,  A  to  E,  around  the  nucleus of IC 342 with masses of 1 mil. solar masses. The  central  molecular  ring  surrounds  a  nuclear star cluster with active star formation and strong far-ultraviolett (FUV) radiation, illuminating the molecular ring and producing photo-dissociation regions (PDRs) on the side facing the central cluster. Energetic FUV photons dissociate and ionize molecules and atoms in the gas and effectively heat the gas and dust via photoelectric heating. Consequently, PDRs strongly emit radiation  from  species  that  are  abundant  and  excited  under  these conditions, like \[CII\].
+
+<img  src="/images/research/IC342-multi.png"/>
+
+*Figure: Line-integrated map of the <sup>12</sup>CO(1-0) transition from the BIMA-SONG sample. The yellow points show the observed GREAT positions in IC 342. The (0, 0) position corresponds to (RA, Dec) (J2000) (03:46:48.5 68:05:47). The red points indicate named GMCs and other structures according to Table 3 in Meier & Turner (2001). Triangles facing up and right indicate HII regions and super nova remnants, respectively, as given by Tsai et al. (2006). The \[CII\] and \[N II\] spectra are shown on the right side. The \[NII\] intensity scale is multiplied by a factor of 5.*
+
+<img  src="/images/research/IC342-geometry.png"/>
+
+*Figure: Geometrical and kinematic scenarios as explained suggested by Meier & Turner 2005 (a), and slightly modified our work (b). The red and blue lobe structures indicate the bi-conic expanding HII gas mentioned in the text. Blue gas is moving toward the observer, red gas is moving away. The mini-spiral (green) and ring (yellow) are surrounding the central nuclear star cluster (white stars), which gives rise to the expanding HII regions as well as to the intense PDR emission from the gas in the ring/spiral facing the cluster. As a result of our studies, we propose new geometry with a leading spiral arm.*
+
+
+[Research paper 2012](https://ui.adsabs.harvard.edu/abs/2012A%26A...542L..22R/abstract){: .btn--research}
+[Research paper 2016](https://ui.adsabs.harvard.edu/abs/2016A%26A...591A..33R/abstract){: .btn--research}
