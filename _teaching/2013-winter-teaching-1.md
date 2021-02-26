@@ -15,24 +15,24 @@ Anwendung physikalischer Prinzipien auf astrophysikalische Problemstellungen / V
 
 ## Inhalt
 
-*Grundlagen:
-  +Teleskope
-  +Koordinatensysteme
-  +Zeit-, Längen-, Massen-, Temperatur-Bestimmung
+* Grundlagen:
+  + Teleskope
+  + Koordinatensysteme
+  + Zeit-, Längen-, Massen-, Temperatur-Bestimmung
 
-*stellare Astrophysik:
-  +Eigenschaften von Sternen
-  +Aufbau und Entwicklung der Sterne
-  +Sternentstehung
-  +Endstadien
+* stellare Astrophysik:
+  + Eigenschaften von Sternen
+  + Aufbau und Entwicklung der Sterne
+  + Sternentstehung
+  + Endstadien
 
-*Die Milchstraße und externe Galaxien:
-  +Morphologie der Milchstraße
-  +Interstellares Medium
-  +Grundlagen: Struktur und Dynamik
-  +Grundlagen: Galaxien-Kerne
+* Die Milchstraße und externe Galaxien:
+  + Morphologie der Milchstraße
+  + Interstellares Medium
+  + Grundlagen: Struktur und Dynamik
+  + Grundlagen: Galaxien-Kerne
 
-*Grundlagen der Kosmologie:
-  +Entfernungsmessung, großräumige Struktur
-  +Verteilung der Materie, Dunkle Materie, Dunkle Energie
-  +Urknall und Entwicklung
+* Grundlagen der Kosmologie:
+  + Entfernungsmessung, großräumige Struktur
+  + Verteilung der Materie, Dunkle Materie, Dunkle Energie
+  + Urknall und Entwicklung
