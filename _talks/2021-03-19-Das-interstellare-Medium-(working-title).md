@@ -1,5 +1,5 @@
 ---
-title: "2021 &mdash; Molek$uuml;lspektroskopie - Den Gasen auf der Spur"
+title: "2021 &mdash; Molekülspektroskopie - Den Gasen auf der Spur"
 collection: talks
 type: "Talk"
 tag: public
