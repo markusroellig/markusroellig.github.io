@@ -5,7 +5,7 @@ type: "Talk"
 tag: public
 invited: Invited
 permalink: \talks\2019-09-27-Den-Gasen-auf-der-Spur---Molekuelspektroskopie-mit-dem-SOFIA
-paperurl: 
+paperurl: '/files/pdf/talks/DenGasenAufDerSpur.pdf'
 date: "2019-09-27"
 venue: "Physikalischer Verein"
 location: "Frankfurt/Main, Germany"
