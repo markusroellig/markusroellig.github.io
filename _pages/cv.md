@@ -8,8 +8,10 @@ redirect_from:
   - /resume
 ---
 
+
 {% include base_path %}
 
+Download my academic CV as PDF: <a href="files/pdf/Academic-CV-Roellig.pdf"><i class="fas fa-fw fa-file-pdf zoom" aria-hidden="true"></i></a>
 
 Education
 ======
