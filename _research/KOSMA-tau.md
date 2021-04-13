@@ -69,3 +69,7 @@ The different 'blocks' in the mentioned scheme depend on each other which makes 
 {% for post in sorted-publications reversed %}
     {% include archive-single.html %}
 {% endfor %}
+
+## Recent Publications that use KOSMA-tau 
+
+[Nayak et al. 2021, ApJ 907, 106](https://ui.adsabs.harvard.edu/abs/2021ApJ...907..106N/abstract)
