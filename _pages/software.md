@@ -29,8 +29,8 @@ Here I share some of the tools that I created during my research. Most of it is 
 
 [<i class="fab fa-github"></i>](https://github.com/markusroellig/LTE) Local Thermal Equilibrium radiative transfer in Mathematica
 
-# PDRica
+# WL-PDR
 
-[<i class="fab fa-github"></i>](https://github.com/markusroellig/PDRica) A simple Mathematica PDR model code.
+[<i class="fab fa-github"></i>](https://github.com/markusroellig/WL-PDR) A simple Mathematica PDR model code.
 
-PDRs are Photon Dominated Regions in the interstellar medium. A PDR model computes the chemical and thermodynamical balance in these regions and their emission signature. PDRica is a port of the simple toy PDR model PyPDR written by Simon Bruderer [<i class="fas fa-code"></i>](http://www.mpe.mpg.de/~simonbr/research_pypdr/). This is not meant to be a model for real world applications but to test certain numerical or physical aspects of PDR modelling in a very simple model setup.
+PDRs are Photon Dominated Regions in the interstellar medium. A PDR model computes the chemical and thermodynamical balance in these regions and their emission signature. WL-PDR is a port of the simple toy PDR model PyPDR written by Simon Bruderer [<i class="fas fa-code"></i>](http://www.mpe.mpg.de/~simonbr/research_pypdr/). This is not meant to be a model for real world applications but to test certain numerical or physical aspects of PDR modelling in a very simple model setup.
