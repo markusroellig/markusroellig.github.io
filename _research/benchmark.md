@@ -21,11 +21,11 @@ This divergency would prevent a unique interpretation of observed data in terms 
 * to agree on the correct handling of important processes
 * to identify the specific limits of applicability of the available codes
 
-To this end, a [PDR-benchmarking workshop](http://www.lc.leidenuniv.nl/lc/web/2004/105/info.php3?wsid=105) was held at the [Lorentz Center](https://zeus.ph1.uni-koeln.de/site/pdr-comparison/www.lorentzcenter.nl) in Leiden, Netherlands in 2004 to jointly work on these topics
+To this end, a [PDR-benchmarking workshop](http://www.lc.leidenuniv.nl/lc/web/2004/105/info.php3?wsid=105) was held at the [Lorentz Center](https://www.lorentzcenter.nl) in Leiden, Netherlands in 2004 to jointly work on these topics
 
 Here we present the results from this workshop and the results originating from the follow-up activities.
 
-[PDR Comparison Archive](https://zeus.ph1.uni-koeln.de/site/pdr-comparison/){: .btn--research}
+[PDR Comparison Archive](https://lecture.ph1.uni-koeln.de/pdr-comparison/){: .btn--research}
 
 ## Publications
 
