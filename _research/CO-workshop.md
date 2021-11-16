@@ -4,9 +4,9 @@ collection: research
 category: data
 order_number: 11
 layout: archive
-excerpt: "<img src='/images/research/CO-poster-small.jpg'>"
+excerpt: "<img src='/images/research/CO-poster-short.jpg'>"
 header:
-  og_image: "research/CO-poster-small"
+  og_image: "research/CO-poster-short"
 ---
 <img align="right" src="/images/research/CO-poster.jpg" width="50%" HSPACE="50" VSPACE="50" />
 #Exciting CO in the Local and High-Redshift Universe
