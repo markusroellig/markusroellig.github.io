@@ -31,6 +31,7 @@ Work experience
 
 Research Expertise and Interests
 ======
+* Computational astrophysics
 * Research in observational galactic and extragalactic astrophysics
 * Microphysics of the interstellar medium (ISM)
 * Chemical and elemental evolution of the ISM
@@ -79,7 +80,7 @@ Telescope Time Awards
 |--------------------------------------------------------------|-----------|-----------------|---------|
 | Galactic Ecology (Co-PI for 2 science cases)                 | >4100h    | CCAT-prime/FYST | 2022-26 |
 | Balloon mission to observe [NII] 122 µm emission (Co-I)      | 21d       | ASTHROS/NASA    | 2023    |
-| Radiative Feedback from Massive Stars (Core-team)            | 27.8h     | JWST/ERS        | 2022    |
+| PDRs4All                              (Core-team)            | 36.9h     | JWST/ERS        | 2022    |
 | Highly Ionized regions in Carina and G333.6-0.2 (Co-I)       | 3.9h      | SOFIA/FIFI-LS   | 2021-22 |
 | Extreme Stellar Feedback in the Carina SF Region (Co-I)      | 19.3h     | SOFIA/upGREAT   | 2021-22 |
 | FEEDBACK – SOFIA Legacy program (Co-I)                       | 91h       | SOFIA/upGREAT   | 2019-22 |
