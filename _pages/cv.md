@@ -135,8 +135,11 @@ Research Visits
 * Feb-Mar 2019	Tel Aviv University, Israel
 * Dez 2014	Tel Aviv University, Israel
 * Sep 2010	Sydney, Australia
+* Jun 2010	NANTEN2 observatory, Chile
+* Jul 2009	NANTEN2 observatory, Chile
 * Apr 2008	Torun, Poland
 * Dez 2006	CEA/Saclay
+* Oct 2006	NANTEN2 observatory, Chile
 * Apr 2006	Torun, Poland
 * Nov 2004	Tel Aviv University, Israel
 
