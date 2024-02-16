@@ -22,7 +22,7 @@ Education
 
 Work experience
 ======
-* __2023 - present__ Scientific Director, Physikalischer Verein – Gesellschaft für Bildung und Wissenschaft, Frankfurt, Germany
+* __2023 - present__ Scientific Director, [Physikalischer Verein – Gesellschaft für Bildung und Wissenschaft](https://www.physikalischer-verein.de/), Frankfurt, Germany
 * __2008 - 2022__    Senior Researcher, I. Physical Institute, Cologne University, Germany
 * __2006 - 2007__    Post-Doc, Argelander-Institute for Astronomy, Bonn University, Germany
 * __2003 - 2006__    Post-Doc, I. Physical Institute, Cologne University, Germany
