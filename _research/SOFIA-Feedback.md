@@ -2,7 +2,7 @@
 title: "SOFIA Legacy program - FEEDBACK"
 collection: research
 category: massiveSF
-order_number: 20
+order_number: 50
 layout: archive
 excerpt: "<img src='/images/research/sofia-feedback.png' alt=''>"
 header:
