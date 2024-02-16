@@ -4,7 +4,7 @@ collection: teaching
 type: "Msc and BSc course"
 permalink: /teaching/2022-spring-teaching-1
 venue:  "Goethe-University Frankfurt, IAP"
-date: 2022-04-12
+date: 2024-04-12
 semester: SoSe
 location: "Frankfurt, Germany"
 ---
