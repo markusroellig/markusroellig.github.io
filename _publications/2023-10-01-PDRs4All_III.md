@@ -2,7 +2,7 @@
 title: "2023 &mdash; PDRs4All III: JWST's NIR spectroscopic view of the Orion Bar"
 collection: publications
 refereed: 'yes'
-tags: pdr massiveSF data JWST
+tags: pdr massiveSF data jwst pdrs4all
 #permalink: /publication/stellar-feedback-and-triggered-sf-in-rcw120
 date: 2023-10-01
 venue: 'Astronomy &amp; Astrophysics'

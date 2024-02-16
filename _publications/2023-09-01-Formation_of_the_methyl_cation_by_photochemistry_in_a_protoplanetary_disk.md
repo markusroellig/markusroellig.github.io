@@ -2,7 +2,7 @@
 title: "2023 &mdash; Formation of the methyl cation by photochemistry in a protoplanetary disk"
 collection: publications
 refereed: 'yes'
-tags: pdr massiveSF data JWST
+tags: pdr massiveSF data jwst pdrs4all
 #permalink: /publication/stellar-feedback-and-triggered-sf-in-rcw120
 date: 2023-09-01
 venue: 'Nature'

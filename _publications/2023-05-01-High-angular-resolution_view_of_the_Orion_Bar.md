@@ -2,7 +2,7 @@
 title: "2023 &mdash; High-angular-resolution NIR view of the Orion Bar revealed by Keck/NIRC2"
 collection: publications
 refereed: 'yes'
-tags: pdr kinematics massiveSF data
+tags: pdr kinematics massiveSF data pdrs4all
 #permalink: /publication/stellar-feedback-and-triggered-sf-in-rcw120
 date: 2023-05-01
 venue: 'Astronomy &amp; Astrophysics'
