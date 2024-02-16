@@ -4,7 +4,7 @@ collection: research
 category: massiveSF
 order_number: 10
 layout: archive
-excerpt: "<img src='/images/research/cropped-logo_pdrs4all_transparent_clean.png' alt=''>"
+excerpt: "<img src='/images/research/logo_pdrs4all_transparent.png' alt=''>"
 header:
   og_image: "research/Images_release.006-2.png"
 ---
