@@ -5,7 +5,7 @@ refereed: 'yes'
 tags: kosma-tau pdr kinematics modelling massiveSF data
 #permalink: /publication/stellar-feedback-and-triggered-sf-in-rcw120
 date: 2021-09-01
-venue: 'Astronomy &amp; Astrophysicss'
+venue: 'Astronomy &amp; Astrophysics'
 paperurl: '/files/pdf/research/'
 link: 'https://ui.adsabs.harvard.edu/link_gateway/2021A%26A...653A.108S/EPRINT_PDF'
 code: ''

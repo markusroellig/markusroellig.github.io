@@ -2,14 +2,14 @@
 title: "Data Analysis for Astronomy and Physics"
 collection: teaching
 type: "Msc and BSc course"
-permalink: /teaching/2021-spring-teaching-2
+permalink: /teaching/2022-spring-teaching-2
 venue: "Cologne University, I. Physical Institute"
-date: 2021-04-01
+date: 2022-04-04
 semester: SoSe
 location: "Cologne, Germany"
 ---
 
-[<i class="fas fa-link"></i>](https://www.ilias.uni-koeln.de/ilias/goto_uk_crs_3862743.html) ILIAS course page (restricted access)
+[<i class="fas fa-link"></i>](https://www.ilias.uni-koeln.de/ilias/goto_uk_crs_4522808.html) ILIAS course page (restricted access)
 
 
 

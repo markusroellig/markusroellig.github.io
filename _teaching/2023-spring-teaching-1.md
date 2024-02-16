@@ -2,9 +2,9 @@
 title: "Data Analysis for Astronomy and Physics"
 collection: teaching
 type: "Msc and BSc course"
-permalink: /teaching/2021-spring-teaching-1
+permalink: /teaching/2023-spring-teaching-1
 venue:  "Goethe-University Frankfurt, IAP"
-date: 2021-04-01
+date: 2023-04-11
 semester: SoSe
 location: "Frankfurt, Germany"
 ---
