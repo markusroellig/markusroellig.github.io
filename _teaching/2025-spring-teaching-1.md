@@ -11,7 +11,7 @@ location: "Frankfurt, Germany"
 
 Full course, open to BSc and MSc students.
 <img style="float: right;" src="/images/Data-Large_edit_small.jpg" width="400">
-[<i class="fas fa-link"></i>](https://exp-astro.de/skripte.php) Course page, [<i class="fas fa-link"></i>](https://qis.server.uni-frankfurt.de/qisserver/rds?state=verpublish&status=init&vmfile=no&publishid=375784&moduleCall=webInfo&publishConfFile=webInfo&publishSubDir=veranstaltung) QIS/LSF Link
+[<i class="fas fa-link"></i>](https://https://exp-astro.de/data_analysis/skripte.php) Course page, [<i class="fas fa-link"></i>](https://qis.server.uni-frankfurt.de/qisserver/rds?state=verpublish&status=init&vmfile=no&publishid=395729&moduleCall=webInfo&publishConfFile=webInfo&publishSubDir=veranstaltung) QIS/LSF Link
 
 ## Course Description
 
