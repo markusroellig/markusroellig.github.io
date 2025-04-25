@@ -78,3 +78,34 @@ Assignments are shared and submitted via GitHub Classroom.
 - [Monthly temperature records (CSV)](https://exp-astro.de/docs/data_analysis/data/ds570.0_monthly.csv)
 - [Temperature station list (CSV)](https://exp-astro.de/docs/data_analysis/data/ds570.0_stnlibrary.csv)
 - [Labor cost chart (PNG)](https://exp-astro.de/docs/data_analysis/data/labor_cost.png)
+
+### 2. Statistics
+**Date:** April 29, 2025 (Q & A: May 6, 2025)
+
+**Lecture Notes:**
+- [Statistics (PDF)](https://exp-astro.de/docs/data_analysis/notes/Lecture_Note_3_Statistics_2025.pdf)
+- [Statistics (NB)](https://exp-astro.de/docs/data_analysis/notes/Lecture_Note_3_Statistics_2025.nb)
+
+**Video Lectures:**
+- [Statistics (Part 1: Statistics of location)](https://youtu.be/avjRfrfdWRo) (34:47)
+- [Statistics (Part 2: Statistics of scatter)](https://youtu.be/XFVh2JnM3Ps) (15:47)
+- [Statistics (Part 3: Samples & bias)](https://youtu.be/8Zl5qoKvEOc) (21:07)
+
+**Additional Materials:**
+- [Variance, standard deviation](https://www.youtube.com/watch?v=xyruAih0qb0) (13:37)
+- [Calculating variance, standard deviation](https://www.youtube.com/watch?v=0Ds2WP6Gpl0) (13:13)
+- [Normal distribution, central limit theorem](https://www.youtube.com/watch?v=o2TaTieifm0) (14:58)
+- [Probability concepts, frequency, Bayes, Laplace](https://www.youtube.com/watch?v=CMqX525l8t8)
+- [Kolmogorov axioms of probability](https://www.youtube.com/watch?v=Y4iCMPBqxIc)
+- [Variance, standard deviation of a random variable](https://www.youtube.com/watch?v=hQrHNEYezzs) (36:55)
+- [Averaging reduces variance and standard deviation](https://www.youtube.com/watch?v=len1ImKQoGs) (21:30)
+- [Three coins; expected value of the standard deviation of the sample](https://www.youtube.com/watch?v=7ir7dv1T_aI) (18:46)
+- [Standard deviation of lifetime](https://www.youtube.com/watch?v=FlEnkEEWpU8) (14:14)
+- [Expected value, variance, standard deviation for discrete and continuous distributions](https://www.youtube.com/watch?v=mfB4TTNxI30) (18:35)
+- [Expected value, variance, standard deviation of three coins](https://www.youtube.com/watch?v=cBd7pYhvTgo) (13:13)
+
+
+**Q & A Materials:**
+- [Monthly temperature records (CSV)](https://exp-astro.de/docs/data_analysis/data/ds570.0_monthly.csv)
+- [Temperature station list (CSV)](https://exp-astro.de/docs/data_analysis/data/ds570.0_stnlibrary.csv)
+- [Labor cost chart (PNG)](https://exp-astro.de/docs/data_analysis/data/labor_cost.png)
