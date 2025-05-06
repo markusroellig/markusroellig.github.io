@@ -145,7 +145,3 @@ Assignments are shared and submitted via GitHub Classroom.
 - [Bozeman Science: Standard Error](https://www.youtube.com/watch?v=BwYj69LAQOI)
 - Additional probability examples and explanations
 
-**Self-Study Problems:**
-- [Problem Set 3 (Jupyter NB)](https://exp-astro.de/docs/data_analysis/data/Problem_3/exercise_3_problems.ipynb)
-- [Problem Set 3 (PDF)](https://exp-astro.de/docs/data_analysis/data/Problem_3/exercise_3_problems.pdf)
-- Data: [Dataset (FITS)](https://exp-astro.de/docs/data_analysis/data/Problem_3/radio-mapfits.sec)
