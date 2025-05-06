@@ -109,3 +109,43 @@ Assignments are shared and submitted via GitHub Classroom.
 - [Monthly temperature records (CSV)](https://exp-astro.de/docs/data_analysis/data/ds570.0_monthly.csv)
 - [Temperature station list (CSV)](https://exp-astro.de/docs/data_analysis/data/ds570.0_stnlibrary.csv)
 - [Labor cost chart (PNG)](https://exp-astro.de/docs/data_analysis/data/labor_cost.png)
+
+### 3. Probabilities
+**Date:** May 6, 2025 (Q & A: May 13, 2025)
+
+**Lecture Notes:**
+- [Probabilities Part 1 (PDF)](https://exp-astro.de/docs/data_analysis/notes/Lecture_Note_4_Probabilities_2025-Part1.pdf)
+- [Probabilities Part 1 (NB)](https://exp-astro.de/docs/data_analysis/notes/Lecture_Note_4_Probabilities_2025-Part1.nb)
+- [Probabilities Part 2 (PDF)](https://exp-astro.de/docs/data_analysis/notes/Lecture_Note_4_Probabilities_2025-Part2.pdf)
+- [Probabilities Part 2 (NB)](https://exp-astro.de/docs/data_analysis/notes/Lecture_Note_4_Probabilities_2025-Part1.nb)
+
+**Video Lectures:**
+- [Probabilities A 1/5](https://youtu.be/AyzuluZl6Z4)
+- [Probabilities A 2/5](https://youtu.be/HYRT78EgkZA)
+- [Probabilities A 3/5](https://youtu.be/A96J-DYet3g)
+- [Probabilities A 4/5](https://youtu.be/LQRYR8Wj-yE)
+- [Probabilities A 5/5](https://youtu.be/9sMQaWDxuzs)
+- [Probabilities B 1/4](https://youtu.be/AKIUCSS_bkU)
+- [Probabilities B 2/4](https://youtu.be/ZxWfTt_T4Zs)
+- [Probabilities B 3/4](https://youtu.be/vPdPlvFd1nk)
+- [Probabilities B 4/4](https://youtu.be/GvezgMbEg0Q)
+
+**Additional Materials:**
+- [Probability concepts, frequency, Bayes, Laplace](https://www.youtube.com/watch?v=CMqX525l8t8)
+- [Kolmogorov axioms of probability](https://www.youtube.com/watch?v=Y4iCMPBqxIc)
+- **Khan Academy:**
+  - [Summarizing center of distributions](https://www.khanacademy.org/math/statistics-probability/probability/data-distributions-a1/summarizing-center-distributions/v/statistics-intro-mean-median-and-mode)
+  - [Summarizing spread of distributions](https://www.khanacademy.org/math/statistics-probability/probability/data-distributions-a1/summarizing-spread-distributions/v/range-variance-and-standard-deviation-as-measures-of-dispersion)
+  - [Sampling distributions](https://www.khanacademy.org/math/statistics-probability/sampling-distributions-library)
+  - [Intro to theoretical probability](https://www.khanacademy.org/math/statistics-probability/probability/probability-geometry/probability-basics/v/basic-probability)
+  - [Simple probability examples](https://www.khanacademy.org/math/statistics-probability/probability/probability-geometry/probability-basics/v/simple-probability)
+  - [Experimental probability](https://www.khanacademy.org/math/statistics-probability/probability/probability-geometry/probability-basics/v/experimental-probability)
+  - [Permutation formula](https://www.khanacademy.org/math/statistics-probability/probability/probability-geometry/counting-permutations/v/permutation-formula)
+  - [Combination formula](https://www.khanacademy.org/math/statistics-probability/probability/probability-geometry/counting-combinations/v/combination-formula)
+- [Bozeman Science: Standard Error](https://www.youtube.com/watch?v=BwYj69LAQOI)
+- Additional probability examples and explanations
+
+**Self-Study Problems:**
+- [Problem Set 3 (Jupyter NB)](https://exp-astro.de/docs/data_analysis/data/Problem_3/exercise_3_problems.ipynb)
+- [Problem Set 3 (PDF)](https://exp-astro.de/docs/data_analysis/data/Problem_3/exercise_3_problems.pdf)
+- Data: [Dataset (FITS)](https://exp-astro.de/docs/data_analysis/data/Problem_3/radio-mapfits.sec)
