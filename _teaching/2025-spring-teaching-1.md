@@ -145,3 +145,98 @@ Assignments are shared and submitted via GitHub Classroom.
 - [Bozeman Science: Standard Error](https://www.youtube.com/watch?v=BwYj69LAQOI)
 - Additional probability examples and explanations
 
+### 4. Probability Distributions
+**Date:** May 13, 2025 (Q & A: May 20, 2025)
+
+**Lecture Notes:**
+- [Probability Distributions (PDF)](https://exp-astro.de/docs/data_analysis/notes/Lecture_Note_5_ProbabilityDistributions_2025.pdf)
+- [Probability Distributions (NB)](https://exp-astro.de/docs/data_analysis/notes/Lecture_Note_5_ProbabilityDistributions_2025.nb)
+
+**Video Lectures:**
+- [Probability Distributions (Part 1)](https://youtu.be/OTXCNhqw_bo) (16:11)
+- [Probability Distributions (Part 2)](https://youtu.be/5M-TFWE_XwM) (43:10)
+- [Probability Distributions (Part 3)](https://youtu.be/IjbudAdS1ys) (24:53)
+- [Probability Distributions (Part 4)](https://youtu.be/Q6XnPhkfXQs) (13:42)
+
+**Additional Materials:**
+- [Normal distribution, central limit theorem, sketch of a derivation](https://www.youtube.com/watch?v=pPXkagyb2io) (67:20)
+- [Normal distribution in OpenOffice.org, probability density, cumulative distribution function](https://www.youtube.com/watch?v=fsi5ISXD9wI)
+- **Khan Academy:**
+  - [Shapes of distributions](https://www.khanacademy.org/math/statistics-probability/probability/data-distributions-a1/displays-of-distributions/v/shapes-of-distributions)
+  - [Comparing distributions](https://www.khanacademy.org/math/statistics-probability/probability/data-distributions-a1/comparing-distributions/v/comparing-swim-times-at-the-olympics)
+  - [Normal distributions](https://www.khanacademy.org/math/statistics-probability/probability/normal-distributions-a2)
+  - [Binomial probability](https://www.khanacademy.org/math/statistics-probability/probability/binomial-probability-a2)
+  - [Poisson distribution](https://www.khanacademy.org/math/statistics-probability/random-variables-stats-library/poisson-distribution/v/poisson-process-1)
+  - [Variance of differences of random variables](https://www.khanacademy.org/math/statistics-probability/random-variables-stats-library/transforming-and-combining-random-variables/v/variance-of-differences-of-random-variables)
+  - [Central limit theorem](https://www.youtube.com/watch?v=JNm3M9cqWyc&list=PL1328115D3D8A2566&index=25)
+
+**Assignment 2:**
+- [Invitation link for DAAP assignment 2: Astronomical Data](https://classroom.github.com/a/Y9S6YShv)
+
+### 5. Hypothesis Testing
+**Date:** May 20, 2025 (Q & A: May 27, 2025)
+
+**Lecture Notes:**
+- [Hypothesis Testing (PDF)](https://exp-astro.de/docs/data_analysis/notes/Lecture_Note_6_HypothesisTesting_2025.pdf)
+- [Hypothesis Testing (NB)](https://exp-astro.de/docs/data_analysis/notes/Lecture_Note_6_HypothesisTesting_2025.nb)
+- [HTs for categorical variables (PDF)](https://exp-astro.de/docs/data_analysis/notes/Lecture_Note_7_HT_for_categorical_variables_2025.pdf)
+- [HTs for categorical variables (NB)](https://exp-astro.de/docs/data_analysis/notes/Lecture_Note_7_HT_for_categorical_variables_2025.nb)
+
+**Video Lectures:**
+- [Hypothesis Tests (Part 1)](https://youtu.be/cgSBXWKtnm4) (21:33)
+- [Hypothesis Tests (Part 2)](https://youtu.be/pK-aKah1HG0) (24:35)
+- [Hypothesis Tests (Part 3)](https://youtu.be/aEwNKnPaJ_M) (17:38)
+- [Hypothesis Tests (Part 4)](https://youtu.be/L0okAChAqqY) (09:46)
+- [Hypothesis Tests for Categorical Variables (Part 1)](https://youtu.be/IzxWksFdM2U) (09:27)
+- [Hypothesis Tests for Categorical Variables (Part 2)](https://youtu.be/pZWMniacrok) (18:35)
+- [Hypothesis Tests for Categorical Variables (Part 3)](https://youtu.be/IKyfAFHhDUs) (11:08)
+- [Hypothesis Tests for Categorical Variables (Part 4)](https://youtu.be/AscRys3QD38) (18:43)
+
+**Additional Materials:**
+- **Khan Academy:**
+  - [Confidence intervals (one sample)](https://www.khanacademy.org/math/statistics-probability/confidence-intervals-one-sample)
+  - [Significance tests (one sample)](https://www.khanacademy.org/math/statistics-probability/significance-tests-one-sample)
+  - [Significance tests and confidence intervals (two samples)](https://www.khanacademy.org/math/statistics-probability/significance-tests-confidence-intervals-two-samples)
+  - [Analysis of variance (ANOVA)](https://www.khanacademy.org/math/statistics-probability/analysis-of-variance-anova-library)
+  - [ANOVA 1: Calculating SST](https://www.youtube.com/watch?v=EFdlFoHI_0I&index=65&list=PL1328115D3D8A2566)
+  - [ANOVA 2: Calculating SSW and SSB](https://www.youtube.com/watch?v=j9ZPMlVHJVs&list=PL1328115D3D8A2566&index=66)
+  - [ANOVA 3: Hypothesis test with F-statistic](https://www.youtube.com/watch?v=Xg8_iSkJpAE&list=PL1328115D3D8A2566&index=67)
+  - [Margin of error tutorials](https://www.youtube.com/watch?v=OwPSuHXmiPw&list=PL1328115D3D8A2566&index=33)
+  - [Standard error of the mean](https://www.youtube.com/watch?v=J1twbrHel3o&index=28&list=PL1328115D3D8A2566)
+  - [Hypothesis testing and p-values](https://www.youtube.com/watch?v=-FtlH4svqx4)
+  - [One-tailed and two-tailed tests](https://www.youtube.com/watch?v=mvye6X_0upA)
+  - [Z-statistics vs. T-statistics](https://www.youtube.com/watch?v=5ABpqVSx33I)
+  - [T-statistic confidence interval](https://www.youtube.com/watch?v=hV4pdjHCKuA)
+  - [Inference for categorical data (chi-square tests)](https://www.khanacademy.org/math/statistics-probability/inference-categorical-data-chi-square-tests)
+
+
+### 6. Correlation
+**Date:** May 27, 2025 (Q & A: June 3, 2025)
+
+**Lecture Notes:**
+- [Correlation (PDF)](https://exp-astro.de/docs/data_analysis/notes/Lecture_Note_8_Correlation_2025.pdf)
+- [Correlation (NB)](https://exp-astro.de/docs/data_analysis/notes/Lecture_Note_8_Correlation_2025.nb)
+
+**Video Lectures:**
+- [Correlation (Part 1)](https://youtu.be/EKRw_zRAXhU) (17:15)
+- [Correlation (Part 2)](https://youtu.be/qxrpHf4fCrc) (35:46)
+- [Correlation (Part 3)](https://youtu.be/sZLkK2yAI6k) (23:23)
+- [Correlation (Part 4)](https://youtu.be/H9tRA7j8Ecg) (07:52)
+
+**Additional Materials:**
+- [Correlation and causality](https://www.youtube.com/watch?v=ROpbdO-gRUo&list=PL1328115D3D8A2566&index=68)
+
+**Assignment 3:**
+- [Invitation link for DAAP assignment 3: Bayesian statistics, samples statistics and tests](https://classroom.github.com/a/ck3Sw4s-)
+
+**Q & A Materials:**
+- [CII_01 (FITS)](https://exp-astro.de/docs/data_analysis/data/CII_01.fits)
+- [plane.dat (CSV)](https://exp-astro.de/docs/data_analysis/data/plane.dat)
+- [figure_0_noise_2.h5 (HDF5)](https://exp-astro.de/docs/data_analysis/data/figure_0_noise_2.h5)
+- [figure_0_noise_5.h5 (HDF5)](https://exp-astro.de/docs/data_analysis/data/figure_0_noise_5.h5)
+- [images.csv (CSV)](https://exp-astro.de/docs/data_analysis/data/images.csv)
+- [imagelabel.txt](https://exp-astro.de/docs/data_analysis/data/imagelabel.txt)
+- [radio-map.fits](https://exp-astro.de/docs/data_analysis/data/radio-map.fits) - artificial 5 by 5 grid of spectra
+- [IC342.12motf.chan.fits](https://exp-astro.de/docs/data_analysis/data/IC342.12motf.chan.fits) - spectral CO (1-0) map of IC 342
+
+
