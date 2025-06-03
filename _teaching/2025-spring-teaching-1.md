@@ -239,4 +239,23 @@ Assignments are shared and submitted via GitHub Classroom.
 - [radio-map.fits](https://exp-astro.de/docs/data_analysis/data/radio-map.fits) - artificial 5 by 5 grid of spectra
 - [IC342.12motf.chan.fits](https://exp-astro.de/docs/data_analysis/data/IC342.12motf.chan.fits) - spectral CO (1-0) map of IC 342
 
+### 7. Error Analysis
+**Date:** June 3, 2025 (Q & A: June 10, 2025)
+
+**Lecture Notes:**
+- [Error Analysis (PDF)](https://exp-astro.de/docs/data_analysis/notes/Lecture_Note_9_ErrorAnalysis_2025.pdf)
+- [Error Analysis (NB)](https://exp-astro.de/docs/data_analysis/notes/Lecture_Note_9_ErrorAnalysis_2025.nb)
+
+**Video Lectures:**
+- [Error Analysis (Part 1)](https://youtu.be/QaEi0tLbagk) (09:26)
+- [Error Analysis (Part 2)](https://youtu.be/4tB7RgRjMq0) (16:20)
+- [Error Analysis (Part 3)](https://youtu.be/quFkyhGpeUM) (18:01)
+
+**Additional Materials:**
+- [Correlation and causality](https://www.youtube.com/watch?v=ROpbdO-gRUo&list=PL1328115D3D8A2566&index=68)
+
+**Q & A Materials:**
+- Data points: {{2.5, 2.4}, {.5, .7}, {2.2, 2.9}, {1.9, 2.2}, {3.1, 3.}, {2.3, 2.7}, {2., 1.6}, {1, 1.1}, {1.5, 1.6}, {1.1, .9}}
+
+
 
