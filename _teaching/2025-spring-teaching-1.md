@@ -240,7 +240,7 @@ Assignments are shared and submitted via GitHub Classroom.
 - [IC342.12motf.chan.fits](https://exp-astro.de/docs/data_analysis/data/IC342.12motf.chan.fits) - spectral CO (1-0) map of IC 342
 
 ### 7. Error Analysis
-**Date:** June 3, 2025 (Q & A: June 10, 2025)
+**Date:** June 3, 2025 (Q & A: June 10, 2025) 
 
 **Lecture Notes:**
 - [Error Analysis (PDF)](https://exp-astro.de/docs/data_analysis/notes/Lecture_Note_9_ErrorAnalysis_2025.pdf)
