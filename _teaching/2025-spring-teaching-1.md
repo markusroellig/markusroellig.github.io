@@ -255,7 +255,7 @@ Assignments are shared and submitted via GitHub Classroom.
 - [Correlation and causality](https://www.youtube.com/watch?v=ROpbdO-gRUo&list=PL1328115D3D8A2566&index=68)
 
 **Q & A Materials:**
-- Data points: {{2.5, 2.4}, {.5, .7}, {2.2, 2.9}, {1.9, 2.2}, {3.1, 3.}, {2.3, 2.7}, {2., 1.6}, {1, 1.1}, {1.5, 1.6}, {1.1, .9}}
+- Data points: `((2.5, 2.4),(.5, .7),(2.2, 2.9),(1.9, 2.2),(3.1, 3.),(2.3, 2.7),(2., 1.6),(1, 1.1),(1.5, 1.6),(1.1, .9))`
 
 ### 8. Regression Analysis
 **Date:** June 10, 2025 (Q & A: June 17, 2025)
