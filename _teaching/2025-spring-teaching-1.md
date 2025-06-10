@@ -257,5 +257,37 @@ Assignments are shared and submitted via GitHub Classroom.
 **Q & A Materials:**
 - Data points: {{2.5, 2.4}, {.5, .7}, {2.2, 2.9}, {1.9, 2.2}, {3.1, 3.}, {2.3, 2.7}, {2., 1.6}, {1, 1.1}, {1.5, 1.6}, {1.1, .9}}
 
+### 8. Regression Analysis
+**Date:** June 10, 2025 (Q & A: June 17, 2025)
 
+**Lecture Notes:**
+- [Regression Analysis (PDF)](https://exp-astro.de/docs/data_analysis/notes/Lecture_Note_10_Regression_2025.pdf)
+- [Regression Analysis (NB)](https://exp-astro.de/docs/data_analysis/notes/Lecture_Note_10_Regression_2025.nb)
+
+**Video Lectures:**
+- [Linear regression (Part 1)](https://youtu.be/MGuCdxX0qEA) (09:09)
+- [Linear regression (Part 2)](https://youtu.be/Mjm5jc331V0) (17:34)
+- [Linear regression (Part 3)](https://youtu.be/Qi0aStrZyrc) (20:41)
+- [Linear regression (Part 4)](https://youtu.be/ias0GNVZJ3w) (09:15)
+- [Linear regression (Part 5)](https://youtu.be/sxixxbawmuw) (29:09)
+
+**Additional Materials:**
+- **Khan Academy:**
+  - [Advanced regression (inference and transforming)](https://www.khanacademy.org/math/statistics-probability/advanced-regression-inference-transforming)
+  - [Squared error of regression line](https://www.youtube.com/watch?v=6OvhLPS7rj4&list=PL1328115D3D8A2566&index=52)
+  - [Proof (parts 1-4) minimizing squared error to regression line](https://www.youtube.com/watch?v=mIx2Oj5y9Q8&list=PL1328115D3D8A2566&index=53)
+  - [Regression line example](https://www.youtube.com/watch?v=GAmzwIkGFgE&list=PL1328115D3D8A2566&index=56)
+  - [R-squared or coefficient of determination](https://www.youtube.com/watch?v=lng4ZgConCM&list=PL1328115D3D8A2566&index=58)
+  - [Calculating R-squared](https://www.youtube.com/watch?v=Fc5t_5r_7IU&list=PL1328115D3D8A2566&index=60)
+  - [Covariance and the regression line](https://www.youtube.com/watch?v=ualmyZiPs9w&index=61&list=PL1328115D3D8A2566)
+
+**Assignment 4:**
+- [Invitation link for DAAP assignment 4: Correlation and PCA](https://classroom.github.com/a/X27LCbwY)
+
+**Q & A Materials:**
+- [MNIST.zip](https://exp-astro.de/docs/data_analysis/data/MNIST.zip)
+- MNIST data: [images.csv](https://exp-astro.de/docs/data_analysis/data/images.csv), [imagelabel.txt](https://exp-astro.de/docs/data_analysis/data/imagelabel.txt)
+- [test_dataset.fits](https://exp-astro.de/docs/data_analysis/data/test_dataset.fits)
+- [faces94.tar.gz](https://exp-astro.de/docs/data_analysis/data/faces94.tar.gz)
+- [Hubble data](https://exp-astro.de/docs/data_analysis/data/hubble_orig.dat)
 
