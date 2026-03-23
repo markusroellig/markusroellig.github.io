@@ -9,18 +9,17 @@ semester: SoSe
 location: "Frankfurt, Germany"
 ---
 
-Full course, open to BSc and MSc students.
-<img style="float: right;" src="![/images/Data-Large_edit_small.jpg](https://cdn.esawebb.org/archives/images/screen/carinanebula3.jpg)" width="400">
- [<i class="fas fa-link"></i>](https://qis.server.uni-frankfurt.de/qisserver/rds?state=verpublish&status=init&vmfile=no&publishid=420312&moduleCall=webInfo&publishConfFile=webInfo&publishSubDir=veranstaltung) QIS/LSF Link
-
-
-[<i class="fas fa-link"></i> Course page](https://exp-astro.de/ism/){: .btn .btn--primary}
- [<i class="fas fa-link"></i>](https://qis.server.uni-frankfurt.de/qisserver/rds?state=verpublish&status=init&vmfile=no&publishid=420312&moduleCall=webInfo&publishConfFile=webInfo&publishSubDir=veranstaltung) QIS/LSF Link{: .btn .btn--primary}
+[<i class="fas fa-link"></i> QIS/LSF Link](https://qis.server.uni-frankfurt.de/qisserver/rds?state=verpublish&status=init&vmfile=no&publishid=420312&moduleCall=webInfo&publishConfFile=webInfo&publishSubDir=veranstaltung){: .btn .btn--primary}
 [<i class="fab fa-youtube"></i> Lecture Videos](https://www.youtube.com/playlist?list=PL39FzCVlEO_emydhtivF8qED9CCZY1fKx){: .btn .btn--research}
 
-<img src="https://cdn.esawebb.org/archives/images/screen/weic2605a.jpg" alt="JWST image of a star-forming region" style="width: 100%; border-radius: 10px; margin: 25px 0; box-shadow: 0 4px 8px rgba(0,0,0,0.2);">
-
-
+<figure style="margin: 25px 0;">
+  <a href="https://esawebb.org/news/weic2605/" target="_blank" rel="noopener noreferrer">
+    <img src="https://cdn.esawebb.org/archives/images/screen/weic2605a.jpg" alt="JWST image of Nebula PMR 1" style="width: 100%; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.2); transition: transform 0.2s;" onmouseover="this.style.transform='scale(1.01)'" onmouseout="this.style.transform='scale(1)'">
+  </a>
+  <figcaption style="font-size: 0.9em; color: #666; text-align: center; margin-top: 10px; line-height: 1.4;">
+    <em>Nebula PMR 1 is a cloud of gas and dust that bears an uncanny resemblance to a brain in a transparent skull, inspiring its nickname, the “Exposed Cranium” nebula. Webb captured its unusual features in both near- and mid-infrared light using two instruments that reveal enhancing details of the nebula’s brain-like appearance.</em>
+  </figcaption>
+</figure>
 
 ---
 
