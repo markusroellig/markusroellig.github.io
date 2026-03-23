@@ -49,23 +49,23 @@ Der Raum zwischen den Sternen ist alles andere als leer. Er ist gefüllt mit ein
 
 Hier werden die aktuellen Skripte, Vorlesungsfolien und Videoaufzeichnungen thematisch sortiert zur Verfügung gestellt.
 
-| Lecture | Topic / Thema | Materials / Unterlagen | Lecture Videos & Q&A |
-| :--- | :--- | :--- | :--- |
-| **Lecture 1** | **Introduction** <br> Overview and History | [📄 Lecture notes 1 (annotated)](#) | 🎬 [Organizational Remarks / Syllabus (11:51)](#)<br>🎬 [Motivation (20:04)](#)<br>🎬 [History of Dust Observations (46:32)](#)<br>🎬 [History of Gas Observations (20:43)](#)<br>🎬 [Modern Radio Astronomy (13:32)](#)<br>💬 [Q&A recording (35:30)](#) |
+| Lecture | Topic / Thema | Materials / Unterlagen |
+| :--- | :--- | :--- |
+| **Lecture 1** | **Introduction** <br> Overview and History | [📄 Lecture notes 1 (annotated)](#) 
 {% comment %}
-| **Lecture 2** | **The dynamics of the interstellar gas** <br> Hydrodynamics | [📄 Lecture notes 2 (annotated)](#) | 🎬 [1/3 Fundamental equations (28:37)](#)<br>🎬 [2/3 Caloric equation of state (24:15)](#)<br>🎬 [3/3 Singular Isotropic Sphere (21:15)](#)<br>💬 [Q&A recording](#) |
-| **Lecture 3** | **The dynamics of the interstellar gas** <br> Magneto-Hydrodynamics | [📄 Lecture notes 3 (annotated)](#) | 🎬 [1/3 Characteristic numbers (30:10)](#)<br>🎬 [2/3 MHD Fundamental equations (17:01)](#)<br>🎬 [3/3 MHD Approximations (34:54)](#)<br>💬 [Q&A recording (57:57)](#) |
-| **Lecture 4** | **The dynamics of the interstellar gas** <br> Instabilities, effects of magnetic fields, turbulence | [📄 Lecture notes 4](#) <br><br> *Movies:* <br> 🎬 [Pulsed jet (GIF)](#) \| [Pulsed jet (MPG)](#) <br> 🎬 *Federrath et al. (2010):* [Column density](#) \| [Slices](#) \| [Divergence](#) \| [Vorticity](#) <br> 🎬 *Gravity/Star Formation:* [Gas column density](#) \| [With magnetic field vectors](#) | 🎬 [1/4 Gravitational instability (42:09)](#)<br>🎬 [2/4 Other instabilities (36:30)](#)<br>🎬 [3/4 Turbulence theory (18:30)](#)<br>🎬 [4/4 Turbulence observations (16:52)](#)<br>💬 [Q&A recording (57:19)](#) |
-| **Lecture 5** | **Radiation from interstellar gas** <br> Line transitions I | [📄 Lecture notes 5](#) | 🎬 [1/3 Dirac theory - interaction with matter (36:56)](#)<br>🎬 [2/3 Discrete systems - H atom (36:44)](#)<br>🎬 [3/3 Multi-electron atoms (38:46)](#)<br>💬 [Q&A recording (37:12)](#) |
-| **Lecture 6** | **Radiation from interstellar gas** <br> Line transitions II | [📄 Lecture notes 6](#) | 🎬 [1/5 Molecules (17:28)](#)<br>🎬 [2/5 Spectroscopic notation (10:33)](#)<br>🎬 [3/5 Rotational transitions (09:30)](#)<br>🎬 [4/5 Selection rules (13:32)](#)<br>🎬 [5/5 Example of observed transitions (04:41)](#)<br>💬 [Q&A recording (46:02)](#) |
-| **Lecture 7** | **Radiation from interstellar gas** <br> Summary of radiative transfer | [📄 Lecture notes 7](#) | 🎬 [1/4 Collisional excitation (10:17)](#)<br>🎬 [2/4 Excitation problem (28:57)](#)<br>🎬 [3/4 Specific emissivity (29:27)](#)<br>🎬 [4/4 Radiative transfer / escape prob. (31:04)](#)<br>💬 [Q&A recording (58:57)](#) |
-| **Lecture 8** | **Radiation from interstellar gas** <br> Continuum radiation | [📄 Lecture notes 8](#) | 🎬 [1/4 Thermal bremsstrahlung (09:05)](#)<br>🎬 [2/4 Thermal spectrum (31:49)](#)<br>🎬 [3/4 Synchrotron radiation (09:33)](#)<br>🎬 [4/4 Dust extinction (26:52)](#) |
-| **Lecture 9** | **Interstellar dust** <br> Solid-state spectroscopy, scattering, extinction & emission | [📄 Lecture notes 9](#) <br> [📓 Q&A Notebook/Radex modelling](#) <br> [📓 Q&A Notebook Dust SED modelling](#) | 🎬 [1/5 Mie theory (19:16)](#)<br>🎬 [2/5 Henyey-Greenstein approx. (09:20)](#)<br>🎬 [3/5 Thermal emission (17:57)](#)<br>🎬 [4/5 Non-thermal emission (05:40)](#)<br>🎬 [5/5 Polarization (15:15)](#)<br>💬 [Q&A recording (54:07)](#) |
-| **Lecture 10** | **Interstellar dust** <br> Dust composition & evolution, PAHs | [📄 Lecture notes 10](#) | 🎬 [1/5 Carbonaceous dust (13:20)](#)<br>🎬 [2/5 Silicates (06:35)](#)<br>🎬 [3/5 Ice mantles (16:28)](#)<br>🎬 [4/5 Dust formation (08:48)](#)<br>🎬 [5/5 Interplanetary dust (22:22)](#) |
-| **Lecture 11** | **Energy balance** <br> Gas heating and cooling processes | [📄 Lecture notes 11 (annotated)](#) | 🎬 [1/4 Interstellar radiation field (21:52)](#)<br>🎬 [2/4 Photoelectric effect (14:03)](#)<br>🎬 [3/4 Photoelectric effect on dust (17:48)](#)<br>🎬 [4/4 H2 heating (38:35)](#)<br>💬 [Q&A recording (26:06)](#) |
-| **Lecture 12** | **Energy balance** <br> Dust-gas interaction, ISM phases, chemical transitions | [📄 Lecture notes 12 (annotated)](#) | 🎬 [1/5 Other heating mechanisms (25:01)](#)<br>🎬 [2/5 Heating characteristics (06:06)](#)<br>🎬 [3/5 Cooling (09:32)](#)<br>🎬 [4/5 Thermal instability (19:00)](#)<br>🎬 [5/5 Non-equlibrium ISM (07:33)](#) |
-| **Lecture 13** | **Special interstellar regions** <br> HII regions, PDRs, shocks, supernova remnants, planetary nebulae | [📄 Lecture notes 13](#) | 🎬 [1/1 PDRs and HII regions (20:30)](#) |
-| **Lecture 14** | **Chemistry in the ISM** | [📄 Lecture notes 14](#) | 🎬 [1/6 Introduction (12:52)](#)<br>🎬 [2/6 Radiative association (09:54)](#)<br>🎬 [3/6 Photodissociation (10:34)](#)<br>🎬 [4/6 Ion-neutral reactions (12:21)](#)<br>🎬 [5/6 Neutral-neutral reactions (02:55)](#)<br>🎬 [6/6 Gas-grain chemistry (13:02)](#) |
+| **Lecture 2** | **The dynamics of the interstellar gas** <br> Hydrodynamics | [📄 Lecture notes 2 (annotated)](#) | 
+| **Lecture 3** | **The dynamics of the interstellar gas** <br> Magneto-Hydrodynamics | [📄 Lecture notes 3 (annotated)](#) |
+| **Lecture 4** | **The dynamics of the interstellar gas** <br> Instabilities, effects of magnetic fields, turbulence | [📄 Lecture notes 4](#) <br><br> *Movies:* <br> 🎬 [Pulsed jet (GIF)](#) \| [Pulsed jet (MPG)](#) <br> 🎬 *Federrath et al. (2010):* [Column density](#) \| [Slices](#) \| [Divergence](#) \| [Vorticity](#) <br> 🎬 *Gravity/Star Formation:* [Gas column density](#) \| [With magnetic field vectors](#) |
+| **Lecture 5** | **Radiation from interstellar gas** <br> Line transitions I | [📄 Lecture notes 5](#) | 
+| **Lecture 6** | **Radiation from interstellar gas** <br> Line transitions II | [📄 Lecture notes 6](#) | 
+| **Lecture 7** | **Radiation from interstellar gas** <br> Summary of radiative transfer | [📄 Lecture notes 7](#) | 
+| **Lecture 8** | **Radiation from interstellar gas** <br> Continuum radiation | [📄 Lecture notes 8](#) |
+| **Lecture 9** | **Interstellar dust** <br> Solid-state spectroscopy, scattering, extinction & emission | [📄 Lecture notes 9](#) <br> [📓 Q&A Notebook/Radex modelling](#) <br> [📓 Q&A Notebook Dust SED modelling](#) | 
+| **Lecture 10** | **Interstellar dust** <br> Dust composition & evolution, PAHs | [📄 Lecture notes 10](#) | 
+| **Lecture 11** | **Energy balance** <br> Gas heating and cooling processes | [📄 Lecture notes 11 (annotated)](#) | 
+| **Lecture 12** | **Energy balance** <br> Dust-gas interaction, ISM phases, chemical transitions | [📄 Lecture notes 12 (annotated)](#) |
+| **Lecture 13** | **Special interstellar regions** <br> HII regions, PDRs, shocks, supernova remnants, planetary nebulae | [📄 Lecture notes 13](#) | 
+| **Lecture 14** | **Chemistry in the ISM** | [📄 Lecture notes 14](#) | 
 {% endcomment %}
 
 
