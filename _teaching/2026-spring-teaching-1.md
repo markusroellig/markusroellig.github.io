@@ -18,7 +18,7 @@ location: "Frankfurt, Germany"
   </figcaption>
 </figure>
 
-[<i class="fas fa-link"></i> Course page](https://exp-astro.de/ism/){: .btn .btn--primary}
+[<i class="fas fa-link"></i>QIS page](https://qis.server.uni-frankfurt.de/qisserver/rds?state=verpublish&status=init&vmfile=no&publishid=420312&moduleCall=webInfo&publishConfFile=webInfo&publishSubDir=veranstaltung){: .btn .btn--primary}
 [<i class="fab fa-youtube"></i> Lecture Videos](https://www.youtube.com/playlist?list=PL39FzCVlEO_emydhtivF8qED9CCZY1fKx){: .btn .btn--research}
 
 ---
