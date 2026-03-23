@@ -38,7 +38,7 @@ Der Raum zwischen den Sternen ist alles andere als leer. Er ist gefüllt mit ein
   * Das Vorlesungsskript und die Folien werden in Englisch bereitgestellt. *(Lecture scripts and slides are provided in English.)*
 * **Evaluation / Leistungsnachweis:** 
  -Studienleistungen gemäß Studienordnung Physik (unbenotet/benotet) durch aktive Mitarbeit zu ausgewählten Themen, die im Lauf der Vorlesung gehalten werden. 
- - Course credit is awarded based on active contrinutions on selected topics given during the semester.
+ - Course credit is awarded based on active contributions on selected topics given during the semester.
 * **Time & Location / Zeit & Ort:** 
   - Dienstag, 12:00 c.t. (Tuesday, 12:00 c.t.)
   - Raum: *Physik - Phys 02.201a*
@@ -52,6 +52,7 @@ Hier werden die aktuellen Skripte, Vorlesungsfolien und Videoaufzeichnungen them
 | Lecture | Topic / Thema | Materials / Unterlagen | Lecture Videos & Q&A |
 | :--- | :--- | :--- | :--- |
 | **Lecture 1** | **Introduction** <br> Overview and History | [📄 Lecture notes 1 (annotated)](#) | 🎬 [Organizational Remarks / Syllabus (11:51)](#)<br>🎬 [Motivation (20:04)](#)<br>🎬 [History of Dust Observations (46:32)](#)<br>🎬 [History of Gas Observations (20:43)](#)<br>🎬 [Modern Radio Astronomy (13:32)](#)<br>💬 [Q&A recording (35:30)](#) |
+{% comment %}
 | **Lecture 2** | **The dynamics of the interstellar gas** <br> Hydrodynamics | [📄 Lecture notes 2 (annotated)](#) | 🎬 [1/3 Fundamental equations (28:37)](#)<br>🎬 [2/3 Caloric equation of state (24:15)](#)<br>🎬 [3/3 Singular Isotropic Sphere (21:15)](#)<br>💬 [Q&A recording](#) |
 | **Lecture 3** | **The dynamics of the interstellar gas** <br> Magneto-Hydrodynamics | [📄 Lecture notes 3 (annotated)](#) | 🎬 [1/3 Characteristic numbers (30:10)](#)<br>🎬 [2/3 MHD Fundamental equations (17:01)](#)<br>🎬 [3/3 MHD Approximations (34:54)](#)<br>💬 [Q&A recording (57:57)](#) |
 | **Lecture 4** | **The dynamics of the interstellar gas** <br> Instabilities, effects of magnetic fields, turbulence | [📄 Lecture notes 4](#) <br><br> *Movies:* <br> 🎬 [Pulsed jet (GIF)](#) \| [Pulsed jet (MPG)](#) <br> 🎬 *Federrath et al. (2010):* [Column density](#) \| [Slices](#) \| [Divergence](#) \| [Vorticity](#) <br> 🎬 *Gravity/Star Formation:* [Gas column density](#) \| [With magnetic field vectors](#) | 🎬 [1/4 Gravitational instability (42:09)](#)<br>🎬 [2/4 Other instabilities (36:30)](#)<br>🎬 [3/4 Turbulence theory (18:30)](#)<br>🎬 [4/4 Turbulence observations (16:52)](#)<br>💬 [Q&A recording (57:19)](#) |
@@ -65,7 +66,8 @@ Hier werden die aktuellen Skripte, Vorlesungsfolien und Videoaufzeichnungen them
 | **Lecture 12** | **Energy balance** <br> Dust-gas interaction, ISM phases, chemical transitions | [📄 Lecture notes 12 (annotated)](#) | 🎬 [1/5 Other heating mechanisms (25:01)](#)<br>🎬 [2/5 Heating characteristics (06:06)](#)<br>🎬 [3/5 Cooling (09:32)](#)<br>🎬 [4/5 Thermal instability (19:00)](#)<br>🎬 [5/5 Non-equlibrium ISM (07:33)](#) |
 | **Lecture 13** | **Special interstellar regions** <br> HII regions, PDRs, shocks, supernova remnants, planetary nebulae | [📄 Lecture notes 13](#) | 🎬 [1/1 PDRs and HII regions (20:30)](#) |
 | **Lecture 14** | **Chemistry in the ISM** | [📄 Lecture notes 14](#) | 🎬 [1/6 Introduction (12:52)](#)<br>🎬 [2/6 Radiative association (09:54)](#)<br>🎬 [3/6 Photodissociation (10:34)](#)<br>🎬 [4/6 Ion-neutral reactions (12:21)](#)<br>🎬 [5/6 Neutral-neutral reactions (02:55)](#)<br>🎬 [6/6 Gas-grain chemistry (13:02)](#) |
-| **Referate** | **Student Presentations** <br> Selected advanced topics | - | - |
+{% endcomment %}
+
 
 ---
 
