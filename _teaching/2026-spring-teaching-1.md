@@ -79,9 +79,12 @@ Der Raum zwischen den Sternen ist alles andere als leer. Er ist gefüllt mit ein
 
 * **Language / Sprache:** * Vorlesungssprache ist regulär Deutsch, auf Anfrage Englisch. *(The lecture is generally taught in German, but can be held in English upon request.)*
   * Das Vorlesungsskript und die Folien werden in Englisch bereitgestellt. *(Lecture scripts and slides are provided in English.)*
-* **Evaluation / Leistungsnachweis:** * Studienleistungen gemäß Studienordnung Physik (unbenotet/benotet) durch Referate zu ausgewählten Themen, die im Lauf der Vorlesung gehalten werden. *(Course credit is awarded based on presentations on selected topics given during the semester.)*
-* **Time & Location / Zeit & Ort:** * Dienstag, 12:00 c.t. *(Tuesday, 12:00 c.t.)*
-  * Raum: *[Raum eintragen / Online via Zoom]*
+* **Evaluation / Leistungsnachweis:** 
+ -Studienleistungen gemäß Studienordnung Physik (unbenotet/benotet) durch aktive Mitarbeit zu ausgewählten Themen, die im Lauf der Vorlesung gehalten werden. 
+ - Course credit is awarded based on active contrinutions on selected topics given during the semester.
+* **Time & Location / Zeit & Ort:** 
+  - Dienstag, 12:00 c.t. (Tuesday, 12:00 c.t.)
+  - Raum: *Physik - Phys 02.201a*
 
 ---
 
