@@ -9,14 +9,49 @@ semester: SoSe
 location: "Frankfurt, Germany"
 ---
 
-[<i class="fas fa-link"></i> Course page](https://exp-astro.de/ism/){: .btn .btn--primary}
-[<i class="fab fa-youtube"></i> Lecture Videos](https://www.youtube.com/playlist?list=PL39FzCVlEO_emydhtivF8qED9CCZY1fKx){: .btn .btn--research}
+<div style="
+  position: relative;
+  width: 100%;
+  height: 350px;
+  overflow: hidden;
+  margin-top: -30px; /* Adjust based on theme header */
+  margin-bottom: 30px;
+  border-radius: 0 0 10px 10px;
+  box-shadow: 0 6px 12px rgba(0,0,0,0.3);
+">
+  <img src="https://cdn.esawebb.org/archives/images/screen/weic2605a.jpg" alt="JWST image of a star-forming region, N79" style="
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(75%) contrast(110%);
+  ">
 
-<img style="float: right; margin-left: 20px; margin-bottom: 20px; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);" src="/images/ISM-image.jpg" width="400" alt="Illustration of the Interstellar Medium">
+  <div style="
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    right: 20px;
+    background-color: rgba(20, 30, 50, 0.85);
+    color: #e0f0ff;
+    padding: 18px;
+    border-radius: 12px;
+    border: 1px solid rgba(80, 150, 255, 0.4);
+    backdrop-filter: blur(8px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.4);
+  ">
+    <h1 style="margin: 0 0 10px 0; font-size: 1.8em; color: #fff;">The Physics and Chemistry of the Interstellar Medium</h1>
+    <p style="margin: 0; font-size: 1.05em; font-style: italic; color: #b0c8e0;">Physik und Chemie des Interstellaren Mediums</p>
+    <p style="margin: 10px 0 0 0;">
+      [<i class="fas fa-link"></i>](https://exp-astro.de/ism/)  Course page
+      [Lecture Videos <i class="fab fa-youtube"></i>](https://www.youtube.com/playlist?list=PL39FzCVlEO_emydhtivF8qED9CCZY1fKx){: .btn--research}
+      <br>Vollständiges Modul für Bachelor- und Masterstudierende.
+    </p>
+  </div>
+</div>
+<img style="float: right; margin-left: 20px; margin-bottom: 20px; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);" src="/images/ISM-image.jpg" width="400">
+Full course, open to BSc and MSc students.
 
-**Full course, open to BSc and MSc students. / Vollständiges Modul für Bachelor- und Masterstudierende.**
-
-Full course info is available at the course page hosted by the [Experimental Astrophysics group](https://exp-astro.de) at the [Institute for Applied Physics](https://www.uni-frankfurt.de/49311579/) at the [Goethe-University Frankfurt](https://www.uni-frankfurt.de).
+Full course info available at the course page hosted by the [Experimental Astrophysics group](https://exp-astro.de) at the [Institute for Applied Physics](https://www.uni-frankfurt.de/49311579/) at the [Goethe-University Frankfurt](https://www.uni-frankfurt.de)."
 
 ---
 
@@ -76,6 +111,6 @@ Hier werden die aktuellen Skripte, Vorlesungsfolien und Videoaufzeichnungen them
 
 ## 🔭 Praxisbezug: Beobachtung und Vermittlung
 
-Als exzellente praktische Ergänzung zu den hochspannenden, aber oft sehr theoretischen Inhalten am IAP bietet sich für Studierende ein Besuch oder sogar ein Engagement beim **[Physikalischen Verein in Frankfurt](https://www.physikalischer-verein.de/)** an. 
+Als exzellente praktische Ergänzung zu den hochspannenden, aber oft sehr theoretischen Inhalten am IAP bietet sich für Studierende ein Besuch oder sogar ein Engagement beim **[Physikalischen Verein in Frankfurt](https://www.physikalischer-verein.de/)** an.
 
 Dort lässt sich die Brücke zwischen der theoretischen Astrophysik des interstellaren Mediums und der echten astronomischen Beobachtung schlagen – sei es bei den öffentlichen Himmelsbeobachtungen oder im regen Austausch mit anderen Astronomie-Begeisterten.
