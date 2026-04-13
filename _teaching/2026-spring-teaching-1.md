@@ -42,6 +42,9 @@ Der Raum zwischen den Sternen ist alles andere als leer. Er ist gefüllt mit ein
 * **Time & Location / Zeit & Ort:** 
   - Dienstag, 12:00 c.t. (Tuesday, 12:00 c.t.)
   - Raum: *Physik - Phys 02.201a*
+* **Syllabus / Lehrplan:**
+  - [PDF Syllabus/Lehrplan](/files/pdr/teaching/ism_2026/Syllabus.pdf) 
+
 
 ---
 
