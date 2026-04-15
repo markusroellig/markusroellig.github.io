@@ -54,7 +54,7 @@ Hier werden die aktuellen Skripte, Vorlesungsfolien und Videoaufzeichnungen them
 
 | Lecture | Topic / Thema | Materials / Unterlagen |
 | :--- | :--- | :--- |
-| **Lecture 1** | **Introduction** <br> Overview and History | [📄 Lecture notes 1 (annotated)](#) 
+| **Lecture 1** | **Introduction** <br> Overview and History | [📄 Lecture notes 1 (annotated)](/files/pdr/teaching/ism_2026/Lecture 1 annotated.pdf) 
 {% comment %}
 | **Lecture 2** | **The dynamics of the interstellar gas** <br> Hydrodynamics | [📄 Lecture notes 2 (annotated)](#) | 
 | **Lecture 3** | **The dynamics of the interstellar gas** <br> Magneto-Hydrodynamics | [📄 Lecture notes 3 (annotated)](#) |
