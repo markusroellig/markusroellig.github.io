@@ -54,14 +54,15 @@ Hier werden die aktuellen Skripte, Vorlesungsfolien und Videoaufzeichnungen them
 
 | Lecture | Topic / Thema | Materials / Unterlagen |
 | :--- | :--- | :--- |
-| **Lecture 1** | **Introduction** <br> Overview and History | [📄 Lecture notes 1 (annotated)](/files/pdr/teaching/ism_2026/Lecture 1 annotated.pdf) 
+| **Lecture 1** | **Introduction** <br> Overview and History | [📄 Lecture notes 1 (annotated)](/files/pdf/teaching/ism_2026/Lecture 1 annotated.pdf) 
+
+| **Lecture 2** | **The dynamics of the interstellar gas** <br> Hydrodynamics | [📄 Lecture notes 2 (annotated)](/files/pdf/teaching/ism_2026/Lecture_2 annotated.pdf) | 
+| **Lecture 3** | **The dynamics of the interstellar gas** <br> Magneto-Hydrodynamics | [📄 Lecture notes 3 (annotated)](/files/pdf/teaching/ism_2026/Lecture_3 annotated.pdf) |
+| **Lecture 4** | **The dynamics of the interstellar gas** <br> Instabilities, effects of magnetic fields, turbulence |  [📄 Lecture notes 4(annotated)](/files/pdf/teaching/ism_2026/Lecture_4 annotated.pdf) |
+| **Lecture 5** | **Radiation from interstellar gas** <br> Line transitions I | [📄 Lecture notes 5(annotated)] (/files/pdf/teaching/ism_2026/Lecture_5 annotated.pdf) |
+| **Lecture 6** | **Radiation from interstellar gas** <br> Line transitions II | [📄 Lecture notes 6(annotated)] (/files/pdf/teaching/ism_2026/Lecture_6 annotated.pdf) |
+| **Lecture 7** | **Radiation from interstellar gas** <br> Summary of radiative transfer | [📄 Lecture notes 7(annotated)] (/files/pdf/teaching/ism_2026/Lecture_7 annotated.pdf) |
 {% comment %}
-| **Lecture 2** | **The dynamics of the interstellar gas** <br> Hydrodynamics | [📄 Lecture notes 2 (annotated)](#) | 
-| **Lecture 3** | **The dynamics of the interstellar gas** <br> Magneto-Hydrodynamics | [📄 Lecture notes 3 (annotated)](#) |
-| **Lecture 4** | **The dynamics of the interstellar gas** <br> Instabilities, effects of magnetic fields, turbulence | [📄 Lecture notes 4](#) <br><br> *Movies:* <br> 🎬 [Pulsed jet (GIF)](#) \| [Pulsed jet (MPG)](#) <br> 🎬 *Federrath et al. (2010):* [Column density](#) \| [Slices](#) \| [Divergence](#) \| [Vorticity](#) <br> 🎬 *Gravity/Star Formation:* [Gas column density](#) \| [With magnetic field vectors](#) |
-| **Lecture 5** | **Radiation from interstellar gas** <br> Line transitions I | [📄 Lecture notes 5](#) | 
-| **Lecture 6** | **Radiation from interstellar gas** <br> Line transitions II | [📄 Lecture notes 6](#) | 
-| **Lecture 7** | **Radiation from interstellar gas** <br> Summary of radiative transfer | [📄 Lecture notes 7](#) | 
 | **Lecture 8** | **Radiation from interstellar gas** <br> Continuum radiation | [📄 Lecture notes 8](#) |
 | **Lecture 9** | **Interstellar dust** <br> Solid-state spectroscopy, scattering, extinction & emission | [📄 Lecture notes 9](#) <br> [📓 Q&A Notebook/Radex modelling](#) <br> [📓 Q&A Notebook Dust SED modelling](#) | 
 | **Lecture 10** | **Interstellar dust** <br> Dust composition & evolution, PAHs | [📄 Lecture notes 10](#) | 
